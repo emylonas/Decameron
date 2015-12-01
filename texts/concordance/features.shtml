@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<title>Features: Concordance to the Decameron</title>
+<!--#include virtual="../../sideinclude.txt" -->
+	</head>
+	<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" background="../../images/pagedesign/paperbkgnd.jpg" link="#990000" alink="#663202" vlink="#663202" bgcolor="#FFFFFF" onload="CSScriptInit();">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+			<tr>
+				<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC">
+					<table border="0" cellpadding="0" cellspacing="0" width="156">
+						<tr height="80">
+							<td width="156" height="80" align="LEFT" valign="BOTTOM" bgcolor="#663202"><img src="../../images/pagedesign/content_topheader_painting.gif" width="156" height="80"></td>
+						</tr>
+						<tr height="1">
+							<td width="156" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						</tr>
+						<tr>
+							<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC"><img src="../../images/pagedesign/content_menu_head_texts.gif" width="156" height="44"><br>
+										  <!--#include virtual="../../sidemenuincl.txt" --></td>
+						</tr>
+					</table>
+				</td>
+				<td width="589" valign="TOP"><table border="0" cellpadding="0" cellspacing="0" width="589">
+
+					<tr height="80">
+						<td width="1" height="80" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="20"></td>
+						<td width="20" height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="20" height="80"></td>
+						<td width="306" height="80" align="LEFT" valign="BOTTOM" bgcolor="#663202"><a href="../../dweb.shtml"><img src="../../images/pagedesign/content_topheader_logo.gif" width="306" height="80" border="0"></a></td>
+						<td width="20" height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="20" height="80"></td>
+						<td width="237" height="80" align="LEFT" valign="MIDDLE" bgcolor="#663202"><table border="0" cellpadding="0" cellspacing="0" width="182">
+
+							<tr>
+								<td><form method="get" action="http://www.google.com/u/brown" target="_top">
+								<input type="hidden" name="hq" value="inurl:www.brown.edu/Departments/Italian_Studies/dweb/" /><img src="../../images/pagedesign/content_sitesearch.gif" width="125" height="9"><br>
+								<input size="30" name="query" value="" /></td>
+							</tr>
+
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+
+					<tr height="1">
+						<td width="1" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="306" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="237" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+					</tr>
+
+					<tr>
+						<td width="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" align="LEFT" valign="TOP"><img src="../../images/pagedesign/clearspacer.gif" width="20" height="362"></td>
+						<td width="543" align="LEFT" valign="TOP" colspan="3">
+<p class="headerstyle"><br>The Features of the Concordance</p>
+<p class="bodynoindent"></p>
+		  <center>
+<img src="help/01.gif" vspace="30">
+<br clear="left">
+<img src="help/02.gif" vspace="30">
+<br clear="left">
+<img src="help/03.gif" vspace="30">
+<br clear="left">
+<img src="help/03b.gif" vspace="30">
+<br clear="left">
+<img src="help/04.gif" vspace="30">
+<br clear="left">
+<img src="help/05.gif" vspace="30">
+</center>
+		
+<p class="headerstyle">
+<a href="http://www.brown.edu/decameron">Main</a>: <a href="../dec_ov.shtml">Texts</a>: <a href="index.shtml">Online Concordance</a>: Features</br>
+<img src="../../images/pagedesign/clearspacer.gif" width="306" height="30"></p>		
+<!--***************************text ends here*******************************-->
+</td>
+						
+					</tr>
+				</table>
+				</td>
+				<td width="100%" align="LEFT" valign="TOP"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="81">
+
+					<tr height="80">
+						<td height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="1" height="80"></td>
+					</tr>
+
+					<tr height="1">
+						<td height="1" align="LEFT" valign="TOP" bgcolor="Black"><b><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></b></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC"><!--#include virtual="../../botincl1.txt" --></td>
+				<td width="589" valign="top"><!--#include virtual="../../botincl2.txt" --></td>
+				<td width="100%" align="LEFT" valign="TOP"><!--#include virtual="../../botincl3.txt" --></td>
+			</tr>
+		</table>
+		</p></form>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<?php
+	$selected = "themes_motifs";
+	require '../../header.php';
+?>
+
+<ul id="breadcrumbs">
+	<li><a href="../../">Main</a></li>
+	<li><a href="../">Themes &amp; Motifs</a></li>
+	<li>Fortuna</li>
+</ul>
+<h2>Fortuna</h2>
+<p>Fortune, along with Intelligence and Love, is one of the three fundamental Forces (or Laws) that rule over the world of the <em>Decameron</em>. From the action and interaction of these three forces spring all the mishaps and vicissitudes that the various novellas recount. Yet, all three of these forces are also the subject of a radical cultural transformation in Medieval mentality.</p>
+<p>With the transition of 14th-century mercantile society toward a new, more &quot;modern&quot; set of attitudes and beliefs, Fortune undergoes a fundamental change: it no longer exclusively refers to a transcendental order, or preordained fate, a Providential divine will ruling over the incessant permutations of human affairs. Instead, it is viewed as an active player in the reallocation of material wealth and happiness. This is best exemplified by a comparison with the representation of Fortune by Dante. In <em>Inferno</em> VII, the spectacle of the misers and spendthrifts pushing huge weights and crashing into each other, prompts Dante to ask Virgil about Fortune. Echoing Boethius, Virgil explains that Fortune is an angel, an agent of divine providence, who continuously shifts the distribution of goods and wealth according to God's inscrutable master plan. While the awe before Fortune's hidden designs seems to persist in the <em>Decameron</em>, the unpredictable and &quot;cyclical&quot; nature of Fortune as a constant challenge to human enterprise is equally stressed. Fortune thus begins to evolve toward an almost &quot;naturalistic,&quot; if not yet entirely &quot;materialistic&quot; and &quot;relativistic,&quot; concept of <em>chance</em>: on the one hand, it expresses the irrational side of events, a warning to adventurous merchants traveling all over the (known and unknown) world in search of fortune; on the other, it stresses the importance of being ready to seize opportunity, in order to make their own fortune.</p>
+<p>The Wheel of Fortune, the traditional representation of fortune's constant turning and cyclical nature, thus provides a sort of &quot;rational&quot; structure (a rationalization of the irrational) independent of any theological overtones. This is also the hidden governing structure of all the stories of the 2nd day, all (with the possible exception of Dioneo's) cyclical in the execution of their narrative plan, as dictated by the author's (and the Queen's) instructions: &quot;the discussion turns upon those who after suffering a series of misfortunes are brought to a state of unexpected happiness.&quot; As a narrative structure, Fortune offers a number of interesting possibilities: the Wheel of Fortune can therefore be considered a true representational and figurative scheme for many of the stories (think of the ups and downs in the space configuration and setting of Andreuccio's story, for example). And even the happy ending, the theme of the 2nd day's storytelling and one of the most tested narrative principles in the <em>Decameron</em>, must undergo the rule of Fortune (the final outcome must be &quot;unpredictable&quot; or unexpected, as the Italian text states, &quot;beyond the protagonists' hopes&quot;). As a narrative rule or structure, Fortune becomes the testing ground of new ideas and a new worldview. At the same time, it is involved in the tension between authorial control and narrative freedom in the <em>Decameron</em>. Even the narrators must obey the rule of Fortune, and yet they are the ones (and the author through them) who test it as a <em>narrative</em> device.</p>
+<p>Even under the reign of Fortune the other two &quot;rulers&quot; of the <em>Decameron</em>'s kingdom (Love and Ingenuity or Reason) make their influence felt. Consider their presence in the various stories and analyze how they interact with the main narrative structure of the day (or vice versa -- how Fortune is present in the stories of other days, governed by Love and/or Ingenuity). Consider also how Fortune is viewed from a &quot;gender&quot; point of view: in traditional iconography she is represented as a woman (capricious and unpredictable, irrational and deceiving) who must be subdued or even beaten by men's reason, strength and will (see Machiavelli's <em>Prince</em>); can you find clear embodiments or representations of Fortune as a woman in any of the <em>Decameron</em>'s stories? And how differently does Fortune (if she does at all) affect a man's and a woman's fate? </p>
+<p>(M R.) For further leads on the representation of Fortune within the medieval context and in Boccaccio's time see: H. R. Patch, The Goddess Fortuna in Medieval Literature. Cambridge: Harvard UP, 1927, and the article by Teodolinda Barolini, &quot;The Wheel of the Decameron,&quot; Romance Philology 36 (1983): 521-539.</p>
+
+<?php
+	include 'relatedPages.php';
+?>
+
+<?php
+	$last_modified = filemtime($_SERVER["SCRIPT_FILENAME"]);
+	include '../../footer.php';
+?>

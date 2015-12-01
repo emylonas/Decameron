@@ -1,0 +1,27 @@
+<?php
+	$selected = "literature";
+	require '../../header.php';
+?>
+
+<ul id="breadcrumbs">
+	<li><a href="../../">Main</a></li>
+	<li><a href="../">Literature</a></li>
+	<li><a href="../">Theoretical Perspectives</a></li>
+	<li>Seduction by Silence</li>
+</ul>
+<h2>Seduction by Silence</h2>
+<p>In &quot;Seduction by Silence: A Gloss on the Tales of Masetto (<a href="../../texts/DecShowText.php?lang=eng&myID=nov0301&expand=day03">III, 1</a>) and Alatiel (<a href="../../texts/DecShowText.php?lang=eng&myID=nov0207&expand=day02">II, 7</a>)&quot; Millicent Marcus attempts to provide an explanation for the absence of sexual activity within the framestory through an analysis of the relationship between language and sexuality that emerges in the tales of Masetto and Alatiel.</p>
+<p>Several passages in the framestory make it clear that Boccaccio is at pains to affirm the storytellers' sexual propriety. Dioneo at the end of Day VI praises the <em>brigata</em>'s chastity, stating that their willingness to tell bawdy tales proves the virtuousness of their deportment, and that their failure to tell such stories would imply sin by omission. And on <a href="../../texts/DecShowText.php?lang=eng&myID=day10&expand=day10">Day X</a> Panfilo remarks that, although licentious tales may lead to corresponding behavior, the <em>brigata</em>&nbsp;has avoided this temptation. This preoccupation with affirming the <em>brigata</em>'s <em>onest&agrave;</em>&nbsp;poses the following question: if the <em>Decameron</em>, as Aldo Scaglione and other critics maintain, is a manifesto of free love, opposing the Church's Puritanism on the one hand and <a href="../../themes_motifs/amore/courtly_love.php">the idealism of courtly love</a> on the other, why would Boccaccio have his framestory youths behave contrary to a code he supposedly endorses?</p>
+<p>Marcus views Masetto's silent seduction of the nuns in part as a polemical statement on Boccaccio's part against the tenets of the courtly love tradition, according to which language plays the central role in seduction. Such a view is given voice by the steward of the convent, who equates Masetto's muteness with amorous impotence: &quot;There is no need to fear that he would start joking with (the) young ladies.&quot; And the abbess' words graphically equate the power of speech with sexual prowess: &quot;She believed that he was without a tail just as he was without a tongue.&quot; Of course they are both proven wrong, as Masetto proves an ideal partner for the convent nuns. When the exhausted Masetto abandons his feigned muteness to redress his situation to the abbess, the relation between language and sexuality at the heart of the tale becomes clear: outside the realm of speech Masetto unleashes insatiable sexual desires, and with words he is able to bring them back under control.</p>
+<p>A similar dialectic between silence and language, though with far more violent consequences, is operative in the story of Alatiel. Her inability to communicate with her nine different captors forces her into an exclusively and excessively carnal relationship with them. In her liaison with Pericone, as with the others, verbal language gives way to a language of sexual desire: &quot;Often she invited herself, not with words that she did not know how to make understood, but with actions.&quot; As in the tale of Masetto, it is Alatiel's recovery of language which puts an end to frenzied sexual activity. Her ending speech &quot;rewrites&quot; her virginity, and marriage neutralizes the sexual threat to society which proved devastating throughout her adventures.</p>
+<p>The role of language in its relationship to sexual activity thus places Masetto and Alatiel in striking contrast to many other Decameronian protagonists, whose clever use of language leads to seduction (Rustico [<a href="../../texts/DecShowText.php?lang=eng&myID=nov0310&expand=day03">III, 10</a>] and Frate Alberto [<a href="../../texts/DecShowText.php?lang=eng&myID=nov0402&expand=day04">IV, 2</a>] being perhaps the most illustrious examples). Marcus quite provocatively suggests that this provides a clue to the logic of the <em>brigata</em>'s restraint. Far from providing an inducement to sexual activity, talking about erotica enables them to control and contain its influence, much as Alatiel and Masetto do. By having his storytellers refrain entirely (rather than engage moderately as &quot;post-linguistic&quot; Masetto and Alatiel), Marcus argues, Boccaccio is making a polemical point against the courtly tradition - that language is not at the service of sexuality, but contains and absorbs its threat to the social order. Talking about lovemaking, rather than acting it out, enables the <em>brigata</em>&nbsp;to control this potentially dangerous force, which in the story of Alatiel brought in its wake a social breakdown similar to that of plague-ridden Florence.</p>
+<p>(A.T.) Marcus, Millicent. &quot;Seduction by Silence: A Gloss on the Tales of Masetto (III, I) and Alatiel (II, 7).&quot; <em>Philological Quarterly</em>&nbsp;58 (1979): 1-15. On Filostrato's refutation of Andreas Capellanus, see Giuseppe Mazzotta, &quot;The <em>Decameron</em>: The Literal and the Allegorical,&quot; <em>Italian Quarterly</em>, 18 (1975): 59-60. </p>
+
+<?php
+	include 'relatedPages.php';
+?>
+
+<?php
+	$last_modified = filemtime($_SERVER["SCRIPT_FILENAME"]);
+	include '../../footer.php';
+?>

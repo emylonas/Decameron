@@ -1,0 +1,128 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<title>Corbaccio: Intro to online edition</title>
+<!--#include virtual="../../sideinclude.txt" -->
+	</head>
+	<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" background="../../images/pagedesign/paperbkgnd.jpg" link="#990000" alink="#663202" vlink="#663202" bgcolor="#FFFFFF" onload="CSScriptInit();">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+			<tr>
+				<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC">
+					<table border="0" cellpadding="0" cellspacing="0" width="156">
+						<tr height="80">
+							<td width="156" height="80" align="LEFT" valign="BOTTOM" bgcolor="#663202"><img src="../../images/pagedesign/content_topheader_painting.gif" width="156" height="80"></td>
+						</tr>
+						<tr height="1">
+							<td width="156" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						</tr>
+						<tr>
+							<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC"><img src="../../images/pagedesign/content_menu_head_texts.gif" width="156" height="50"><br>
+								<!--#include virtual="../../sidemenuincl.txt" --></td>
+						</tr>
+					</table>
+				</td>
+				<td width="589" valign="TOP"><table border="0" cellpadding="0" cellspacing="0" width="589">
+
+					<tr height="80">
+						<td width="1" height="80" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="20"></td>
+						<td width="20" height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="20" height="80"></td>
+						<td width="306" height="80" align="LEFT" valign="BOTTOM" bgcolor="#663202"><a href="../../dweb.shtml"><img src="../../images/pagedesign/content_topheader_logo.gif" width="306" height="80" border="0"></a></td>
+						<td width="20" height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="20" height="80"></td>
+						<td width="237" height="80" align="LEFT" valign="MIDDLE" bgcolor="#663202"><table border="0" cellpadding="0" cellspacing="0" width="182">
+
+							<tr>
+								<td><form method="get" action="http://www.google.com/u/brown" target="_top">
+								<input type="hidden" name="hq" value="inurl:www.brown.edu/Departments/Italian_Studies/dweb/" /><img src="../../images/pagedesign/content_sitesearch.gif" width="125" height="9"><br>
+								<input size="30" name="query" value="" /></td>
+							</tr>
+
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+
+					<tr height="1">
+						<td width="1" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="306" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="237" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+					</tr>
+
+					<tr>
+						<td width="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" align="LEFT" valign="TOP"><img src="../../images/pagedesign/clearspacer.gif" width="20" height="411"></td>
+						<td width="306" align="LEFT" valign="TOP">
+<p class="headerstyle"><br>The <i>Corbaccio</i>: Introduction to the Online Edition</p>
+
+<p class="bodynoindent"><a href="http://www.stg.brown.edu/projects/decameron/itCorIndex.php">[go to electronic text]</a></p>
+
+<p class="bodynoindent">The text used on the site is based on the most recent critical edition prepared by Giorgio Padoan for the Mondadori collected works of Boccaccio, Tutte le opere di Giovanni Boccaccio, 12 vols, ed. by Vittore Branca (Milan: Mondadori, 1964-), V (ii) (1994), 413-614. The electronic edition has been proofread against the critical edition several times, and the paragraph numeration conforms to that used in the Padoan edition. However, it is possible that typographical errors may have crept in during the preparation of the text, and users who discover any mistakes are asked to contact the Decameron Web editors via the <a href="../../subscribe/guestbook.shtml">Guestbook</a>.</p>
+
+<p class="headerstyle">Encoding principles</p>
+
+<p class="bodynoindent">The electronic text was first mounted early in 2002 as an SGML-encoded text, readable through the Dynaweb internet server provided by the <a href="http://www.stg.brown.edu">Scholarly Technology Group</a> at Brown University. Recently, the text encoding was converted to XML, and <i>Corbaccio</i> is now accessed through Apache's <a href="http://jakarta.apache.org/tomcat/">Tomcat</a> servlet container. The structural organization of the electronic text remains the same in the new encoding.</p>
+
+<p class="headerstyle">Structure of the electronic text</p>
+
+<p class="bodynoindent">In order to make the text more navigable, it was necessary to divide it into constituent parts. The <i>Corbaccio</i> does not possess the type of formal organizing structure that can be seen, for example, in the Decameron, and thus it was necessary to superimpose a narrative (and by extension, interpretative) scheme onto Boccaccio's text. We decided to base our divisions on those suggested by Robert Hollander in his book, <i>Boccaccio's Last Fiction: The Corbaccio</i> (Philadelphia: University of Pennsylvania Press, 1988), pp. 2-3, with some simplifications. The narrative frames employed for our electronic text thus reinforce the formal chiasmic structure of the text, as can be seen by our seven-part schema:<br><br>
+
+Part I: Proemio: Incipit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Part II: Cornice (Frame)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Part III: Sogno: Inferno (Dream: Hell)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Part IV: Sogno: Dialogo (Dream: Dialogue)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Part V: Sogno: Purgatorio (Dream: Purgatory)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Part VI: Cornice (Frame)<br>
+Part VII: Conclusione: Explicit</p>
+
+<p class="bodynoindent">Unlike Hollander, we follow Padoan's paragraph numeration (shown in coloured square brackets at every paragraph), and we have combined as one section the various parts of the dialogue between the Narrator and Guide.</p>
+
+<p class="headerstyle">Search functions</p>
+
+<p class="bodynoindent">Currently, only a <a href="../../search/itCorSrchWrd.shtml">word search</a> is available for this electronic text. <!-- We are still developing the search functions after our recent transfer to XML, and thus the searches are limited at this time.  -->The search is currently case-sensitive, and thus we recommend that searches are undertaken twice, in order to find all possible occurrences of words. Proper names should be capitalized for searching.</p>
+
+<p class="bodynoindent">Successful search results are presented as a table of key words in context. The location of the word is shown as a link in green square brackets, showing the part of the text in which the word occurs and the paragraph number. Unfortunately, at this time it is only possible to go to the beginning of each of the seven sections, NOT to the actual keyword in the text. We recommend that you make a note of the paragraph number until we have fixed this glitch!</p>
+
+<p class="bodynoindent">(G.A.)</p>
+
+								<p class="headerstyle"><a href="../../dweb.shtml">Main</a>: <a href="../index.shtml">Texts</a>: <a href="index.shtml">Corbaccio</a>: Introduction to the Online Edition</p>
+								<p class="headerstyle"></p>
+							</td>
+						<td width="20" align="LEFT" valign="TOP"><img src="../../images/pagedesign/clearspacer.gif" width="20" height="20"></td>
+						<td width="237" align="LEFT" valign="TOP">
+<p class="bodynoindent"><br><b>Corbaccio Links:</b><br><br>
+									<img src="../../images/pagedesign/content_bullet.gif" width="5" height="5"> <a href="index.shtml">Introduction to the text<br>
+									</a><img src="../../images/pagedesign/content_bullet.gif" width="5" height="5"> Introduction to the online edition<br>
+									</a><img src="../../images/pagedesign/content_bullet.gif" width="5" height="5"> <a href="summary.shtml">Summary of the text<br>
+									</a><img src="../../images/pagedesign/content_bullet.gif" width="5" height="5"> <a href="sources.shtml">Major online sources for the <i>Corbaccio</i><br>
+									</a><img src="../../images/pagedesign/content_bullet.gif" width="5" height="5"> <a href="crit.shtml">Some critical questions about the <i>Corbaccio</i><br>
+									</a><img src="../../images/pagedesign/content_bullet.gif" width="5" height="5"> <a href="biblio.shtml">Select <i>Corbaccio</i> bibliography</a></p>
+							</td>
+					</tr>
+				</table>
+				</td>
+				<td width="100%" align="LEFT" valign="TOP"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="81">
+
+					<tr height="80">
+						<td height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="1" height="80"></td>
+					</tr>
+
+					<tr height="1">
+						<td height="1" align="LEFT" valign="TOP" bgcolor="Black"><b><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></b></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC"><!--#include virtual="../../botincl1.txt" --></td>
+				<td width="589" valign="top"><!--#include virtual="../../botincl2.txt" --></td>
+				<td width="100%" align="LEFT" valign="TOP"><!--#include virtual="../../botincl3.txt" --></td>
+			</tr>
+		</table>
+		</p></form>
+	</body>
+</html>

@@ -1,0 +1,178 @@
+<!-- styles copied from the site by MaKo, www.mako4css.com -->
+A:link {
+      color: #A52A2A;
+      text-decoration: none;
+     }
+A:hover {
+      color: #999999;
+      text-decoration: none;
+     }
+A.nav:link {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      background: transparent;
+     }
+A.nav:visited {
+      color: #FF8C00;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      background: transparent;
+     }
+A.nav:hover {
+      color: #7FFFD4;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      background: transparent;
+     }
+A.arrow:link {
+      color: #A52A2A;
+      text-decoration: none;
+     }
+A.arrow:visited {
+      color: #A52A2A;
+      text-decoration: none;
+     }
+A.arrow:hover {
+      color: #999999;
+      text-decoration: none;
+     }
+A.singleNav:link {
+      color: #0000FF;
+      text-decoration: none;
+      background: #FFFFFF;
+     }
+A.singleNav:visited {
+      color: #0000FF;
+      text-decoration: none;
+      background: #FFFFFF;
+     }
+A.singleNav:hover {
+      color: #999999;
+      text-decoration: none;
+      background: #FFFFFF;
+     }
+.annotation {
+     font-size: 10px;
+}
+.annotation-head {
+     font-size: 11px;
+     font-weight: bold;
+}
+.bbarPaint {
+      background-color: #FFFF99;
+}
+BODY {
+      background-image: url("http://www.brown.edu/Departments/Italian_Studies/dweb/images/pagedesign/paperbkgnd.jpg");
+      font-family: Palatino, Arial, Verdana, Helvetica, Geneva, sans-serif;
+      margin: 0px;
+     }
+.Content {
+      background-color: #FFFFFF;
+      color: #000088;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding: 5px;
+      font-family: Verdana, Eyechart, Geneva, Arial, Helvetica, sans-serif;
+     }
+.uberContent {
+      margin-left: 140px;
+      margin-top: 8px;
+}
+.current {
+      background-color: #FFB6C1;
+}
+.framing {
+      font-family: Lucida Sans, Eyechart, Geneva, Arial, Helvetica, sans-serif;
+      color:#A52A2A;
+}
+.greenText {
+      color: green;
+     }
+.head-color {
+      background-color: #87CEFA;
+      padding: 6px;
+}
+.hilit {
+      color: red;
+      background-color: yellow;
+     }
+H1 {
+      font-family: Lucida Sans, Eyechart, Geneva, Arial, Helvetica, sans-serif;
+      text-align:left;
+}
+H2 {
+      font-family: Lucida Sans, Eyechart, Geneva, Arial, Helvetica, sans-serif;
+      text-align:left;
+}
+.linkbox {
+      font-size: 12px;
+      padding: 2px;
+      margin: 2px;
+      border-color: #48D1CC;
+      border-style: solid;
+      border-width: 1px;
+      text-align: center;
+     }
+.navcell {
+      text-align: center;
+      background-color: #000088;
+}
+.navbox {
+      font-size: 15px;
+      font-family: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+      background-color: #003399;
+      border-color: #FF6633;
+      border-style: groove;
+      border-width: 2px;
+      padding: 1px;
+      margin: 2px;
+      text-align:center;
+     }
+.tableHead {
+      font-weight: bold;
+}
+.TOC {
+      margin: 10px;
+      top: 170px;
+      left: 3px;
+      bottom: 130px;
+      width: 220px;
+      background-color: #000088;
+      border-color: #000088;
+      color: #000088;
+     }
+.tocbox {
+      font-size: 10px;
+      background-color: #66CCCC;
+      border-color: #48D1CC;
+      color: #000000;
+      border-style: groove;
+      border-width: 2px;
+      padding: 1px;
+      margin: 2px;
+     }
+.toctitle {
+      font-size: 1em;
+      font-family: Lucida Sans, Verdana, Geneva, Helvetica, sans-serif; 
+      line-height: 1.5em;
+      font-weight: bold;
+      color: #A52A2A;
+     }
+.topPaint {
+      background-color: #663300;
+}
+.subsection {
+     font-size: 10px;
+     font-family: Geneva, Verdana, Eyechart, Geneva, Arial, Helvetica, sans-serif;
+     line-height: 20px;
+     font-weight: bold;
+}
+.thesis {
+     font-size: 10px;
+     font-family: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+     line-height: 16px;
+}

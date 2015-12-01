@@ -1,0 +1,108 @@
+***** This README created by Paul Caton, Scholarly Technology Group, March 2004. *****
+
+
+Overview
+--------
+
+The files in this directory are part of a much larger web resource, the Decameron Web. The Decameron Web is run by Brown's Italian Studies department and most of the project's files reside on the Italian Studies server. The Decameron Web homepage is:
+
+http://www.brown.edu/Departments/Italian_Studies/dweb/dweb.shtml
+
+The project is based around Boccaccio's Decameron and the web site contains Italian and English versions of the text. The site also contains two minor Boccaccio texts, the Corbaccio and the Elegia di Madonna Fiammetta (Italian versions only).
+
+The files here do two things for Decameron Web users: (1) display the texts for reading; (2) process search requests and display the results. 
+
+!!! Nb. READ IMPORTANT SECTION 'MAKING CHANGES' BELOW !!!
+
+
+File names and functions
+________________________
+
+The most important function files are named according to the following convention:
+
+     LANGUAGE + WORK + FUNCTION [+ FILETYPE]
+
+and associated pairs of files share the same prefix. Thus:
+
+     itDecShowText.php
+
+applies to the Italian version of the Decameron and handles text display; it is paired with:
+
+     itDecShowText.xsl
+
+The .php file controls the construction of the page that gets returned to the client's browser (nb. see section PHP below). Generally each .php file does the following:
+
+ - calls the appropriate header file (see below)
+ - creates an XSLT process that uses the paired .xsl file to transform the relevant text file into whatever needs to be displayed
+ - calls the footer file (see below)
+
+The two file pairs with the prefixes "showItTrans" and "showEngTrans" do what they say. A user reading a section of the English version of the Decameron can click on a link and the showItTrans.php/showItTrans.xsl file pair will switch the display to the Italian version of that section; similarly the showEngTrans.php/showEngTrans.xsl file pair switches from Italian version to the relevant section in the English version.
+
+Text files
+----------
+
+There are four main text files:
+
+engDecameron.xml
+itDecameron.xml
+itCorbaccio.xml
+itFiammetta.xml
+
+These are the files that the PHP/XSL file pairs work with. They contain entity references in decimal number form (eg. &#224; for "a" + grave accent)
+
+In addition there are four other text files:
+
+engDecWithEnts.xml
+itDecWithEnts.xml
+itCorWithEnts.xml
+itFiaWithEnts.xml
+
+They contain entity references in word form (eg. &agrave;). These files are not used directly but are used to generate the main text files listed above.
+
+
+Header and footer files
+-----------------------
+
+Header files are HTML fragments that help make up the full page that gets sent to the client's browser. They call the decameron .css file, and they contain all the HTML that creates the banner and links at the top of the display. They end by opening a <table>; the footer.html file (just one for the whole directory) simply closes the table with </table>, then closes out the whole page with </body> and </html>.
+
+
+File paths
+----------
+
+All href= values point either to files in this directory (including the gfx subdirectory) or to a different server altogether. There are no paths that reference the server root directory.
+
+
+DTD and validation
+------------------
+
+The main text files are not validated during deliver so the DTD declaration is commented out. In the secondary text files (fooWithEnts.xml) the declaration is not commented out and they can be validated against the DTD. The main DTD file is:
+
+decameron.dtd
+
+also present are some necessary ISO entity files:
+
+iso-lat1.ent
+iso-lat2.ent
+iso-num.ent
+iso-pub.ent
+
+
+PHP
+---
+
+The .php files depend on PHP version 4.1 or later with XML and XSLT enabled in the build. (See www.php.net for information.)
+
+
+Making changes
+--------------
+
+The files on the Italian Studies server have href= values that point to this server and these files. Therefore if any or all of the following happen:
+
+ - the directory is moved to another server
+ - the name of this server is changed
+ - any of the filenames are changed
+
+the appropriate person in the Italian Studies department must be notified with exact details of the change(s) they must make to their files.
+
+Currently (March 2004) Professor Massimo Riva (Massimo_Riva@brown.edu) is the person to contact; he will notify the person responsible for making the changes.
+  

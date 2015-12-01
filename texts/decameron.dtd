@@ -1,0 +1,534 @@
+<!-- this is the Decameron Project working dtd -->
+<!-- 2002-07-10 by Paul: revised to put PERSON and PLACE into a simplified teiHeader; -->
+<!-- * also changed the entity file system paths for move to Tomcat environment; -->
+<!-- 2002-07-03 by Syd: converted to XML: -->
+<!-- * removed omissibality indicators; -->
+<!-- * NAMES -> NMTOKENS -->
+<!-- * all mixed content models that ended in "+" changed to end in "*" -->
+<!-- * quoted an attribute default that was not -->
+<!-- * point directly to XML safe ISO entity sets -->
+<!--01-11: there have been many changes to this working DTD during 00. Unfortunately not documented. It is now time to clean it up and customize it to follow up the encoding of new books:
+Corbaccio and Fiammetta in primis--> 
+<!--99-07-29: revised edition of the Decameron DTD.
+At the moment it is still unclear whether we are going to modify it again to accomodate 
+the encoding of Elegia di Madonna Fiammetta and maybe of Corbaccio-->
+<!--98-06-29: after testing and modifying this DTD, its current version has been moved up to catalog.-->
+<!--98-04-29:  First attempt of DTD for Decameron Web, SGML version, TEI.2 and Teilite-->
+
+
+<!-- **************** PARAMETER ENTITIES *******************		-->
+
+<!ENTITY % globalatts  "id         ID        #IMPLIED
+                        corresp    IDREFS    #IMPLIED
+                        next       IDREF     #IMPLIED
+                        prev       IDREF     #IMPLIED
+                        n          CDATA     #IMPLIED
+                        lang       CDATA     #IMPLIED
+                        rend      (singleq | doubleq | ndash | dguill | sguill | 
+                                   italic | opendash | closedash | notdash | 
+                                   dqopen | dqclose | dqnone)     #IMPLIED"  >
+
+<!ENTITY % linkstuff    "ptr | ref | xptr | xref | anchor | seg"  > 
+
+<!ENTITY % text          "milestone"         >
+
+<!-- ***************** OVERALL STRUCTURE ********************		-->
+
+<!-- This Dtd contains a TeiHeader available to list out all the information
+about the book, its author and the editions currently used and encoded, Italian as the master,
+English as reference (provided with milestones that refer back to the Italian). -->
+
+<!ELEMENT decameron   (teiHeader, text)  >
+<!ATTLIST decameron 
+                     %globalatts;  >
+
+<!-- commenting this out for now
+<!ELEMENT teiHeader   (fileDesc, encodingDesc, profileDesc, revisionDesc)>
+ -->
+<!ELEMENT teiHeader   (fileDesc, profileDesc?)   >
+<!ATTLIST teiHeader  
+                     %globalatts;  >
+<!ELEMENT fileDesc   (#PCDATA)   >
+<!ATTLIST fileDesc  
+                     %globalatts;  >
+<!ELEMENT profileDesc   (particDesc?)   >
+<!ATTLIST profileDesc  
+                     %globalatts;  >
+<!ELEMENT particDesc   (person | place)*   >
+<!ATTLIST particDesc  
+                     %globalatts;  >
+
+<!ELEMENT text   (front, body, back?)  >
+<!ATTLIST text      
+                     %globalatts;   >
+
+<!ELEMENT milestone   EMPTY  >
+<!ATTLIST milestone  
+                     id            ID                  #IMPLIED 
+                     lang          IDREF               #IMPLIED 
+                     rend          CDATA               #IMPLIED 
+                     ed            CDATA               #IMPLIED
+                     n             CDATA               #IMPLIED 
+                     unit          CDATA               #IMPLIED 
+                                                                  >
+
+<!ELEMENT pb   EMPTY>
+
+<!ATTLIST pb 
+                     id            ID                  #IMPLIED 
+                     lang          IDREF               #IMPLIED 
+                     rend          CDATA               #IMPLIED 
+                     ed            CDATA               #IMPLIED
+                     n             CDATA               #IMPLIED 
+                                                                    >     
+
+<!ELEMENT ptr   EMPTY  >
+<!ATTLIST ptr       type           CDATA               #IMPLIED 
+                    resp           CDATA               #IMPLIED 
+                    crdate         CDATA               #IMPLIED 
+                    targType       NMTOKENS               #IMPLIED 
+                    target         IDREFS              #REQUIRED 
+                    %globalatts;                                     >
+
+<!ELEMENT ref   (#PCDATA | date | %linkstuff; | name | num | time | title | q | figure)*  >
+<!ATTLIST ref       type           CDATA               #IMPLIED 
+                    resp           CDATA               #IMPLIED 
+                    crdate         CDATA               #IMPLIED 
+                    targType       NMTOKENS               #IMPLIED 
+                    target         IDREFS              #REQUIRED
+                    %globalatts;                                >
+
+<!ELEMENT xptr   EMPTY  > 
+<!ATTLIST xptr      type           CDATA               #IMPLIED 
+                    resp           CDATA               #IMPLIED 
+                    crdate         CDATA               #IMPLIED 
+                    targType       NMTOKENS               #IMPLIED 
+                    doc            ENTITY              #IMPLIED 
+                    from           CDATA               "ROOT" 
+                    to             CDATA               "DITTO" 
+                    %globalatts;                                  >
+
+<!ELEMENT xref   (#PCDATA | date | %linkstuff; | name | num | time | title | q | figure)*   >
+<!ATTLIST xref      type           CDATA               #IMPLIED 
+                    resp           CDATA               #IMPLIED 
+                    crdate         CDATA               #IMPLIED 
+                    targType       NMTOKENS               #IMPLIED 
+                    doc            ENTITY              #IMPLIED 
+                    from           CDATA               "ROOT" 
+                    to             CDATA               "DITTO" 
+                    %globalatts;                                          >
+                 
+<!ELEMENT anchor   EMPTY  >
+<!ATTLIST anchor    type           CDATA                #IMPLIED 
+                    function       CDATA                #IMPLIED 
+                    id             ID                   #REQUIRED 
+                    n              CDATA                #IMPLIED
+                    lang           CDATA                #IMPLIED
+                    rend           CDATA                #IMPLIED   >
+
+<!ELEMENT seg   (#PCDATA | date | %linkstuff; | name | num | time | title | q | figure)*  >
+<!ATTLIST seg       type         (authorialcomment | commentary | topic | 
+                                  proverb)                                    #IMPLIED 
+                    function       CDATA                                         #IMPLIED 
+                    subtype        CDATA                                         #IMPLIED 
+                    %globalatts;              >
+
+<!-- *****************************************************              -->               
+
+<!-- The outermost structure, or first level, comprises: argument (the socalled "rubrica") 
+and a prefatory matter (Prologue) included in front.-->
+
+<!ELEMENT front   (titlePage?, argument, prologue)  >
+<!ATTLIST front  %globalatts;  >
+
+<!ELEMENT titlePage   (byline | docAuthor | docTitle | titlePart)+ >
+<!ATTLIST titlePage 
+                 %globalatts;  >   
+
+<!--98-05-01: e-mail from Mike Papio: they are not interested into encoding the title page, but
+we want to keep the option open -->
+
+<!ELEMENT argument   (#PCDATA | p)*  >
+<!ATTLIST argument  who              IDREF                       #IMPLIED
+                    %globalatts;  >
+
+<!--TeiLite doesn't have the element prologue, while TEI P3 does.
+Prologue is needed for Decameron and Elegia di Madonna Fiammetta.-->   
+
+<!ELEMENT prologue   (head, (p+)) >
+<!ATTLIST prologue   who              IDREF                       #IMPLIED
+                     %globalatts;                                                >
+
+<!ELEMENT p   (#PCDATA | date | name | note | num | rs | time | emph | foreign | hi | 
+                   title | %linkstuff; | pb | q | %text; | figure)*  >
+<!ATTLIST p      
+                 %globalatts;                                                    >
+
+<!ELEMENT date   (#PCDATA | num | %linkstuff;)*  >
+<!ATTLIST date   calendar          CDATA                           #IMPLIED 
+                 value             CDATA                           #IMPLIED
+                 %globalatts;                                                    > 
+
+<!ELEMENT name   (#PCDATA | code | foreign | hi | %linkstuff;)*  >
+<!ATTLIST name  type          (person | place)                     #IMPLIED      
+                persref            IDREFS                          #IMPLIED    
+                placeref           IDREFS                          #IMPLIED
+                %globalatts;                                                     >
+
+<!ELEMENT note   (#PCDATA | l | lg | note | p | pb | q | %linkstuff;)*  >
+<!ATTLIST note 
+                type CDATA #IMPLIED 
+                target IDREFS #IMPLIED 
+                %globalatts;                                                     >
+
+<!ELEMENT code   (#PCDATA)  >
+<!ATTLIST code 
+                %globalatts;      >
+
+<!ELEMENT foreign   (#PCDATA)  >
+<!ATTLIST foreign    
+                     %globalatts;                                          >
+
+<!ELEMENT hi   (#PCDATA)  >
+<!ATTLIST hi         id      ID                      #IMPLIED 
+                     n       CDATA                   #IMPLIED 
+                     rend    CDATA                   #IMPLIED 
+                     lang    IDREF                   #IMPLIED     >
+
+
+<!ELEMENT num   (#PCDATA) > 
+<!ATTLIST num   type        CDATA                    #IMPLIED 
+                value       CDATA                    #IMPLIED 
+                %globalatts;                                      >
+
+<!ELEMENT rs   (#PCDATA) >
+<!ATTLIST rs  key           CDATA                      #IMPLIED 
+              reg           CDATA                      #IMPLIED 
+              type          CDATA                      #IMPLIED   
+              %globalatts;                                        >
+     
+<!ELEMENT time   (#PCDATA) >
+<!ATTLIST time  value         CDATA                     #IMPLIED 
+                type (am | pm | 24hour | descriptive)   #IMPLIED 
+                zone         CDATA                      #IMPLIED 
+                %globalatts;                                       >
+
+<!ELEMENT emph   (#PCDATA)  >
+<!ATTLIST emph 
+               %globalatts;                                        >
+
+<!ELEMENT title   (#PCDATA | foreign)*  >
+<!ATTLIST title  type         CDATA                     #IMPLIED
+                  %globalatts;                                     >
+
+<!ELEMENT q   (#PCDATA | emph | foreign | hi | lg | l |  name | note | p | 
+                 pb | q | title | %text; | %linkstuff;)*  >
+
+<!ATTLIST q    type       (internalmonologue | novella | othervoice | 
+                          prayer | proverb | song | mentioned)           #IMPLIED 
+               direct     (y | n | unspecified)                          "unspecified" 
+               who            IDREFS                                     #IMPLIED    
+               %globalatts;                                         >
+
+<!ELEMENT figure   (head?, p*, figDesc?)  >
+<!ATTLIST figure  entity      ENTITY                     #IMPLIED
+                  %globalatts;                                      >
+
+<!ELEMENT figDesc   (#PCDATA | %linkstuff;)*  >
+<!ATTLIST figDesc
+                 %globalatts;                                      >
+
+<!-- ***************************************************************  -->
+
+<!--the body of the text contains also the epilogue and the trailer to the book.
+These elements appear to be at the same level of Days, but not entirely part
+of a Day-->
+
+<!ELEMENT body   (pb?, (div1+), epilogue?, trailer?)>
+
+<!--05/08-->
+
+<!--TeiLite doesn't have the element epilogue, while TEI P3 does. 
+Even though, like prologue, it may occur within: back front, it may also be 
+included in the body of the text, when it appears to be integrated in it.
+Epilogue is needed only for Decameron-->
+
+<!ELEMENT epilogue   (pb?, head, (p+)) >
+<!ATTLIST epilogue   who              IDREF                       #IMPLIED
+                     %globalatts;                                                >
+
+<!ELEMENT trailer   (#PCDATA | p | name | foreign | title | %linkstuff;)*>
+<!ATTLIST trailer  
+                   %globalatts;                                          >
+
+                      
+                         <!--**-->
+
+<!-- The second level of nesting is represented by a div type="day". Each day contains: a head, with 
+a progressive number from 1 to 10; a prefatory matter (Introduction) called "Introduzione"; 10 div
+type="novella";  and a conclusive matter, with a head: "Conclusione alla n. giornata",
+with a progressive n. from 1 to 10. Each conclusive matter in this level contains a song -->
+
+<!--11-19: extremely changed the encoding of div1 to allow proper encoding of corbaccio-->
+
+<!ELEMENT div1   (pb?, head, argument?, (div2 | div3 | lg | p | pb | q | %linkstuff; | %text;)+)  >
+<!ATTLIST div1     type             (Day | book | chapter)       "chapter"
+                   ruler            IDREF              #IMPLIED
+                   %globalatts;                                                     >
+
+
+
+<!ELEMENT head   (#PCDATA | %linkstuff;)*   > 
+<!ATTLIST head     type             CDATA              #IMPLIED 
+                   %globalatts;                                     >
+
+
+                         <!--**-->
+                    
+<!-- The third level of nesting is represented by the div type="novella". 
+Each novella contains 
+an argument at its very start, followed by a set of paragraphs which, normally, start with 
+Boccaccio's commenting voice introducing a narrator, whom, after having expressed a comment,
+starts narrating the novella itself -->
+
+<!ELEMENT div2   (head, argument?, (div3 | lg | p | pb | q | %linkstuff; | %text;)+)  >
+<!ATTLIST div2    type              (introduction | awakening | chapter | 
+                                     dream | novella | conclusion | epilogue | 
+                                     section)                                     "section"
+                  
+                  who                IDREF                                        #IMPLIED
+                  %globalatts;                                                              >
+
+<!-- who contains an idref that points to a specific narrator whose desciption would be 
+presented in the file containing a list of people and places-->    
+
+<!ELEMENT div3   ((lg | note | p | pb | q | %linkstuff; | %text;)+)  >
+<!ATTLIST div3   
+                who                   IDREF                              #IMPLIED
+                type    (commentary | epilogue  | letter | prayer  | 
+                         prologue  
+                         | proverb  | section | song | story | unknown  
+                         | introduction | novella | conclusion)           #REQUIRED 
+                          
+                %globalatts;                                                         >
+
+<!ELEMENT lg   (#PCDATA | l | lg | note | pb | %linkstuff; | %text;)*  >
+<!ATTLIST lg
+                who                   IDREF                              #IMPLIED    
+                %globalatts;   >
+
+<!ELEMENT l   (#PCDATA | note | q | %linkstuff; | %text;)*  >
+<!ATTLIST l    
+                %globalatts;   >
+
+
+
+
+
+<!-- ********************************************************************** -->
+
+<!-- The element back retained for convenience PC 07/10/02 -->
+
+<!ELEMENT back   (#PCDATA)     >
+<!ATTLIST back   
+                %globalatts;    >
+
+<!-- ********************************************************************** -->
+
+<!--Here are listed all the attributes for the elements person and place. 
+The element person is declared in TEI P3, while the element place is not. 
+We organized this section of the Dtd to meet the need of displaying a database file
+of people and places.. 
+The attributes persref and placeref point to identical
+ids in a list containing data for each encoded person or place.-->
+<!--98-10-26: added a new element to person called REL, in order to allow us to encode
+relationships among relatives.-->
+<!--99-06-20: the DTD attribute order of BACK has been reversed to allow correct encoding order 
+in back.sgm. Problems have started with the installation of the new version of Xemacs-->
+<!--11-01: changed role and estate that were correctly defaulted to "unknown" and unspecified" 
+to the loose #IMPLIED, in order not to have INDICE DEI NOMI in Corbaccio and Fiammetta appear 
+filled with these unuseful values. Trying not to have to modify the complex code Kim devised for Indice
+dei Nomi-->
+<!-- 02-07-10: took PERSON and PLACE out of BACK and put them in PARTICDESC in PROFILEDESC,
+both simplified versions of the TEI elements PC -->  
+   
+<!ELEMENT person   (#PCDATA | rel | disguise | orig)*  > 
+<!ATTLIST person
+
+                  %globalatts;
+
+                personification  CDATA                                        #IMPLIED
+
+                mythological     CDATA                                        #IMPLIED
+
+                historical       CDATA                                        #IMPLIED
+
+                biblical         CDATA                                        #IMPLIED
+
+                legendary        (arthurian-cycle | carolingian-cycle|
+                                  trojan-cycle | other)                        #IMPLIED                 
+
+                  type           (biblical | fictional | 
+                                  generic-speaker | historical | 
+                                  literary-historical | 
+                                  mythological | saint)                            #IMPLIED
+
+                  brigata        (yes | no)                                        #IMPLIED
+
+                  religion       (christian | jew | muslim | pagan | another)      #IMPLIED
+
+                  sexorientation (homosexual | bisexual)                           #IMPLIED
+
+                  status         (married | unmarried | unmarried-to-married)      #IMPLIED
+
+                  sex            (m |f)                                            #IMPLIED
+                
+                  condition      (mentally-ill | temporarily-ill | 
+                                  temporarily-imprisoned | alive-deceased | 
+                                  ill-deceased | deceased | indigent)              #IMPLIED 
+
+                  age             (child | youth | adult | elder |
+                                   child-youth | child-adult | child-elder |
+                                   youth-adult | youth-elder | adult-elder)        #IMPLIED
+
+                  role           (emperor | sultan | king | queen | prince |  
+                                  princess | duke | duchess | count | 
+                                  countess | lord | knight |  
+                                  soldier | courtier | jester | 
+                                  abbot | admiral | angel | artisan | artist | 
+                                  bath-matron |
+                                  churchauthority | 
+                                  cityauthority | doctor | family |
+                                  farm-worker | hermit | historian |
+                                  housewife | innkeeper | intermediary |
+                                  legalauthority |
+                                  magician | maiden | merchant | monk | murderer |
+                                  nun | outlaw | moneylender | pander | people |
+                                  peasant | philosopher | pirate | pope | 
+                                  preacher | prostitute | religiousauthority |
+                                  sailor | scholar | 
+                                  servant | steward | treasurer |
+                                  widow | writer | yeoman | unspecified)           #IMPLIED
+
+                  estate         (royalty | noble | religious | military | 
+                                  mercantile | plebeian | poor | unknown)         #IMPLIED 
+
+                  origin          CDATA                                            #IMPLIED                                       
+                                                                                           >
+
+<!ELEMENT rel   EMPTY  >
+<!ATTLIST rel 
+                   
+                   which           IDREFS                                           #IMPLIED
+
+                   whom            IDREFS                                           #IMPLIED
+
+                   type           (brother | cousin | father | grandfather | 
+                                   grandson | 
+                                   guardian | husband | nephew |  son | uncle |
+                                   ward |
+                                   aunt | daughter | granddaughter | 
+                                   grandmother | mother | niece | sister | 
+                                   wife | friend |
+                                   relative | family | 
+                                   lover | loved-by | murderer | 
+                                   servant | 
+                                   closeto | inside | around)                       #IMPLIED
+                                                               >
+<!ELEMENT disguise   EMPTY  >
+<!ATTLIST disguise
+
+                  %globalatts; 
+                  
+                  disguisename    CDATA                                            #IMPLIED
+
+                  religion       (christian | jew | muslim | pagan)                #IMPLIED
+
+                  status         (married | unmarried | unmarried-to-married)      #IMPLIED
+
+                  sex            (m |f)                                           "m"
+
+                  condition      (mentally-ill | temporarily-ill | 
+                                  temporarily-imprisoned | alive-deceased | 
+                                  ill-deceased | deceased | indigent)              #IMPLIED
+
+                  age             (child | youth | adult | elder |
+                                   child-youth | child-adult | child-elder |
+                                   youth-adult | youth-elder | adult-elder)        #IMPLIED 
+
+                   role           CDATA                                            #IMPLIED
+
+                  estate         (royalty | noble | religious | military | 
+                                  mercantile | plebeian | poor | unknown)         "unknown" 
+
+                  origin          CDATA                                           #IMPLIED                                                                                                                   
+                                                                          >      
+
+<!--************************-->
+
+<!ELEMENT place   (#PCDATA | rel | orig)*  >
+<!ATTLIST place   
+                  %globalatts;
+
+                  imaginary        (yes | no)                                        #IMPLIED
+           
+                  othcity          CDATA                                             #IMPLIED
+
+                  othreg           CDATA                                             #IMPLIED
+
+                  geograficarea  (Iberia | France | England-Ireland-Scotland | 
+                                 NorthEurope-EastEurope | Central-Europe | 
+                                 Italy | Greece-Balkans | 
+                                 Aegean-islands | Turkey-AsiaMinor | 
+                                 Cyprus-Levant | 
+                                 NorthAfrica | MidEast-FarEast)                      #IMPLIED
+
+                  itcity           CDATA                                             #IMPLIED
+
+                  itreg          (Piedmont | Aosta | Lombardy | Veneto |
+                                 Trent-UpperAdige | Friuli-VenetiaJulia |
+                                 Liguria | Emilia-Romagna | Tuscany | Marches |
+                                 Umbria | Latium | Abruzzi | Molise | Campania |
+                                 Apulia | Basilicata | Calabria | Sicily | 
+                                 Sardinia)                                           #IMPLIED                 
+
+                  type           (area | bridge | cape | castle | church | 
+                                  city | convent | 
+                                  contrada | country | countryside | county | 
+                                  fief | forest | 
+                                  fountain | garden | gate | hamlet | harbour | 
+                                  hill |
+                                  hospital | island | lake | lawn | loggia |
+                                  mill | monastery |
+                                  mountain | neighborhood | planet | 
+                                  region | river |  
+                                  sea | square | stream | street-lane | 
+                                  tree | valley | villa |
+                                  wood)                                              #IMPLIED
+                                                                       >                                                     
+           
+                                                                   
+<!ELEMENT orig   EMPTY  >
+<!ATTLIST orig
+                 %globalatts;
+                 resp             CDATA                                            #IMPLIED                                 reg              CDATA                                            #IMPLIED
+                 
+                                                                          >
+
+
+ <!-- ***************** GENERAL ENTITIES ********************		-->
+
+<!-- we need just the plain first set of ISO Latin 1 entities to be able to reproduce accented 
+Italian letters. We get them in here -->  
+
+<!ENTITY % isolat1 SYSTEM "iso-lat1.ent" >
+     %isolat1;
+
+<!ENTITY % ISOlat2 SYSTEM "iso-lat2.ent" >
+     %ISOlat2;
+
+<!ENTITY % ISOnum SYSTEM "iso-num.ent" >
+     %ISOnum;
+
+<!ENTITY % ISOpub SYSTEM "iso-pub.ent" >
+     %ISOpub;

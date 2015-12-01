@@ -1,0 +1,401 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<title>Concordance to the Decameron</title>
+<!--#include virtual="../../sideinclude.txt" -->
+	</head>
+	<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" background="../../images/pagedesign/paperbkgnd.jpg" link="#990000" alink="#663202" vlink="#663202" bgcolor="#FFFFFF" onload="CSScriptInit();">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+			<tr>
+				<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC">
+					<table border="0" cellpadding="0" cellspacing="0" width="156">
+						<tr height="80">
+							<td width="156" height="80" align="LEFT" valign="BOTTOM" bgcolor="#663202"><img src="../../images/pagedesign/content_topheader_painting.gif" width="156" height="80"></td>
+						</tr>
+						<tr height="1">
+							<td width="156" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						</tr>
+						<tr>
+							<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC"><img src="../../images/pagedesign/content_menu_head_texts.gif" width="156" height="44"><br>
+										  <!--#include virtual="../../sidemenuincl.txt" --></td>
+						</tr>
+					</table>
+				</td>
+				<td width="589" valign="TOP"><table border="0" cellpadding="0" cellspacing="0" width="589">
+
+					<tr height="80">
+						<td width="1" height="80" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="20"></td>
+						<td width="20" height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="20" height="80"></td>
+						<td width="306" height="80" align="LEFT" valign="BOTTOM" bgcolor="#663202"><a href="../../dweb.shtml"><img src="../../images/pagedesign/content_topheader_logo.gif" width="306" height="80" border="0"></a></td>
+						<td width="20" height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="20" height="80"></td>
+						<td width="237" height="80" align="LEFT" valign="MIDDLE" bgcolor="#663202"><table border="0" cellpadding="0" cellspacing="0" width="182">
+
+							<tr>
+								<td><form method="get" action="http://www.google.com/u/brown" target="_top">
+								<input type="hidden" name="hq" value="inurl:www.brown.edu/Departments/Italian_Studies/dweb/" /><img src="../../images/pagedesign/content_sitesearch.gif" width="125" height="9"><br>
+								<input size="30" name="query" value="" /></td>
+							</tr>
+
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+
+					<tr height="1">
+						<td width="1" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="306" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="237" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+					</tr>
+
+					<tr>
+						<td width="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" align="LEFT" valign="TOP"><img src="../../images/pagedesign/clearspacer.gif" width="20" height="362"></td>
+						<td width="543" align="LEFT" valign="TOP" colspan="3">
+<p class="headerstyle"><br>The Online Concordance to the <i>Decameron</i></p>
+<p>
+This thoroughgoing concordance is intended to provide scholars, teachers and students with a reliable and easily accessible lexical index of Boccaccio's masterpiece. Until now, this sort of inventory was available only in the edition compiled by Alfredo Barbina under the direction of Umberto Bosco (<i>Concordanze del "Decameron"</i>, 2 vol., Firenze, Giunti, 1969). Since this work has for many years been out of print and is currently held by relatively few North American libraries, however, the editors of the <i>Decameron</i> Web decided to produce a new version, based on Branca's updated edition, for the benefit of readers around the world. In addition to its immediate availability, this concordance differs from Barbina's in a couple of other ways as well. We have chosen the KWIC format (key words in context) for display so that users may more easily find combinations that interest them, e.g. <i>s&iacute; come</i>, <i>s&iacute; fatto</i> and so on. All words are listed in alphabetical order rather than being grouped with infinitives or masculine singular forms. In this way, users can quickly locate specific verbs and adjectives by number and gender. Those interested in all forms of a specific verb or adjective should consult the lexicon (in <a href="lexicon.pdf">PDF</a> or <a href="lexicon.zip">ZIP</a> format) where they may browse all the words that appear in the <i>Decameron</i>. Many of the unusual forms that may be missed, as well as variant spellings, have been cross-referenced for convenience. As a general rule, if an uncommon form does not appear at a reasonable distance from its relative, an indication will be provided. Note, however, that we have taken it for granted that readers of the <i>Decameron</i> are already familiar with frequent medieval spellings and complete verb conjugations. Some of the most frequent words have been eliminated. These include most subject pronouns, possessive adjectives, articles, prepositions, some selected adverbs such as <i>non</i>, object pronouns including <i>ci</i> and <i>ne</i>, and a small selection of very common conjunctions such as <i>ma</i>, <i>e</i> and <i>o</i>. When in doubt, the user should consult the lexicon. Note that names are not separated unless, as in the case of Can Grande, they may be mistaken for another word.
+<p>
+We have attempted to distinguish homographs as clearly as possible. Abbreviations commonly used include <i>adj.</i> (adjective), <i>adv.</i> (adverb), <i>interj.</i> (interjection), <i>n.</i> (noun), <i>p.p.</i> (past participle), <i>pr.</i> (pronoun), <i>num.</i> (number), <i>v.</i> (verb form), <i>&lt;</i> (derives from) and <i>cf.</i> (<i>confer</i> or compare).
+<p>
+<table cellpadding="5"><tr><td>
+<b>IMPORTANT:</b> Because there are over 17,000 unique words in the <i>Decameron</i>, a comprehensive concordance such as this one is quite large. We have striven to make this index as easy to use and as user-friendly as possible. We suggest that our visitors take a look at the <a href="features.shtml">overview of its features</a> before beginning their research. In order to make searches easier and downloads faster, we have cut the volume into forty smaller documents. Nevertheless, each document is roughly one hundred pages in length. Due to the configuration of Brown's server, some browsers display PDF documents of this size as blank pages and sometimes even crash. Should you encounter such problems, please consult the <a href="help.shtml">help page</a>.</td>
+<td align="center"><a href="http://www.adobe.com/products/acrobat/readstep2.html"><img src="help/getacro.gif" border="0"></a><br>ENGLISH
+<p>
+<a href="http://www.adobe.it/products/acrobat/readstep.html"><img src="help/getacro.gif" border="0"></a><br>ITALIANO</td>
+</tr>
+<tr><td colspan="2" align="right">(M.P.)</td></tr>
+</table>
+<p>
+&nbsp;<br>
+		  <center>
+<table border cellspacing=1 cellpadding=7>
+<tr><td valign="TOP">
+<b><p>Name or Range</b></td>
+<td valign="TOP">
+<b><p align="CENTER">PDF (size in K)</b></td>
+<td valign="TOP">
+<b><p align="CENTER">ZIP (size in K)</b></td>
+</tr>
+<tr><td valign="TOP" colspan="3">&nbsp;</td>
+</tr>
+<tr><td valign="TOP">
+<p>lexicon</td>
+<td valign="TOP">
+<p align="CENTER"><a href="lexicon.pdf">347</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="lexicon.zip">200</a></td>
+</tr>
+<tr><td valign="TOP" colspan="3">&nbsp;</td>
+</tr>
+<tr><td valign="TOP">
+<p>ab-allora</td>
+<td valign="TOP">
+<p align="CENTER"><a href="ab-allora.pdf">361</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="ab-allora.zip">276</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>allori-andata</td>
+<td valign="TOP">
+<p align="CENTER"><a href="allori-andata.pdf">384</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="allori-andata.zip">299</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>andataci-avanti</td>
+<td valign="TOP">
+<p align="CENTER"><a href="andataci-avanti.pdf">386</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="andataci-avanti.zip">297</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>avanza-battuto</td>
+<td valign="TOP">
+<p align="CENTER"><a href="avanza-battuto.pdf">379</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="avanza-battuto.zip">293</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>bazzica-camino</td>
+<td valign="TOP">
+<p align="CENTER"><a href="bazzica-camino.pdf">369</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="bazzica-camino.zip">285</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>camisci-ch'</td>
+<td valign="TOP">
+<p align="CENTER"><a href="camisci-ch.pdf">290</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="camisci-ch.zip">225</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>che-cheggia</td>
+<td valign="TOP">
+<p align="CENTER"><a href="che-cheggia.pdf">763</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="che-cheggia.zip">579</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>cheggio-cominci</td>
+<td valign="TOP">
+<p align="CENTER"><a href="cheggio-cominci.pdf">487</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="cheggio-cominci.zip">373</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>comincia-convento</td>
+<td valign="TOP">
+<p align="CENTER"><a href="comincia-convento.pdf">319</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="comincia-convento.zip">244</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>conventuale-croce</td>
+<td valign="TOP">
+<p align="CENTER"><a href="conventuale-croce.pdf">378</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="conventuale-croce.zip">293</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>crocetta-dilettevoli</td>
+<td valign="TOP">
+<p align="CENTER"><a href="crocetta-dilettevoli.pdf">375</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="crocetta-dilettevoli.zip">291</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>diletti-diterminato</td>
+<td valign="TOP">
+<p align="CENTER"><a href="diletti-diterminato.pdf">364</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="diletti-diterminato.zip">279</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>diti-dovete</td>
+<td valign="TOP">
+<p align="CENTER"><a href="diti-dovete.pdf">368</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="diti-dovete.zip">284</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>doveva-entri</td>
+<td valign="TOP">
+<p align="CENTER"><a href="doveva-entri.pdf">401</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="doveva-entri.zip">314</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>entrivi-faentina</td>
+<td valign="TOP">
+<p align="CENTER"><a href="entrivi-faentina.pdf">382</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="entrivi-faentina.zip">298</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>faenza-ferrara</td>
+<td valign="TOP">
+<p align="CENTER"><a href="faenza-ferrara.pdf">376</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="faenza-ferrara.zip">293</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>ferri-frutto</td>
+<td valign="TOP">
+<p align="CENTER"><a href="ferri-frutto.pdf">354</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="ferri-frutto.zip">273</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>fu-giucava</td>
+<td valign="TOP">
+<p align="CENTER"><a href="fu-giucava.pdf">378</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="fu-giucava.zip">293</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>giudaica-impedito</td>
+<td valign="TOP">
+<p align="CENTER"><a href="giudaica-impedito.pdf">365</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="giudaica-impedito.zip">282</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>impediva-lasciano</td>
+<td valign="TOP">
+<p align="CENTER"><a href="impediva-lasciano.pdf">353</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="impediva-lasciano.zip">270</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>lasciar-mala</td>
+<td valign="TOP">
+<p align="CENTER"><a href="lasciar-mala.pdf">368</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="lasciar-mala.zip">284</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>maladetta-messegli</td>
+<td valign="TOP">
+<p align="CENTER"><a href="maladetta-messegli.pdf">360</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="maladetta-messegli.zip">279</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>messer-mostratore</td>
+<td valign="TOP">
+<p align="CENTER"><a href="messer-mostratore.pdf">369</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="messer-mostratore.zip">285</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>mostrava-ognuna</td>
+<td valign="TOP">
+<p align="CENTER"><a href="mostrava-ognuna.pdf">371</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="mostrava-ognuna.zip">288</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>ognuno-parola</td>
+<td valign="TOP">
+<p align="CENTER"><a href="ognuno-parola.pdf">361</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="ognuno-parola.zip">280</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>parole-piacevano</td>
+<td valign="TOP">
+<p align="CENTER"><a href="parole-piacevano.pdf">365</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="parole-piacevano.zip">283</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>piacevi-portatori</td>
+<td valign="TOP">
+<p align="CENTER"><a href="piacevi-portatori.pdf">377</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="piacevi-portatori.zip">293</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>portatovi-proda</td>
+<td valign="TOP">
+<p align="CENTER"><a href="portatovi-proda.pdf">372</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="portatovi-proda.zip">288</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>prodezza-quanta</td>
+<td valign="TOP">
+<p align="CENTER"><a href="prodezza-quanta.pdf">373</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="prodezza-quanta.zip">288</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>quante-quindi</td>
+<td valign="TOP">
+<p align="CENTER"><a href="quante-quindi.pdf">388</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="quante-quindi.zip">302</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>quindici-rifermati</td>
+<td valign="TOP">
+<p align="CENTER"><a href="quindici-rifermati.pdf">344</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="quindici-rifermati.zip">262</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>rifinava-santi</td>
+<td valign="TOP">
+<p align="CENTER"><a href="rifinava-santi.pdf">337</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="rifinava-santi.zip">257</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>santissima-sentire</td>
+<td valign="TOP">
+<p align="CENTER"><a href="santissima-sentire.pdf">358</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="santissima-sentire.zip">276</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>sentirebbe-sola</td>
+<td valign="TOP">
+<p align="CENTER"><a href="sentirebbe-sola.pdf">377</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="sentirebbe-sola.zip">293</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>solamente-stette</td>
+<td valign="TOP">
+<p align="CENTER"><a href="solamente-stette.pdf">397</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="solamente-stette.zip">305</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>stettero-tornatosi</td>
+<td valign="TOP">
+<p align="CENTER"><a href="stettero-tornatosi.pdf">392</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="stettero-tornatosi.zip">300</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>tornava-uomini</td>
+<td valign="TOP">
+<p align="CENTER"><a href="tornava-uomini.pdf">407</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="tornava-uomini.zip">314</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>uomo-vergognava</td>
+<td valign="TOP">
+<p align="CENTER"><a href="uomo-vergognava.pdf">401</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="uomo-vergognava.zip">311</a></td>
+</tr>
+<tr><td valign="TOP">
+<p>vergogne-zuffa</td>
+<td valign="TOP">
+<p align="CENTER"><a href="vergogne-zuffa.pdf">407</a></td>
+<td valign="TOP">
+<p align="CENTER"><a href="vergogne-zuffa.zip">316</a></td>
+</tr>
+</table>
+</center>
+<p>		
+<p class="headerstyle">
+<a href="http://www.brown.edu/decameron">Main</a>: <a href="../dec_ov.shtml">Texts</a>: Online Concordance</br>
+<img src="../../images/pagedesign/clearspacer.gif" width="306" height="30"></p>		
+<!--***************************text ends here*******************************-->
+</td>
+						
+					</tr>
+				</table>
+				</td>
+				<td width="100%" align="LEFT" valign="TOP"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="81">
+
+					<tr height="80">
+						<td height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="1" height="80"></td>
+					</tr>
+
+					<tr height="1">
+						<td height="1" align="LEFT" valign="TOP" bgcolor="Black"><b><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></b></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC"><!--#include virtual="../../botincl1.txt" --></td>
+				<td width="589" valign="top"><!--#include virtual="../../botincl2.txt" --></td>
+				<td width="100%" align="LEFT" valign="TOP"><!--#include virtual="../../botincl3.txt" --></td>
+			</tr>
+		</table>
+		</p></form>
+	</body>
+</html>

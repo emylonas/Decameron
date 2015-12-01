@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Risorgimento Papers"
+AuthUserFile /www/data/httpd/htdocs/Departments/Italian_Studies/dweb/risorgimento_conf/.pass
+Require user participant 

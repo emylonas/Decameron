@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<title>Help: Concordance to the Decameron</title>
+<!--#include virtual="../../sideinclude.txt" -->
+	</head>
+	<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" background="../../images/pagedesign/paperbkgnd.jpg" link="#990000" alink="#663202" vlink="#663202" bgcolor="#FFFFFF" onload="CSScriptInit();">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+			<tr>
+				<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC">
+					<table border="0" cellpadding="0" cellspacing="0" width="156">
+						<tr height="80">
+							<td width="156" height="80" align="LEFT" valign="BOTTOM" bgcolor="#663202"><img src="../../images/pagedesign/content_topheader_painting.gif" width="156" height="80"></td>
+						</tr>
+						<tr height="1">
+							<td width="156" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						</tr>
+						<tr>
+							<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC"><img src="../../images/pagedesign/content_menu_head_texts.gif" width="156" height="44"><br>
+										  <!--#include virtual="../../sidemenuincl.txt" --></td>
+						</tr>
+					</table>
+				</td>
+				<td width="589" valign="TOP"><table border="0" cellpadding="0" cellspacing="0" width="589">
+
+					<tr height="80">
+						<td width="1" height="80" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="20"></td>
+						<td width="20" height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="20" height="80"></td>
+						<td width="306" height="80" align="LEFT" valign="BOTTOM" bgcolor="#663202"><a href="../../dweb.shtml"><img src="../../images/pagedesign/content_topheader_logo.gif" width="306" height="80" border="0"></a></td>
+						<td width="20" height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="20" height="80"></td>
+						<td width="237" height="80" align="LEFT" valign="MIDDLE" bgcolor="#663202"><table border="0" cellpadding="0" cellspacing="0" width="182">
+
+							<tr>
+								<td><form method="get" action="http://www.google.com/u/brown" target="_top">
+								<input type="hidden" name="hq" value="inurl:www.brown.edu/Departments/Italian_Studies/dweb/" /><img src="../../images/pagedesign/content_sitesearch.gif" width="125" height="9"><br>
+								<input size="30" name="query" value="" /></td>
+							</tr>
+
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+
+					<tr height="1">
+						<td width="1" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="306" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="237" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+					</tr>
+
+					<tr>
+						<td width="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" align="LEFT" valign="TOP"><img src="../../images/pagedesign/clearspacer.gif" width="20" height="362"></td>
+						<td width="543" align="LEFT" valign="TOP" colspan="3">
+<p class="headerstyle"><br>
+Concordance Help</p>
+<p>
+If you experience problems while downloading the Acrobat PDF files within your browser, you may right-click on the link to download the file outside your browser or download the ZIP versions of the concordance and open them locally. Alternatively, you may set up Acrobat as a helper application. Follow the instructions below to carry out this procedure in Acrobat 5.0. If you have another version of the Reader, consult your program documentation.
+<p>
+<b>Setting up Acrobat 5.0 as a helper application</b>
+<p>
+If your Web browser does not display PDF documents properly in the browser window, or if you prefer not to view PDF documents in the Web browser, you can set up Acrobat as a helper application in your browser's preferences. Then, when you view a PDF document on the Web, Acrobat will start and display the document. When Acrobat works as a helper application, you cannot use page-at-a-time downloading, form submittal in a browser, or search highlighting on the Web, and you cannot view embedded PDF documents.<br>
+To set up your Web browser to recognize PDF files, you must define a MIME type and a file type. The file type should be pdf. The MIME type should be application/pdf. See your browser's documentation for information on configuring it.<br>
+If you are using Netscape Navigator 2.0 or later with Windows or on a Macintosh, and if you want to use Acrobat as a helper application, rename the PDFViewer plug-in or delete it from the Netscape plug-in folder. The plug-in is named nppdf32.dll (Windows) or PDFViewer (Mac OS).<br>
+<b>Note:</b> This is not necessary in Mac OS.<br>
+<b>To use Acrobat as a helper application in Windows:</b><br>
+1 Choose File > Preferences > General.<br>
+2 Deselect Web Browser Integration, and click OK.
+<p>
+<b>Impostazione di Acrobat Reader 5.0 come applicazione di aiuto</b>
+<p>
+Se il browser Web non visualizza in modo appropriato i documenti PDF nella finestra del browser, oppure se si preferisce non visualizzare i documenti PDF nel browser Web, &egrave; possibile impostare Acrobat Reader come applicazione di aiuto nelle preferenze del browser. Quindi, quando si visualizza un documento PDF sul Web, Acrobat Reader avvier&agrave; la visualizzazione del documento. Quando Acrobat Reader funziona come applicazione di aiuto, non &egrave; possibile utilizzare la Visualizzazione Web veloce, inoltrare moduli in un browser oppure eseguire evidenziazioni di ricerca sul Web. &Egrave; possibile impostare una preferenza di opzione in modo che tutti i documenti PDF sul Web si aprano in una nuova finestra di Acrobat Reader.<br>
+Per impostare il browser Web in modo che riconosca i file PDF, &egrave; necessario definire un tipo MIME e un tipo di file. Il tipo di file deve essere pdf. Il tipo MIME deve essere applicazione/pdf. Consultare la documentazione del browser per informazioni sulle modalit&agrave; di configurazione.<br>
+Questa procedura &egrave; fondamentale soprattutto se si utilizza Netscape 6.0. Se si utilizza Netscape Navigator 4.0 o versione successiva e si desidera utilizzare Acrobat Reader come applicazione di aiuto, ridenominare il modulo aggiuntivo PDFViewer oppure eliminarlo dalla cartella del modulo aggiuntivo di Netscape. Il modulo aggiuntivo si chiama nppdf32.dll (Windows) o PDFViewer (Mac OS).<br>
+<b>Nota:</b> non è necessario eseguire questa operazione in Mac OS.<br>
+<b>Per utilizzare Acrobat Reader come applicazione di aiuto in Windows:</b><br>
+1 Scegliere Modifica > Preferenze e selezionare Opzioni.<br>
+2 Deselezionare Visualizza PDF nel browser e fare clic su OK.
+<p class="headerstyle">
+<a href="http://www.brown.edu/decameron">Main</a>: <a href="../dec_ov.shtml">Texts</a>: <a href="index.shtml">Online Concordance</a>: Help</br>
+<img src="../../images/pagedesign/clearspacer.gif" width="306" height="30"></p>
+<!--***************************text ends here*******************************-->
+</td>
+						
+					</tr>
+				</table>
+				</td>
+				<td width="100%" align="LEFT" valign="TOP"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="81">
+
+					<tr height="80">
+						<td height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="1" height="80"></td>
+					</tr>
+
+					<tr height="1">
+						<td height="1" align="LEFT" valign="TOP" bgcolor="Black"><b><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></b></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC"><!--#include virtual="../../botincl1.txt" --></td>
+				<td width="589" valign="top"><!--#include virtual="../../botincl2.txt" --></td>
+				<td width="100%" align="LEFT" valign="TOP"><!--#include virtual="../../botincl3.txt" --></td>
+			</tr>
+		</table>
+		</p></form>
+	</body>
+</html>

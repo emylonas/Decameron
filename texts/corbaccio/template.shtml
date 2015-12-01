@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<title>Corbaccio</title>
+<!--#include virtual="../../sideinclude.txt" -->
+	</head>
+	<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" background="../../images/pagedesign/paperbkgnd.jpg" link="#990000" alink="#663202" vlink="#663202" bgcolor="#FFFFFF" onload="CSScriptInit();">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+			<tr>
+				<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC">
+					<table border="0" cellpadding="0" cellspacing="0" width="156">
+						<tr height="80">
+							<td width="156" height="80" align="LEFT" valign="BOTTOM" bgcolor="#663202"><img src="../../images/pagedesign/content_topheader_painting.gif" width="156" height="80"></td>
+						</tr>
+						<tr height="1">
+							<td width="156" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						</tr>
+						<tr>
+							<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC"><img src="../../images/pagedesign/content_menu_head_texts.gif" width="156" height="50"><br>
+								<!--#include virtual="../../sidemenuincl.txt" --></td>
+						</tr>
+					</table>
+				</td>
+				<td width="589" valign="TOP"><table border="0" cellpadding="0" cellspacing="0" width="589">
+
+					<tr height="80">
+						<td width="1" height="80" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="20"></td>
+						<td width="20" height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="20" height="80"></td>
+						<td width="306" height="80" align="LEFT" valign="BOTTOM" bgcolor="#663202"><a href="../../dweb.shtml"><img src="../../images/pagedesign/content_topheader_logo.gif" width="306" height="80" border="0"></a></td>
+						<td width="20" height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="20" height="80"></td>
+						<td width="237" height="80" align="LEFT" valign="MIDDLE" bgcolor="#663202"><table border="0" cellpadding="0" cellspacing="0" width="182">
+
+							<tr>
+								<td><form method="get" action="http://www.google.com/u/brown" target="_top">
+								<input type="hidden" name="hq" value="inurl:www.brown.edu/Departments/Italian_Studies/dweb/" /><img src="../../images/pagedesign/content_sitesearch.gif" width="125" height="9"><br>
+								<input size="30" name="query" value="" /></td>
+							</tr>
+
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+
+					<tr height="1">
+						<td width="1" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="306" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="237" height="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+					</tr>
+
+					<tr>
+						<td width="1" align="LEFT" valign="TOP" bgcolor="Black"><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></td>
+						<td width="20" align="LEFT" valign="TOP"><img src="../../images/pagedesign/clearspacer.gif" width="20" height="411"></td>
+						<td width="306" align="LEFT" valign="TOP">
+<br>
+<p class="headerstyle">The <i>Corbaccio</i>: </p>
+
+<p class="bodystyle"></p>
+
+								<p class="headerstyle"><a href="../../dweb.shtml">Main</a>: <a href="../index.shtml">Texts</a>: <a href="index.shtml">Corbaccio</a>: </p>
+								<p class="headerstyle"></p>
+							</td>
+						<td width="20" align="LEFT" valign="TOP"><img src="../../images/pagedesign/clearspacer.gif" width="20" height="20"></td>
+						<td width="237" align="LEFT" valign="TOP">
+<br><p class="bodynoindent"><b>Corbaccio Links:</b><br><br>
+									<img src="../../images/pagedesign/content_bullet.gif" width="5" height="5"> <a href="index.shtml">Introduction to the text<br>
+									</a><img src="../../images/pagedesign/content_bullet.gif" width="5" height="5"> <a href="intro-online.shtml">Introduction to the online edition<br>
+									</a><img src="../../images/pagedesign/content_bullet.gif" width="5" height="5"> <a href="summary.shtml">Summary of the text<br>
+									</a><img src="../../images/pagedesign/content_bullet.gif" width="5" height="5"> <a href="sources.shtml">Major online sources for the <i>Corbaccio</i><br>
+									</a><img src="../../images/pagedesign/content_bullet.gif" width="5" height="5"> <a href="crit.shtml">Some critical questions about the <i>Corbaccio</i><br>
+									</a><img src="../../images/pagedesign/content_bullet.gif" width="5" height="5"> <a href="biblio.shtml">Select <i>Corbaccio</i> bibliography</a></p>
+							</td>
+					</tr>
+				</table>
+				</td>
+				<td width="100%" align="LEFT" valign="TOP"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="81">
+
+					<tr height="80">
+						<td height="80" align="LEFT" valign="TOP" bgcolor="#663202"><img src="../../images/pagedesign/topheader_brownspacer.gif" width="1" height="80"></td>
+					</tr>
+
+					<tr height="1">
+						<td height="1" align="LEFT" valign="TOP" bgcolor="Black"><b><img src="../../images/pagedesign/bottom_menu_blackspacer.gif" width="1" height="1"></b></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="156" align="LEFT" valign="TOP" bgcolor="#FFFFCC"><!--#include virtual="../../botincl1.txt" --></td>
+				<td width="589" valign="top"><!--#include virtual="../../botincl2.txt" --></td>
+				<td width="100%" align="LEFT" valign="TOP"><!--#include virtual="../../botincl3.txt" --></td>
+			</tr>
+		</table>
+		</p></form>
+	</body>
+</html>

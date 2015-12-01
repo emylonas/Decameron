@@ -1,0 +1,203 @@
+Application Hand off Documentation Checklist
+
+
+SERVICE DESCRIPTION
+
+What does this application do?
+In response to requests from a client browser (passed on by the web server) PHP pages control XSLT transformations of XML text files to create HTML.
+
+
+Who does this application serve?
+Brown students, Brown faculty and general users worldwide of the Decameron Web resource.
+
+
+SYSADMIN OVERVIEW
+
+How is this application started/stopped?  (Anything in /etc/rc?.d) 
+N/A
+
+How do I test to see whether it's up? 
+Try to access URL:
+http://www.stg.brown.edu/projects/decameron/itDecIndex.php
+
+If it's not up, how will I know?  Who will complain? 
+Page will either not be accessible at all, or will report a transformation error. Initial complaint will probably come from somebody in Brown's Italian Studies department (which controls the resource).
+
+What daemon(s) is(are) started when this application runs? 
+N/A
+
+Does anything go into cron for this application?  If so, what and under what UID? 
+N/A
+
+What UID owns this operation?  Is there a specific reason this UID is used? 
+www
+
+Is any of it setuid/setgid?  If so, why? 
+N/A
+
+Are there configuration files?  If so, where?  Do they ever change?
+N/A
+
+Does it dump a pid file anywhere when it runs? 
+N/A
+
+Does it produce data?  If so, where does that go?  How long do we need to keep data?
+N/A
+
+Where does it log?  How long do old logs need to be retained? 
+N/A
+
+What data is logged?  What does a typical log entry look like? 
+N/A
+
+
+SERVICE INFORMATION
+
+Is this a 24x7 service? 
+Yes
+
+Is there formal monitoring required? 
+No
+
+Who supports it?  How do I contact them?
+Scholarly Technology Group 
+Paul_Caton@brown.edu tel.33619 (primary ceontact)
+Elli_Mylonas@brown.edu tel.37231 (secondary contact)
+
+What are the hours of tech support? 
+Normal working hours
+
+Is there a support contract?  If so, what's the agreement? 
+No
+
+Who's authorized to use the service contract? 
+N/A
+
+What are the service contract numbers/telephone numbers? 
+N/A
+
+
+SYSTEM REQUIREMENTS
+
+How large are the binaries? 
+N/A
+
+How much memory does it require to run? 
+Web server should have at least 128Mb available
+
+How much memory does it require to run well? 
+500Mb or more for web server is desirable
+
+If it produces data, how much disk space will be required? 
+N/A
+
+How much disk space will logs require? 
+N/A
+
+Will this require anything installed in /usr/local? 
+No
+
+
+
+OPERATIONS SUPPORT ISSUES
+
+Is there formal monitoring required? 
+No
+
+How would I monitor it with intermapper? 
+N/A
+
+How do I back this application and its data up? 
+Normal CIS solstice backup
+
+How long do I need to keep backups of this application's data? 
+Normal Solstice cycle
+
+
+ON-CALL SUPPORT ISSUES
+
+How do I tell the application is running normally? 
+Use web browser to go to:
+
+http://www.stg.brown.edu/projects/decameron/itDecIndex.php
+
+If it's not up, how will I know?  Who will complain?
+Page will either not be accessible at all, or will report a transformation error. Initial complaint will probably come from somebody in Brown's Italian Studies department (which controls the resource).
+
+How do I  monitor performance of this application?  How will I know if performance is sucking? 
+Monitor by accessing pages. A delay of approx. 5 seconds for pages to come up is normal because of real-time XSLT transformations involved; delays of 10 seconds or longer signal poor performance.
+
+If a tie-in to another system fails, will I need to process anything by hand? 
+No
+
+Does this application have any regular maintenance?  If so, what? 
+No
+
+If configuration needs changing, who's going to ask to have changes made?
+Scholarly Technology Group
+
+What are the most common configuration changes?  How do I make them? 
+N/A
+
+How do I know my configuration changes have succeeded? 
+N/A
+
+If I change the configuration of this application/system, do I also have to change configuration of other applications/systems? 
+No
+
+
+
+INTER OPERATION WITH EXISTING SYSTEMS
+
+What other systems does this application tie into (e.g. mail? LDAP?)? 
+N/A
+
+If that tie-in fails, what are the symptoms? 
+N/A
+
+Does this application require any data sources (feeds)?  If so, where do they come from? 
+N/A
+
+What are the symptoms when it doesn't get the expected data feed? 
+N/A
+
+Is this application going to be queried by another application?  If so, how? 
+N/A
+
+
+DEVELOPMENT/ONGOING MAINTENANCE
+
+What language is it in? 
+PHP, XSLT, XML, HTML
+
+If it's in perl, does it use any special modules?  If so, where are they (/usr/local, elsewhere)? 
+N/A
+
+If there are special modules, where do they come from (e.g. CPAN?  somewhere else?)? 
+N/A
+
+What are the application's library dependencies? 
+PHP pages need version 4.1 or later with XSLT support built in.
+
+Is this an open source product?  Is it based on an open source product? 
+N/A
+
+Are there any local mods?  If so, what are they and what do they do? 
+N/A
+
+Are there any applicable newsgroups and/or mailing lists where I can find information about bugs or security holes?  What about patches or problem fixes? 
+www.php.net
+
+
+
+
+INSTALLATION PROCEDURE
+
+How do I install it? 
+Unzip, untar directory and place under /www/htdocs/projects/
+
+Is there any information about potential upgrade paths? 
+N/A
+
+If this is a replacement application, how do I migrate old data?
+Delete all old data.
