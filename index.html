@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <title>Decameron Web</title>
+    <style type="text/css">
+    html, body { height:100%; margin: 0; padding: 0;}
+    #map { height: 95%;}
+    #tools { height:80px; background:gray; margin:0;padding:0; width:100%}
+    .onoffswitch {float:right; padding:10px 10px 10px 10px;}
+    footer { font-size:1em;}
+    </style>
+    <link rel="stylesheet" href="switch.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyC4TU2TWevt6f17IQTSkOz1_MvDR7JRd_k&"></script>
+    <script src="spider.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div id="tools" class="container">
+      <div class="onoffswitch">
+      <form>
+          <input type="checkbox" onclick="handleclick(this);" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+          <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+          </label>
+
+          </form>
+      </div>
+    </div>
+    <div id="map"></div>
+    <script src="index.js"></script>
+  </body>
+
+</html>

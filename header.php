@@ -10,6 +10,13 @@ while (!file_exists($filename)){
 	$relativePath = '../'.$relativePath;	
 }
 ?>	
+
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Credentials: true");
+header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Disposition, Content-Description');
+?>
 	
 <?php
 	if ($selected == "the_project") $title = "The Project";
@@ -35,11 +42,16 @@ while (!file_exists($filename)){
 	<title>Decameron Web | <?php echo $title ?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $relativePath?>css/style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $relativePath?>css/switch.css" media="all"/>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"> -->
 	<script src="<?php echo $relativePath?>js/jquery-1.3.2.min.js" type="text/javascript"></script>
 	<script src="<?php echo $relativePath?>js/jquery.badBrowser.js" type="text/javascript"></script>
 	<script src="<?php echo $relativePath?>js/text_navigation.js" type="text/javascript"></script>
 	<script src="<?php echo $relativePath?>js/functions.js" type="text/javascript"></script>	
-	<script src="<?php echo $relativePath?>js/lightbox/js/jquery.lightbox.min.js" type="text/javascript"></script>	
+	<script src="<?php echo $relativePath?>js/lightbox/js/jquery.lightbox.min.js" type="text/javascript"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4TU2TWevt6f17IQTSkOz1_MvDR7JRd_k&"></script>	
+	<script src="<?php echo $relativePath?>js/spider.min.js" type="text/javascript"></script>
+	// <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
