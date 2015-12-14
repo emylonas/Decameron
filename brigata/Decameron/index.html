@@ -4,13 +4,6 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
   <title>Decameron Web</title>
-    <style type="text/css">
-    html, body { height:100%; margin: 0; padding: 0;}
-    #map { height: 95%;}
-    #tools { height:80px; background:gray; margin:0;padding:0; width:100%}
-    .onoffswitch {float:right; padding:10px 10px 10px 10px;}
-    footer { font-size:1em;}
-    </style>
     <link rel="stylesheet" href="switch.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=
 AIzaSyC4TU2TWevt6f17IQTSkOz1_MvDR7JRd_k&"></script>
@@ -22,8 +15,24 @@ AIzaSyC4TU2TWevt6f17IQTSkOz1_MvDR7JRd_k&"></script>
   </head>
 
   <body>
-    <div id="tools" class="container">
-      <div class="onoffswitch">
+<style type="text/css">
+    .box-image { max-width:450px; max-height:350px;}
+    html, body { height:100%; margin: 0; padding: 0;}
+    #map {height:750px;}
+    #tools { height:60px; background:gray; margin:0;padding:0; width:100%}
+    #title {float:left;font-size:1.5em;color:white; padding:18px 10px 10px 10px;font-family:Verdana Helvetica Arial sans-serif;}
+    .onoffswitch {float:right; padding:10px 10px 10px 10px;}
+    .switchlabel {float:right; padding:18px 10px 10px 10px; color:white; font-size:1.5em; font-family:Verdana Helvetica Arial sans-serif;}
+    footer { font-size:1em;}
+    #legend { background:#C7B68A; padding:10px; width:200px; font-size:1.5em; font-family:Verdana Helvetica Arial sans-serif; border:1px solid gray;}
+    .colorbox { height: 20px; width:30px; background:black; display:inline-block; margin-right: 5px; padding-top:20px; border:1px solid gray;}
+
+</style>
+
+
+<div id="tools" class="container">
+  <div id="title">Decameron Map</div>
+     <div class="onoffswitch">
       <form>
           <input type="checkbox" onclick="handleclick(this);" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
           <label class="onoffswitch-label" for="myonoffswitch">
@@ -31,11 +40,27 @@ AIzaSyC4TU2TWevt6f17IQTSkOz1_MvDR7JRd_k&"></script>
             <span class="onoffswitch-switch"></span>
           </label>
 
-          </form>
-      </div>
+       </form>
     </div>
-    <div id="map"></div>
-    <script src="index.js"></script>
-  </body>
+      <div class="switchlabel">Map Overlay</div>
+</div>
+<div id="mapcontainer">
+<div id="map">Map</div>
+<div id="legend">
+  <div class="colorbox" style="background:#662D91;"></div>Pampinea<br>
+  <div class="colorbox" style="background:#005B7F;"></div>Panfilo<br>
+  <div class="colorbox" style="background:#FFF568;"></div>Neifile<br>
+  <div class="colorbox" style="background:#84CDEF;"></div>Filomena<br>
+  <div class="colorbox" style="background:#9E0B0F;"></div>Dioneo<br>
+  <div class="colorbox" style="background:#F26522;"></div>Fiammetta<br>
+  <div class="colorbox" style="background:#FFFFFF;"></div>Emilia<br>
+  <div class="colorbox" style="background:#707070;"></div>Filostrato<br>
+  <div class="colorbox" style="background:#7CC576;"></div>Lauretta<br>
+  <div class="colorbox" style="background:#005826;"></div>Elissa<br>
+</div>
+</div>
 
+
+</body>
+<script src="index.js" type="text/javascript"></script>
 </html>

@@ -17,6 +17,8 @@
     footer { font-size:1em;}
     #legend { background:#C7B68A; padding:10px; width:70px; font-family:Verdana Helvetica Arial sans-serif; border:1px solid gray;}
     .colorbox { height: 10px; width:15px; background:black; display:inline-block; margin-right: 5px;}
+    a {text-decoration:underline; color:#085394;}
+    .box-image { max-width:450px; max-height:350px;}
 </style>
 
 <ul id="breadcrumbs">
@@ -26,7 +28,7 @@
 
 
 <div id="tools" class="container">
-	<div id="title">Decameron Map</div>
+	<div id="title">Decameron Map: <a target="_blank" href="Decameron/index.html">Full Size</a></div>
      <div class="onoffswitch">
       <form>
           <input type="checkbox" onclick="handleclick(this);" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -75,7 +77,7 @@
 	<li><a href="panfilo.php">Panfilo</a></li>
 </ul>
 </body>
-<script src="<?php echo $relativePath?>brigata/decameron_map.js" type="text/javascript""></script>
+<script src="<?php echo $relativePath?>brigata/decameron_map.js" type="text/javascript"></script>
 	
 <?php
 	$last_modified =  filemtime($_SERVER["SCRIPT_FILENAME"]);

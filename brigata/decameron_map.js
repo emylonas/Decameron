@@ -2,13 +2,30 @@
 var map;
 var historicalOverlay;
 
-console.log("map loaded");
+var styles = [
+{"featureType":"administrative","stylers":[{"visibility":"simplified"}]},
+{"featureType":"poi","stylers":[{"visibility":"on"}]},
+{"featureType":"road","stylers":[{"visibility":"simplified"}]},
+{"featureType":"water","stylers":[{"visibility":"simplified"}]},
+{"featureType":"transit","stylers":[{"visibility":"simplified"}]},
+{"featureType":"landscape","stylers":[{"visibility":"simplified"}]},
+{"featureType":"road.highway","stylers":[{"visibility":"off"}]},
+{"featureType":"road.local","stylers":[{"visibility":"on"}]},
+{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"on"}]},
+{"featureType":"water","stylers":[{"color":"#84afa3"},{"lightness":52}]},
+{"stylers":[{"saturation":-77}]},{"featureType":"road"}];
+
+var styledMap = new google.maps.StyledMapType(styles, {name: "Decameron Map"});
+
+
 map = new google.maps.Map(document.getElementById('map'), {
   center: {lat: 43.76956, lng: 11.25581},
-  zoom: 3,
+  zoom: 4,
   minZoom: 3,
-  mapTypeId: google.maps.MapTypeId.SATELLITE
 });
+
+map.mapTypes.set('map_style', styledMap);
+map.setMapTypeId('map_style');
 
 
 var imageBounds = {
@@ -85,22 +102,27 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
 
     for (var i = 0; i < data.feed.entry.length; i++) {
 
-
+      var locations = data.feed.entry[i].gsx$locations.$t;
       var label = data.feed.entry[i].gsx$label.$t;
       var theme = data.feed.entry[i].gsx$themeoftheday.$t;
       var type = data.feed.entry[i].gsx$storytype.$t;
       var locationtype = data.feed.entry[i].gsx$setting.$t;
-      var timeline = data.feed.entry[i].gsx$timeline.$t;
       var characters = data.feed.entry[i].gsx$characters.$t;
       var themes = data.feed.entry[i].gsx$themesmotifs.$t;
       var keywords = data.feed.entry[i].gsx$keywords.$t;
       var rubric = data.feed.entry[i].gsx$rubric.$t;
       var narr = data.feed.entry[i].gsx$narrator.$t;
       var mlabel = data.feed.entry[i].gsx$markerlabel.$t;
-      var contentString = '<h2>'+label+'</h2>'+'<div><p><strong>Theme of the Day: </strong>'+
-      theme+'</p><p><strong>Story Type: </strong>'+type+'</p><p><strong>Setting: </strong>'+
-      locationtype+'</p><p><strong>Timeline: </strong>'+timeline+'</p><p><strong>Characters: </strong>'+characters+'</p><p><strong>Themes: </strong>'+
-      themes+'</p><p><strong>Keywords: </strong>'+keywords+'</p><p><strong>Summary: </strong>'+rubric+'</p></div>';             
+      var image = data.feed.entry[i].gsx$image.$t;
+      var quote = '"';
+      image = quote.concat(image);
+      image = image.concat(quote);
+      console.log(image);
+      var caption = data.feed.entry[i].gsx$caption.$t;
+      var contentString = '<h2>'+label+'</h2>'+'<div><p><strong>Location(s): </strong>'+locations+'</p><p><strong>Theme of the Day: </strong>'+
+      theme+'</p><p><strong>Summary: </strong>'+rubric+'</p><p><strong>Story Type: </strong>'+type+'</p><p><strong>Setting: </strong>'+
+      locationtype+'</p><p><strong>Characters: </strong>'+characters+'</p><p><strong>Themes: </strong>'+
+      themes+'</p><p><strong>Keywords: </strong>'+keywords+'</p><figure><img class="box-image" src='+image+'/><figcaption>'+caption+'</figcaption></figure></div>';             
       var color;
 
       if (narr in narrators) {
@@ -118,6 +140,8 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
         var latlng = coordinates[j].split(",");
         var lat = Number(latlng[0]);
         var lng = Number(latlng[1]);
+        console.log(lat);
+        console.log(lng);
         createMarker(lat, lng, location, contentString, color, mlabel);
       }
 
