@@ -110,7 +110,7 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
       var characters = data.feed.entry[i].gsx$characters.$t;
       var themes = data.feed.entry[i].gsx$themesmotifs.$t;
       var keywords = data.feed.entry[i].gsx$keywords.$t;
-      var rubric = data.feed.entry[i].gsx$rubric.$t;
+      var rubric = data.feed.entry[i].gsx$summary.$t;
       var narr = data.feed.entry[i].gsx$narrator.$t;
       var mlabel = data.feed.entry[i].gsx$markerlabel.$t;
       var image = data.feed.entry[i].gsx$image.$t;
