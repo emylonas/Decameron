@@ -1,0 +1,12 @@
+{
+  "name": "catalan map nov 30",
+  "version": "1.0.0",
+  "description": "",
+  "type": "overlay",
+  "format": "png",
+  "minzoom": "2",
+  "maxzoom": "7",
+  "bounds": "-25.51538958,22.18472031,46.24766462,67.92833924",
+  "scale": "1",
+  "profile": "mercator"
+}

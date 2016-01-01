@@ -1,7 +1,47 @@
-//initialize map and historical overlay
+//initialize map
 var map;
-var historicalOverlay;
+var mapBounds = new google.maps.LatLngBounds(
+    new google.maps.LatLng(22.18472031, -25.51538958),
+    new google.maps.LatLng(67.92833924, 46.24766462));
+    var mapMinZoom = 2;
+    var mapMaxZoom = 7;
+    var opts = {
+    streetViewControl: false,
+    tilt: 0,
+    mapTypeId: google.maps.MapTypeId.HYBRID,
+    center: new google.maps.LatLng(0,0),
+    zoom: mapMinZoom
+}
+map = new google.maps.Map(document.getElementById("map"), opts);
 
+//initialize historical overlay with tiles
+var imageMapType = new google.maps.ImageMapType({
+    getTileUrl: function(coord, zoom) {
+      var proj = map.getProjection();
+      var z2 = Math.pow(2, zoom);
+      var tileXSize = 256 / z2;
+      var tileYSize = 256 / z2;
+      var tileBounds = new google.maps.LatLngBounds(
+        proj.fromPointToLatLng(new google.maps.Point(coord.x * tileXSize, (coord.y + 1) * tileYSize)),
+        proj.fromPointToLatLng(new google.maps.Point((coord.x + 1) * tileXSize, coord.y * tileYSize))
+      );
+      if (!mapBounds.intersects(tileBounds) || zoom < mapMinZoom || zoom > mapMaxZoom) return null;
+      return "Decameron/{z}/{x}/{y}.png".replace('{z}',zoom).replace('{x}',coord.x).replace('{y}',coord.y);
+    },
+    tileSize: new google.maps.Size(256, 256),
+    minZoom: mapMinZoom,
+    maxZoom: mapMaxZoom,
+    name: 'Tiles'
+});
+
+map.overlayMapTypes.push(imageMapType);
+map.fitBounds(mapBounds);
+
+//arrays for turning markers on and off by narrator and day
+var markers = [[],[],[],[],[],[],[],[],[],[]];
+var days = [[],[],[],[],[],[],[],[],[],[]];
+
+//set the old-fashioned road map style
 var styles = [
 {"featureType":"administrative","stylers":[{"visibility":"simplified"}]},
 {"featureType":"poi","stylers":[{"visibility":"on"}]},
@@ -17,26 +57,9 @@ var styles = [
 
 var styledMap = new google.maps.StyledMapType(styles, {name: "Decameron Map"});
 
-
-map = new google.maps.Map(document.getElementById('map'), {
-  center: {lat: 43.76956, lng: 11.25581},
-  zoom: 4,
-  minZoom: 3,
-});
-
 map.mapTypes.set('map_style', styledMap);
 map.setMapTypeId('map_style');
 
-
-var imageBounds = {
-  north: 56.45310,
-  south: 31.03405,
-  east: 57.47392,
-  west: -29.40672
-};
-historicalOverlay = new google.maps.GroundOverlay("images/catalan map image.png",
-    imageBounds);
-historicalOverlay.setMap(map);
 
 //spidering markers
 var gm = google.maps;
@@ -56,8 +79,32 @@ iw.close();
 
 map.controls[google.maps.ControlPosition.RIGHT_TOP].push(document.getElementById('legend'));
 
-// create a marker of a random color
-function createMarker(latitude, longitude, city, text, color, label) {
+//funtion to change narrator name to array index in array of markers
+function getNum(narr) {
+    if (narr=="Dioneo")
+      return 0;
+    else if (narr=="Elissa")
+      return 1;
+    else if (narr=="Emilia")
+      return 2;
+    else if (narr=="Fiammetta")
+      return 3;
+    else if (narr=="Filomena")
+      return 4;
+    else if (narr=="Filostrato")
+      return 5;
+    else if (narr=="Lauretta")
+      return 6;
+    else if (narr=="Neifile")
+      return 7;
+    else if (narr=="Pampinea")
+      return 8;
+    else
+      return 9;
+}
+
+// create a marker
+function createMarker(latitude, longitude, city, text, color, label, narrator, day) {
   //move the location slightly by a random amount, for ease of visualization in clusters
   var baseJitter = .1;
   var rnd = Math.random;
@@ -72,17 +119,19 @@ function createMarker(latitude, longitude, city, text, color, label) {
       title: city,
   });
   marker.desc = text;
+  var n = getNum(narrator);
+  markers[getNum(narrator)].push(marker);
+  days[day-1].push(marker);
   oms.addMarker(marker);
 }
   
-
 //turn historical map on and off
 function handleclick(cb) {
   if (!cb.checked) {
-    historicalOverlay.setMap(null);     
+    map.overlayMapTypes.clear();     
   }
   else{
-    historicalOverlay.setMap(map);
+    map.overlayMapTypes.push(imageMapType);
   }
 }
 
@@ -106,6 +155,7 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
       var label = data.feed.entry[i].gsx$label.$t;
       var theme = data.feed.entry[i].gsx$themeoftheday.$t;
       var type = data.feed.entry[i].gsx$storytype.$t;
+      var timeperiod = data.feed.entry[i].gsx$timeperiod.$t;
       var locationtype = data.feed.entry[i].gsx$setting.$t;
       var characters = data.feed.entry[i].gsx$characters.$t;
       var themes = data.feed.entry[i].gsx$themesmotifs.$t;
@@ -119,10 +169,11 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
       image = image.concat(quote);
       console.log(image);
       var caption = data.feed.entry[i].gsx$caption.$t;
+
       var contentString = '<h2>'+label+'</h2>'+'<div><p><strong>Location(s): </strong>'+locations+'</p><p><strong>Theme of the Day: </strong>'+
-      theme+'</p><p><strong>Summary: </strong>'+rubric+'</p><p><strong>Story Type: </strong>'+type+'</p><p><strong>Setting: </strong>'+
+      theme+'</p><p><strong>Summary: </strong>'+rubric+'</p><p><strong>Story Type: </strong>'+type+'</p><p><strong>Time Period: </strong>'+timeperiod+'</p><p><strong>Setting: </strong>'+
       locationtype+'</p><p><strong>Characters: </strong>'+characters+'</p><p><strong>Themes: </strong>'+
-      themes+'</p><p><strong>Keywords: </strong>'+keywords+'</p><figure><img class="box-image" src='+image+'/><figcaption>'+caption+'</figcaption></figure></div>';             
+      themes+'</p><p><strong>Keywords: </strong>'+keywords+'</p><figure><img class="box-image" src='+image+'/><figcaption>'+caption+'</figcaption></figure></div>';                 
       var color;
 
       if (narr in narrators) {
@@ -142,9 +193,86 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
         var lng = Number(latlng[1]);
         console.log(lat);
         console.log(lng);
-        createMarker(lat, lng, location, contentString, color, mlabel);
+        createMarker(lat, lng, location, contentString, color, mlabel, narr, mlabel);
       }
-
     } 
 });
+
+//functions for user to click on narrator and day boxes to turn markers on and off
+var narrboxes = document.getElementsByClassName('narr');
+var set = 0;
+var nswitch = {};
+
+for (i = 0; i < narrboxes.length; i++) {
+  narrboxes[i].onclick = function() {
+    clickAllBoxes(markers, this);
+  };
+}
+
+var dayboxes = document.getElementsByClassName('day');
+var dswitch = {};
+
+for (i=0;i < dayboxes.length;i++) {
+  dayboxes[i].onclick = function() {
+    clickAllBoxes(days, this);
+  }
+}
+
+function clickAllBoxes(array, e) {
+  if (!nswitch[e.id]) {
+          nswitch[e.id] = 1;
+          e.style.backgroundColor = "white";
+          e.style.fontWeight = "bold";
+          e.style.border = "1px solid gray";
+          e.style.borderRadius = "5px";
+          showMarkers(array, e.id);
+      }
+      else {
+        if (nswitch[e.id] == 0) {
+          nswitch[e.id] = 1;
+          e.style.backgroundColor = "white";
+          e.style.fontWeight = "bold";
+          e.style.border = "1px solid gray";
+          e.style.borderRadius = "5px";
+          showMarkers(array, e.id);
+        }
+        else {
+          nswitch[e.id] = 0;
+          e.style.backgroundColor = "#C7B68A";
+          e.style.fontWeight = "normal";
+          e.style.border = "none";
+          hideMarkers(array, e.id);
+        }
+      }
+};
+
+
+function setAllMarkers(arr, m) {
+  for (var i=0; i<10; i++) {
+    for (var j=0; j<arr[i].length; j++) {
+        arr[i][j].setMap(m);
+    }
+  }
+}
+
+function showMarkers(arr, narr) {
+  if (set==0) {
+    setAllMarkers(arr, null);
+  }
+  for (var k=0; k<arr[narr].length; k++) {
+    arr[narr][k].setMap(map);
+    set += 1;
+  }
+  
+}
+
+function hideMarkers(arr, narr) {
+  for (var k=0; k<arr[narr].length;k++) {
+    arr[narr][k].setMap(null);
+    set -= 1;
+  }
+  
+  if (set==0)
+    setAllMarkers(arr,map);
+}
 
