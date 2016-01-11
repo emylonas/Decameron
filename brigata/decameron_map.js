@@ -3,14 +3,15 @@ var map;
 var mapBounds = new google.maps.LatLngBounds(
     new google.maps.LatLng(22.18472031, -25.51538958),
     new google.maps.LatLng(67.92833924, 46.24766462));
-    var mapMinZoom = 2;
-    var mapMaxZoom = 7;
+    var mapMinZoom = 4;
+    var mapMaxZoom = 12;
     var opts = {
     streetViewControl: false,
     tilt: 0,
     mapTypeId: google.maps.MapTypeId.HYBRID,
-    center: new google.maps.LatLng(0,0),
-    zoom: mapMinZoom
+    center: {lat: 43.78, lng: 11.25},
+    zoom: mapMinZoom,
+    minZoom: mapMinZoom
 }
 map = new google.maps.Map(document.getElementById("map"), opts);
 
@@ -35,11 +36,12 @@ var imageMapType = new google.maps.ImageMapType({
 });
 
 map.overlayMapTypes.push(imageMapType);
-map.fitBounds(mapBounds);
+// map.fitBounds(mapBounds);
 
 //arrays for turning markers on and off by narrator and day
 var markers = [[],[],[],[],[],[],[],[],[],[]];
 var days = [[],[],[],[],[],[],[],[],[],[]];
+var onmarkers = [];
 
 //set the old-fashioned road map style
 var styles = [
@@ -123,6 +125,7 @@ function createMarker(latitude, longitude, city, text, color, label, narrator, d
   markers[getNum(narrator)].push(marker);
   days[day-1].push(marker);
   oms.addMarker(marker);
+  onmarkers.push(marker);
 }
   
 //turn historical map on and off
@@ -202,10 +205,12 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
 var narrboxes = document.getElementsByClassName('narr');
 var set = 0;
 var nswitch = {};
+var dfilter = [];
+var nfilter = [];
 
 for (i = 0; i < narrboxes.length; i++) {
   narrboxes[i].onclick = function() {
-    clickAllBoxes(markers, this);
+    clickAllBoxes(markers, this, nswitch, nfilter, dfilter);
   };
 }
 
@@ -214,65 +219,83 @@ var dswitch = {};
 
 for (i=0;i < dayboxes.length;i++) {
   dayboxes[i].onclick = function() {
-    clickAllBoxes(days, this);
+    clickAllBoxes(days, this, dswitch, dfilter, nfilter);
   }
 }
 
-function clickAllBoxes(array, e) {
-  if (!nswitch[e.id]) {
-          nswitch[e.id] = 1;
-          e.style.backgroundColor = "white";
-          e.style.fontWeight = "bold";
-          e.style.border = "1px solid gray";
-          e.style.borderRadius = "5px";
-          showMarkers(array, e.id);
+function clickAllBoxes(array, e, xswitch, filter1, filter2) {
+  if (!xswitch[e.id] || xswitch[e.id] == 0) {
+      xswitch[e.id] = 1;
+      e.style.backgroundColor = "white";
+      e.style.fontWeight = "bold";
+      e.style.border = "1px solid gray";
+      e.style.borderRadius = "5px";
+      filter1.push.apply(filter1, array[e.id]);
+      set += 1;
+      showMarkers(array[e.id], filter2);
+      set += 1;
+      showMarkers(filter2, filter1);
+      set -= 1;
+      }
+  else {
+      xswitch[e.id] = 0;
+      e.style.backgroundColor = "#C7B68A";
+      e.style.fontWeight = "normal";
+      e.style.border = "none";
+      if (filter1 == nfilter) {
+        nfilter = nfilter.filter( function(el) {
+        return array[e.id].indexOf(el) < 0;
+      });
+        showMarkers(filter2, nfilter);
       }
       else {
-        if (nswitch[e.id] == 0) {
-          nswitch[e.id] = 1;
-          e.style.backgroundColor = "white";
-          e.style.fontWeight = "bold";
-          e.style.border = "1px solid gray";
-          e.style.borderRadius = "5px";
-          showMarkers(array, e.id);
-        }
-        else {
-          nswitch[e.id] = 0;
-          e.style.backgroundColor = "#C7B68A";
-          e.style.fontWeight = "normal";
-          e.style.border = "none";
-          hideMarkers(array, e.id);
-        }
+        dfilter = dfilter.filter( function(el) {
+        return array[e.id].indexOf(el) < 0;
+      });
+        showMarkers(filter2, dfilter);
       }
+      set -=1;
+      hideMarkers(array[e.id], filter2);
+      
+  }
+      
 };
 
 
-function setAllMarkers(arr, m) {
+function setAllMarkers(m) {
   for (var i=0; i<10; i++) {
-    for (var j=0; j<arr[i].length; j++) {
-        arr[i][j].setMap(m);
+    for (var j=0; j<markers[i].length; j++) {
+        markers[i][j].setMap(m);
     }
   }
 }
 
-function showMarkers(arr, narr) {
-  if (set==0) {
-    setAllMarkers(arr, null);
+function showMarkers(arr, filter) {
+  if (set==1) {
+    setAllMarkers(null);
   }
-  for (var k=0; k<arr[narr].length; k++) {
-    arr[narr][k].setMap(map);
-    set += 1;
+  if (filter.length > 0) {
+    for (var k=0; k<arr.length;k++) {
+      if ($.inArray(arr[k], filter) != -1) {
+        arr[k].setMap(map);
+      }
+      else {
+        arr[k].setMap(null);
+      }
+    }
   }
-  
+  else {
+    for (var k=0; k<arr.length; k++) {
+        arr[k].setMap(map);
+      }
+  }
 }
 
-function hideMarkers(arr, narr) {
-  for (var k=0; k<arr[narr].length;k++) {
-    arr[narr][k].setMap(null);
-    set -= 1;
+function hideMarkers(arr, filter) {
+
+  for (var k=0; k<arr.length;k++) {
+      arr[k].setMap(null);
   }
-  
   if (set==0)
-    setAllMarkers(arr,map);
+    setAllMarkers(map);
 }
-

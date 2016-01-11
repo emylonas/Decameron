@@ -67,7 +67,7 @@
 <div id="mapcontainer">
   <div id="map">Map</div>
   <div id="legend">
-    <strong>Filter by: Narrator</strong>
+    <strong>Filter by narrator</strong>
     <div><a class="narr" id="0"><div class="colorbox" style="background:#9E0B0F;"></div>Dioneo</a></div>
     <div><a class="narr" id="1"><div class="colorbox" style="background:#005826;"></div>Elissa</a></div>
     <div><a class="narr" id="2"><div class="colorbox" style="background:#FFFFFF;"></div>Emilia</a></div>
@@ -78,10 +78,10 @@
     <div><a class="narr" id="7"><div class="colorbox" style="background:#FFF568;"></div>Neifile</a></div>
     <div><a class="narr" id="8"><div class="colorbox" style="background:#662D91;"></div>Pampinea</a></div>
     <div><a class="narr" id="9"><div class="colorbox" style="background:#005B7F;"></div>Panfilo</a></div>
-    <strong>Filter by: Day</strong>
-    <p><a class="day" id="0">&nbsp;1 &nbsp;</a><a class="day" id="1">&nbsp;2 &nbsp;</a><a class="day" id="2">&nbsp;3 &nbsp;</a>
+    <strong>Filter by story day</strong>
+    <p><a class="day" id="0">&nbsp;1 &nbsp;</a><a class="day" id="1">&nbsp;2 &nbsp;</a><a class="day" id="2">&nbsp;3&nbsp;</a>
     <a class="day" id="3">&nbsp;4 &nbsp;</a><a class="day" id="4">&nbsp;5 &nbsp;</a><a class="day" id="5">&nbsp;6 &nbsp;</a><br>
-    <a class="day" id="6">&nbsp;7 &nbsp;</a><a class="day" id="7">&nbsp;8 &nbsp;</a>
+    <a class="day" id="6">&nbsp;7 &nbsp;</a><a class="day" id="7">&nbsp;8&nbsp;</a>
     <a class="day" id="8">&nbsp;9 &nbsp;</a><a class="day" id="9">&nbsp;10 &nbsp;</a></p>
   </div>
 </div>
