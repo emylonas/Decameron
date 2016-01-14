@@ -3,7 +3,7 @@ var map;
 var mapBounds = new google.maps.LatLngBounds(
     new google.maps.LatLng(22.18472031, -25.51538958),
     new google.maps.LatLng(67.92833924, 46.24766462));
-    var mapMinZoom = 4;
+    var mapMinZoom = 5;
     var mapMaxZoom = 12;
     var opts = {
     streetViewControl: false,

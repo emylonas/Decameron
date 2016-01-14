@@ -80,7 +80,7 @@
     <div><a class="narr" id="9"><div class="colorbox" style="background:#005B7F;"></div>Panfilo</a></div>
     <strong>Filter by story day</strong>
     <p><a class="day" id="0">&nbsp;1 &nbsp;</a><a class="day" id="1">&nbsp;2 &nbsp;</a><a class="day" id="2">&nbsp;3&nbsp;</a>
-    <a class="day" id="3">&nbsp;4 &nbsp;</a><a class="day" id="4">&nbsp;5 &nbsp;</a><a class="day" id="5">&nbsp;6 &nbsp;</a><br>
+    <a class="day" id="3">&nbsp;4 &nbsp;</a><a class="day" id="4">&nbsp;5 &nbsp;</a><br><a class="day" id="5">&nbsp;6&nbsp;</a>    
     <a class="day" id="6">&nbsp;7 &nbsp;</a><a class="day" id="7">&nbsp;8&nbsp;</a>
     <a class="day" id="8">&nbsp;9 &nbsp;</a><a class="day" id="9">&nbsp;10 &nbsp;</a></p>
   </div>
