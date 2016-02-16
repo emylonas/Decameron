@@ -176,7 +176,7 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
       var contentString = '<h2>'+label+'</h2>'+'<div><p><strong>Location(s): </strong>'+locations+'</p><p><strong>Theme of the Day: </strong>'+
       theme+'</p><p><strong>Summary: </strong>'+rubric+'</p><p><strong>Story Type: </strong>'+type+'</p><p><strong>Time Period: </strong>'+timeperiod+'</p><p><strong>Setting: </strong>'+
       locationtype+'</p><p><strong>Characters: </strong>'+characters+'</p><p><strong>Themes: </strong>'+
-      themes+'</p><p><strong>Keywords: </strong>'+keywords+'</p><figure><img class="box-image" src='+image+'/><figcaption>'+caption+'</figcaption></figure></div>';                 
+      themes+'</p><p><strong>Keywords: </strong>'+keywords+'</p>';                 
       var color;
 
       if (narr in narrators) {
@@ -191,12 +191,14 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
 
       var coordinates = data.feed.entry[i].gsx$coordinates.$t.split(";");
       for (var j=0; j < coordinates.length; j++) {
-        var latlng = coordinates[j].split(",");
-        var lat = Number(latlng[0]);
-        var lng = Number(latlng[1]);
-        console.log(lat);
-        console.log(lng);
-        createMarker(lat, lng, location, contentString, color, mlabel, narr, mlabel);
+        if (coordinates[j] != "") {
+          var latlng = coordinates[j].split(",");
+          var lat = Number(latlng[0]);
+          var lng = Number(latlng[1]);
+          console.log(lat);
+          console.log(lng);
+          createMarker(lat, lng, location, contentString, color, mlabel, narr, mlabel);
+        }
       }
     } 
 });
