@@ -189,10 +189,14 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
 
       var coordinates = data.feed.entry[i].gsx$coordinates.$t.split(";");
       for (var j=0; j < coordinates.length; j++) {
-        var latlng = coordinates[j].split(",");
-        var lat = Number(latlng[0]);
-        var lng = Number(latlng[1]);
-        createMarker(lat, lng, location, contentString, color, mlabel, narr, mlabel);
+        if (coordinates[j] != "") {
+          var latlng = coordinates[j].split(",");
+          var lat = Number(latlng[0]);
+          var lng = Number(latlng[1]);
+          console.log(lat);
+          console.log(lng);
+          createMarker(lat, lng, location, contentString, color, mlabel, narr, mlabel);
+        }
       }
 
     } 
