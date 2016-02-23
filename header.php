@@ -35,6 +35,7 @@ header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Dispo
 	else if ($selected == "bibliography") $title = "Bibliography";
 	else if ($selected == "pedagogy") $title = "Pedagogy";
 	else if ($selected == "syllabus") $title = "Syllabus";	
+	else if ($selected == "visualizations") $title = "Visualizations";
 ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -92,6 +93,7 @@ header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Dispo
 			<li id="bibliography"><a href="<?php echo $relativePath?>bibliography/"<?php if ($selected == "bibliography") print(" class=\"selected\"") ?>>Bibliography</a></li>
 			<li id="pedagogy"><a href="<?php echo $relativePath?>pedagogy/"<?php if ($selected == "pedagogy") print(" class=\"selected\"") ?>>Pedagogy</a></li>
 			<li id="syllabus"><a href="<?php echo $relativePath?>the_project/syllabus.php"<?php if ($selected == "syllabus") print(" class=\"selected\"") ?>>Syllabus</a></li>
+			<li id="visualizations"><a href="<?php echo $relativePath?>visualizations/"<?php if ($selected == "visualizations") print(" class=\"selected\"") ?>>Visualizations (new!)</a></li>
 			<!-- End -->
 		</ul>
 		

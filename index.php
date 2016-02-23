@@ -23,7 +23,7 @@
 <a href="the_project/">The Project</a> | <a href="boccaccio/life1_en.php">Boccaccio</a> | <a href="texts/">Texts</a> | <a href="brigata/">Brigata</a> | <a href="plague/">Plague</a> | <a href="literature/">Literature</a> | <a href="history/">History</a> | <a href="society/">Society</a> | <a href="religion/">Religion</a> | <a href="arts/">Arts</a>
 </p>
 <p>
-<a href="images/maps/maps.php">Maps</a> | <a href="themes_motifs/">Themes &amp; Motifs</a> | <a href="bibliography/">Bibliography</a> | <a href="pedagogy/">Pedagogy</a> | <a href="the_project/syllabus.php">Syllabus</a>
+<a href="images/maps/maps.php">Maps</a> | <a href="themes_motifs/">Themes &amp; Motifs</a> | <a href="bibliography/">Bibliography</a> | <a href="pedagogy/">Pedagogy</a> | <a href="the_project/syllabus.php">Syllabus</a> | <a href="visualizations/">Visualizations (new!)
 </p>
 <h3>&nbsp;</h3>
 <p/>
