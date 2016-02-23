@@ -1,15 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-	
+
 <?php
 $filename = '../text_search.php';
 $relativePath = '../';
 
 while (!file_exists($filename)){
 	$filename = '../'.$filename;
-	$relativePath = '../'.$relativePath;	
+	$relativePath = '../'.$relativePath;
 }
-?>	
+?>
 
 <?php
 header("Access-Control-Allow-Origin: *");
@@ -17,7 +17,7 @@ header("Access-Control-Allow-Credentials: true");
 header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Disposition, Content-Description');
 ?>
-	
+
 <?php
 	if ($selected == "the_project") $title = "The Project";
 	else if ($selected == "boccaccio") $title = "Boccaccio";
@@ -34,7 +34,7 @@ header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Dispo
 	else if ($selected == "themes_motifs") $title = "Themes &amp; Motifs";
 	else if ($selected == "bibliography") $title = "Bibliography";
 	else if ($selected == "pedagogy") $title = "Pedagogy";
-	else if ($selected == "syllabus") $title = "Syllabus";	
+	else if ($selected == "syllabus") $title = "Syllabus";
 	else if ($selected == "visualizations") $title = "Visualizations";
 ?>
 
@@ -48,9 +48,9 @@ header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Dispo
 	<script src="<?php echo $relativePath?>js/jquery-1.3.2.min.js" type="text/javascript"></script>
 	<script src="<?php echo $relativePath?>js/jquery.badBrowser.js" type="text/javascript"></script>
 	<script src="<?php echo $relativePath?>js/text_navigation.js" type="text/javascript"></script>
-	<script src="<?php echo $relativePath?>js/functions.js" type="text/javascript"></script>	
+	<script src="<?php echo $relativePath?>js/functions.js" type="text/javascript"></script>
 	<script src="<?php echo $relativePath?>js/lightbox/js/jquery.lightbox.min.js" type="text/javascript"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4TU2TWevt6f17IQTSkOz1_MvDR7JRd_k&"></script>	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4TU2TWevt6f17IQTSkOz1_MvDR7JRd_k&"></script>
 	<script src="<?php echo $relativePath?>js/spider.min.js" type="text/javascript"></script>
 	// <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script> -->
 </head>
@@ -77,8 +77,9 @@ header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Dispo
 	</div>
 	<div id="sidebar">
 		<ul>
-			<!-- Navigation -->
 			<li id="the_project"><a href="<?php echo $relativePath?>the_project/"<?php if ($selected == "the_project") print(" class=\"selected\"") ?>>The Project</a></li>
+			<!-- Navigation -->
+			<!-- <li id="the_project"><a href="<?php echo $relativePath?>the_project/"<?php if ($selected == "the_project") print(" class=\"selected\"") ?>>The Project</a></li>
 			<li id="boccaccio"><a href="<?php echo $relativePath?>boccaccio/life1_en.php"<?php if ($selected == "boccaccio") print(" class=\"selected\"") ?>>Boccaccio</a></li>
 			<li id="texts"><a href="<?php echo $relativePath?>texts/"<?php if ($selected == "texts") print(" class=\"selected\"") ?>>Texts</a></li>
 			<li id="brigata"><a href="<?php echo $relativePath?>brigata/"<?php if ($selected == "brigata") print(" class=\"selected\"") ?>>Brigata</a></li>
@@ -93,16 +94,16 @@ header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Dispo
 			<li id="bibliography"><a href="<?php echo $relativePath?>bibliography/"<?php if ($selected == "bibliography") print(" class=\"selected\"") ?>>Bibliography</a></li>
 			<li id="pedagogy"><a href="<?php echo $relativePath?>pedagogy/"<?php if ($selected == "pedagogy") print(" class=\"selected\"") ?>>Pedagogy</a></li>
 			<li id="syllabus"><a href="<?php echo $relativePath?>the_project/syllabus.php"<?php if ($selected == "syllabus") print(" class=\"selected\"") ?>>Syllabus</a></li>
-			<li id="visualizations"><a href="<?php echo $relativePath?>visualizations/"<?php if ($selected == "visualizations") print(" class=\"selected\"") ?>>Visualizations (new!)</a></li>
+			<li id="visualizations"><a href="<?php echo $relativePath?>visualizations/"<?php if ($selected == "visualizations") print(" class=\"selected\"") ?>>Visualizations (new!)</a></li> -->
 			<!-- End -->
 		</ul>
-		
+
 <?php if ($selected == "texts") {
 
  if ($work !=="index") {
 		include('text_search.php');
 		}
-	
+
 }
 ?>
 </div>

@@ -135,7 +135,7 @@ h2 span.cite {
 }
 
 /* used in text searches to highlight found words */
-.hilit 
+.hilit
 {
 	color: #A84936;
 	font-weight: bold;
@@ -144,7 +144,7 @@ h2 span.cite {
 /* Image Styles */
 
 .image_right, .image_left, .image_center {
-	margin-bottom: 20px;	
+	margin-bottom: 20px;
 }
 
 .image_right {
@@ -279,7 +279,9 @@ h2 span.cite {
 	/*height: 355px;  --  original height*/
 	height:450px; /*ensures that short pages won't cut off menu*/
 	background-repeat:no-repeat;
-	background-image: url(../images/page_elements/navigation_back.png);
+	border: 2px solid black;
+	background-color: white;
+	/*background-image: url(../images/page_elements/navigation_back.png);*/
 	margin-left: 16px;
 	margin-top: 9px;
 	padding-top: 22px;
@@ -484,16 +486,16 @@ ul.links li a:hover {
 			color: #333;
 			border-bottom: 1px solid #404040;
 		}
-		
+
 		ul.relatedLinks li a:visited {
 			color: #333;
 			border-bottom: 1px dotted #404040;
 		}
-		
+
 		ul.relatedLinks li a:hover {
 			border-bottom-color: #B3B296;
 		}
-		
+
 ul#breadcrumbs {
 	height: 22px;
 	background-color: #dddebb;
@@ -567,14 +569,14 @@ img.map {
 div.twocolumn {
 	overflow: auto;
 	width: 100%;}
-	
+
 .left {
 	width: 40%;
 	float: left;}
 .right {
 	width: 50%;
 	float: right;}
-	
+
 /* for floating paras and making them look like a two column.*/
 div.maps{
 	overflow: auto;
@@ -753,7 +755,7 @@ background-color: #cccc99;
 }
 
 #footer a:hover {
-	color: #c1c894;	
+	color: #c1c894;
 }
 
 #footer strong {
@@ -777,7 +779,7 @@ background-color: #cccc99;
 /** HOME PAGE **/
 
 #stripe {
-background: #edf2cc url(../images/page_elements/footer_background.png) repeat-x; 
+background: #edf2cc url(../images/page_elements/footer_background.png) repeat-x;
 top:0px;
 bottom: 0px;
 
@@ -813,7 +815,7 @@ bottom: 0px;
 	margin-right: auto;
 	position: relative;
 }
-   
+
 #indexcontent {
 	position:relative;
 	top:0px;
