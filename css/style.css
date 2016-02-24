@@ -80,11 +80,11 @@ ul ul {
 
 li {
 	font-family: 'Libre Baskerville', serif;
-	padding-left: 25px;
 	line-height: 1.9em;
 }
 
 .side{
+	padding-left: 25px;
 	margin: -8px 0;
 }
 
@@ -310,6 +310,7 @@ h2 span.cite {
 }
 
 #sidebar ul li a.selected {
+	color: #333333;
 	/*Add little diamond image*/
 }
 
@@ -445,7 +446,7 @@ ul.links li a:hover {
 ul#breadcrumbs {
 	height: 22px;
 	background-color: #dddebb;
-	font-size: 9px;
+	font-size: 13px;
 	border-bottom: 1px solid #cdcbab;
 	border-top: 1px solid #cdcbab;
 	line-height: 22px;
