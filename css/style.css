@@ -79,7 +79,13 @@ ul ul {
 }
 
 li {
+	font-family: 'Libre Baskerville', serif;
+	padding-left: 25px;
 	line-height: 1.9em;
+}
+
+.side{
+	margin: -8px 0;
 }
 
 input {
@@ -277,94 +283,34 @@ h2 span.cite {
 #sidebar ul {
 	width: 169px;
 	/*height: 355px;  --  original height*/
-	height:450px; /*ensures that short pages won't cut off menu*/
+	font-size: 16px;
+	/*height:450px; /*ensures that short pages won't cut off menu*/*/
 	background-repeat:no-repeat;
-	border: 2px solid black;
-	background-color: white;
-	/*background-image: url(../images/page_elements/navigation_back.png);*/
+	/*border: 2px solid #DDDEBB;
+	background-color: #F8F8F8;*/
+	background-size: cover;
+    background-position: center;
+	background-image: url(../images/page_elements/navigation_back.png);
 	margin-left: 16px;
 	margin-top: 9px;
 	padding-top: 22px;
+	padding-bottom: 22px;
 }
 
 #sidebar ul li a {
-	display: block;
+	/*display: block;*/
 	height: 22px;
 	background-repeat: no-repeat;
 	text-indent: -9000px;
 }
 
-#sidebar ul li a:hover {
+#sidebar ul li a:hover a.selected {
 	border: none;
-	background-position: 0 -22px;
+	color: #333333;
 }
 
 #sidebar ul li a.selected {
-	background-position: 0 -44px;
-}
-
-#sidebar ul li#the_project a {
-	background-image: url(../images/nav/the_project.png);
-}
-
-#sidebar ul li#boccaccio a {
-	background-image: url(../images/nav/boccaccio.png);
-}
-
-#sidebar ul li#texts a {
-	background-image: url(../images/nav/texts.png);
-}
-
-#sidebar ul li#search a {
-	background-image: url(../images/nav/search.png);
-}
-
-#sidebar ul li#brigata a {
-	background-image: url(../images/nav/brigata.png);
-}
-
-#sidebar ul li#plague a {
-	background-image: url(../images/nav/plague.png);
-}
-
-#sidebar ul li#literature a {
-	background-image: url(../images/nav/literature.png);
-}
-
-#sidebar ul li#history a {
-	background-image: url(../images/nav/history.png);
-}
-
-#sidebar ul li#society a {
-	background-image: url(../images/nav/society.png);
-}
-
-#sidebar ul li#religion a {
-	background-image: url(../images/nav/religion.png);
-}
-
-#sidebar ul li#arts a {
-	background-image: url(../images/nav/arts.png);
-}
-
-#sidebar ul li#maps a {
-	background-image: url(../images/nav/maps.png);
-}
-
-#sidebar ul li#themes_motifs a {
-	background-image: url(../images/nav/themes_motifs.png);
-}
-
-#sidebar ul li#bibliography a {
-	background-image: url(../images/nav/bibliography.png);
-}
-
-#sidebar ul li#pedagogy a {
-	background-image: url(../images/nav/pedagogy.png);
-}
-
-#sidebar ul li#syllabus a {
-	background-image: url(../images/nav/syllabus.png);
+	/*Add little diamond image*/
 }
 
 /* Text Search */
