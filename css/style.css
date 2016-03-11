@@ -3,8 +3,8 @@
 /***  GENERAL PAGE STYLES  ********/
 
 html, body {
-	font-family: Verdana, Helvetica, Arial, sans-serif;
-	font-size: 11px;
+	/*font-family: Verdana, Helvetica, Arial, sans-serif;*/
+	font-size: 13px;
 	height: 100%;
 	line-height: 1.6em;
 	color: #333;
