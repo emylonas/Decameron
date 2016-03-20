@@ -1,0 +1,399 @@
+body { font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: 300; padding:20px; background-color:#262626 !important;}
+table {
+  margin: -10px;
+  border-collapse: separate;
+  float:left;
+  position:relative;
+  margin-left:40px;
+  margin-top:20px;
+  background-color: black;
+  margin-bottom:20px;
+}
+td {
+  vertical-align: top;
+  border-radius: 5px;
+  display: table-cell;
+  text-align: center;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  width:50px;
+  height:40px;
+  padding-top:15px;
+  padding-bottom:15px;
+  border: 5px solid #CCC;
+  color: rgba(7,7,7,1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: 0 1px 0 0 rgba(255,255,255,0.298039) inset, 0 -1px 1px 0 rgba(255,255,255,0.14902) inset, 0 2px 0 0 rgb(187,187,187) , 0 4px 3px 0 rgba(0,0,0,0.2) ;
+  box-shadow: 0 1px 0 0 rgba(255,255,255,0.298039) inset, 0 -1px 1px 0 rgba(255,255,255,0.14902) inset, 0 2px 0 0 rgb(187,187,187) , 0 4px 3px 0 rgba(0,0,0,0.2) ;
+  -webkit-transition: all 0.1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -moz-transition: all 0.1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -o-transition: all 0.1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 0.1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+th {
+    background: #CCC;
+  vertical-align: top;
+  border-radius: 5px;
+  display: table-cell;
+  padding: 5px;
+  width: 50px;
+  height: 20px;
+    
+
+  text-align: center;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  padding-top:15px;
+  padding-bottom:15px;
+  border: 5px solid #CCC;
+  color: rgba(7,7,7,1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: 0 1px 0 0 rgba(255,255,255,0.298039) inset, 0 -1px 1px 0 rgba(255,255,255,0.14902) inset, 0 2px 0 0 rgb(187,187,187) , 0 4px 3px 0 rgba(0,0,0,0.2) ;
+  box-shadow: 0 1px 0 0 rgba(255,255,255,0.298039) inset, 0 -1px 1px 0 rgba(255,255,255,0.14902) inset, 0 2px 0 0 rgb(187,187,187) , 0 4px 3px 0 rgba(0,0,0,0.2) ;
+  -webkit-transition: all 0.1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -moz-transition: all 0.1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -o-transition: all 0.1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 0.1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}	
+td:hover {
+    cursor:pointer;
+    cursor:hand;
+    color: gray;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-size: auto auto;
+    background-size: auto auto;
+}
+td.clicked {
+  top: 2px;
+  color:transparent;
+ -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: 0 1px 0 0 rgba(255,255,255,0.298039) inset, 0 -1px 1px 0 rgba(255,255,255,0.14902) inset;
+  box-shadow: 0 1px 0 0 rgba(255,255,255,0.298039) inset, 0 -1px 1px 0 rgba(255,255,255,0.14902) inset;
+  -webkit-transition: all 50ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -moz-transition: all 50ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -o-transition: all 50ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 50ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+#content {
+    float:left;
+    width:420px;
+    background-color:#5ECADE;
+    margin: 20px;
+    padding-left:20px;
+    position:relative;
+    padding-right:20px;
+    margin-top:40px;
+    margin-left:30px;
+    border-radius:5px;
+    padding-top:0px;
+}
+#content:empty {
+    display:none;
+}
+#facets {
+    float:left;
+    width:300px;
+    line-height:15px;
+    position:relative;
+    margin-left:80px;
+    background-color:#4B4B4B;
+    padding-left:15px;
+    padding-right:15px;
+    margin-top:28px;
+    border:3px solid #110b0b;
+}
+#facets a {
+    color:#CAE5ED;
+}
+#facets h2 {
+    color:#A9C0C7;
+}
+#clear-filters-button {
+    background-color:#5ECADE;
+}
+img {
+    padding:0;
+    max-height:400px;
+    max-width:380px;
+}
+figure {
+    padding:0;
+    margin:0;
+}
+#first {
+    width:280px;
+}
+.facet_x {
+    margin-left:20px
+}
+.facet-container {
+
+
+}
+.on {
+    color:red;
+}
+.off {
+    color:black;
+}
+.btn {
+    white-space:normal !important;
+    text-align:left !important;
+    border-radius:5px !important;
+}
+.btn-primary {
+    background-color:#5ECADE !important;
+}
+.btn-primary .badge {
+    color: #5ECADE !important;
+}
+#cloud {
+    margin-top:30px;
+    background-color:#5b5757;
+    float:left;
+    width:572px;
+    margin:20px;
+    overflow:auto;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-left:40px;
+}
+
+
+#cloud_container a {
+    background-color:#5A5B5B;
+    color:#FAF7F3 !important;
+}
+#cloud_container a:hover {
+    font-weight: bold !important;
+    cursor: pointer !important;
+    color: #62F295 !important;
+}
+
+.Pm {
+  background: -webkit-linear-gradient(0deg, #662D91 0, #662D91 0, #b592d1 100%, #662D91 100%);
+  background: -moz-linear-gradient(90deg, #662D91 0, #662D91 0, #b592d1 100%, #662D91 100%);
+  background: linear-gradient(90deg, #662D91 0, #662D91 0, #b592d1 100%, #662D91 100%);
+}
+
+.Pm:hover {   
+  background: -webkit-linear-gradient(-90deg, #662D91 0, #bba7c9 100%), -webkit-linear-gradient(0deg, #662D91 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(180deg, #662D91 0, #bba7c9 100%), -moz-linear-gradient(90deg, #662D91 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: linear-gradient(180deg, #662D91 0, #bba7c9 100%), linear-gradient(90deg, #662D91 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+}
+
+.Pm.clicked {
+  background: -webkit-radial-gradient(#e0d3ea 0, #8963a5 100%), rgba(252,249,249,1);
+  background: -moz-radial-gradient(#e0d3ea 0, #8963a5 100%), rgba(252,249,249,1);
+  background: radial-gradient(#e0d3ea 0, #8963a5 100%), rgba(252,249,249,1);
+}
+
+.Pn {
+  background: -webkit-linear-gradient(0deg, #005B7F 0, #aadcef 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(90deg, #005B7F 0, #aadcef 100%), rgb(238, 238, 238);
+  background: linear-gradient(90deg, #005B7F 0, #aadcef 100%), rgb(238, 238, 238);
+}
+
+.Pn:hover {
+  background: -webkit-linear-gradient(-90deg, #005B7F 0, #84bfd6 100%), -webkit-linear-gradient(0deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(180deg, #005B7F 0, #84bfd6 100%), -moz-linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: linear-gradient(180deg, #005B7F 0, #84bfd6 100%), linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+}
+
+.Pn.clicked {
+  background: -webkit-radial-gradient(#e3f2f7 0, #2995bc 100%), rgb(255, 255, 255);
+  background: -moz-radial-gradient(#e3f2f7 0, #2995bc 100%), rgb(255, 255, 255);
+  background: radial-gradient(#e3f2f7 0, #2995bc 100%), rgb(255, 255, 255);
+}
+
+.Ne {
+  background: -webkit-linear-gradient(0deg, #fcf155 0, #f4f4cb 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(90deg, #fcf155 0, #f4f4cb 100%), rgb(238, 238, 238);
+  background: linear-gradient(90deg, #fcf155 0, #f4f4cb 100%), rgb(238, 238, 238);
+}
+
+.Ne:hover {
+  background: -webkit-linear-gradient(-90deg, #f9ee4d 0, #f4f2d0 100%), -webkit-linear-gradient(0deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(180deg, #f9ee4d 0, #f4f2d0 100%), -moz-linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: linear-gradient(180deg, #f9ee4d 0, #f4f2d0 100%), linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+}
+
+.Ne.clicked {
+  background: -webkit-radial-gradient(#ffffff 0, #f7eb42 100%), rgb(255, 255, 255);
+  background: -moz-radial-gradient(#ffffff 0, #f7eb42 100%), rgb(255, 255, 255);
+  background: radial-gradient(#ffffff 0, #f7eb42 100%), rgb(255, 255, 255);
+}
+
+.Fla {
+  background: -webkit-linear-gradient(0deg, #62bfea 0, #e1eef4 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(90deg, #62bfea 0, #e1eef4 100%), rgb(238, 238, 238);
+  background: linear-gradient(90deg, #62bfea 0, #e1eef4 100%), rgb(238, 238, 238);
+}
+
+.Fla:hover {
+  background: -webkit-linear-gradient(-90deg, #5abeed 0, #b8ddf2 100%), -webkit-linear-gradient(0deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(180deg, #5abeed 0, #b8ddf2 100%), -moz-linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: linear-gradient(180deg, #5abeed 0, #b8ddf2 100%), linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+}
+
+.Fla.clicked {
+  background: -webkit-radial-gradient(#edf9ff 0, #85cff2 100%), rgb(255, 255, 255);
+  background: -moz-radial-gradient(#edf9ff 0, #85cff2 100%), rgb(255, 255, 255);
+  background: radial-gradient(#edf9ff 0, #85cff2 100%), rgb(255, 255, 255);
+}
+
+.Di {
+  background: -webkit-linear-gradient(0deg, #9E0B0F 0, #eaadae 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(90deg, #9E0B0F 0, #eaadae 100%), rgb(238, 238, 238);
+  background: linear-gradient(90deg, #9E0B0F 0, #eaadae 100%), rgb(238, 238, 238);
+}
+
+.Di:hover {
+  background: -webkit-linear-gradient(-90deg, #9E0B0F 0, #d89c9d 100%), -webkit-linear-gradient(0deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(180deg, #9E0B0F 0, #d89c9d 100%), -moz-linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: linear-gradient(180deg, #9E0B0F 0, #d89c9d 100%), linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+}
+
+.Di.clicked {
+  background: -webkit-radial-gradient(#f2c4c4 0, #c94244 99%, #c94244 100%), rgb(255, 255, 255);
+  background: -moz-radial-gradient(#f2c4c4 0, #c94244 99%, #c94244 100%), rgb(255, 255, 255);
+  background: radial-gradient(#f2c4c4 0, #c94244 99%, #c94244 100%), rgb(255, 255, 255);
+}
+
+.Fi {
+  background: -webkit-linear-gradient(0deg, #F26522 0, #edc3af 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(90deg, #F26522 0, #edc3af 100%), rgb(238, 238, 238);
+  background: linear-gradient(90deg, #F26522 0, #edc3af 100%), rgb(238, 238, 238);
+}
+
+.Fi:hover {
+  background: -webkit-linear-gradient(-90deg, #F26522 0, #f4c4ad 100%), -webkit-linear-gradient(0deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(180deg, #F26522 0, #f4c4ad 100%), -moz-linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: linear-gradient(180deg, #F26522 0, #f4c4ad 100%), linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+}
+
+.Fi.clicked {
+  background: -webkit-radial-gradient(#f2e3dc 0, #ed7e4b 99%, #ed7e4b 100%), rgb(255, 255, 255);
+  background: -moz-radial-gradient(#f2e3dc 0, #ed7e4b 99%, #ed7e4b 100%), rgb(255, 255, 255);
+  background: radial-gradient(#f2e3dc 0, #ed7e4b 99%, #ed7e4b 100%), rgb(255, 255, 255);
+}
+
+.Fls {
+  background: -webkit-linear-gradient(0deg, #545252 0, #c1bdbd 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(90deg, #545252 0, #c1bdbd 100%), rgb(238, 238, 238);
+  background: linear-gradient(90deg, #545252 0, #c1bdbd 100%), rgb(238, 238, 238);
+}
+
+.Fls:hover {
+  background: -webkit-linear-gradient(-90deg, #5b5b5b 0, #bfbfbf 100%), -webkit-linear-gradient(0deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(180deg, #5b5b5b 0, #bfbfbf 100%), -moz-linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: linear-gradient(180deg, #5b5b5b 0, #bfbfbf 100%), linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+}
+
+.Fls.clicked {
+  background: -webkit-radial-gradient(#fff9f9 0, #686868 99%, #686868 100%), rgb(255, 255, 255);
+  background: -moz-radial-gradient(#fff9f9 0, #686868 99%, #686868 100%), rgb(255, 255, 255);
+  background: radial-gradient(#fff9f9 0, #686868 99%, #686868 100%), rgb(255, 255, 255);
+}
+
+.Em {
+  background: -webkit-linear-gradient(0deg, #c9c5c5 0, #FFFFFF 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(90deg, #c9c5c5 0, #FFFFFF 100%), rgb(238, 238, 238);
+  background: linear-gradient(90deg, #c9c5c5 0, #FFFFFF 100%), rgb(238, 238, 238);
+}
+
+.Em:hover {
+  background: -webkit-linear-gradient(-90deg, #d6d4d4 0, #FFFFFF 100%), -webkit-linear-gradient(0deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(180deg, #d6d4d4 0, #FFFFFF 100%), -moz-linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: linear-gradient(180deg, #d6d4d4 0, #FFFFFF 100%), linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+}
+
+.Em.clicked {
+  background: -webkit-radial-gradient(#ffffff 0, #e0dede 99%, #e0dede 100%), rgb(255, 255, 255);
+  background: -moz-radial-gradient(#ffffff 0, #e0dede 99%, #e0dede 100%), rgb(255, 255, 255);
+  background: radial-gradient(#ffffff 0, #e0dede 99%, #e0dede 100%), rgb(255, 255, 255);
+}
+
+.La {
+  background: -webkit-linear-gradient(0deg, #68b561 0, #c3edc0 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(90deg, #68b561 0, #c3edc0 100%), rgb(238, 238, 238);
+  background: linear-gradient(90deg, #68b561 0, #c3edc0 100%), rgb(238, 238, 238);
+}
+
+.La:hover {
+  background: -webkit-linear-gradient(-90deg, #6ebc67 0, #bceab9 100%), -webkit-linear-gradient(0deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(180deg, #6ebc67 0, #bceab9 100%), -moz-linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: linear-gradient(180deg, #6ebc67 0, #bceab9 100%), linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+}
+
+.La.clicked {
+  background: -webkit-radial-gradient(#e2f2e1 0, #9dd698 99%, #9dd698 100%), rgb(255, 255, 255);
+  background: -moz-radial-gradient(#e2f2e1 0, #9dd698 99%, #9dd698 100%), rgb(255, 255, 255);
+  background: radial-gradient(#e2f2e1 0, #9dd698 99%, #9dd698 100%), rgb(255, 255, 255);
+}
+
+.El {
+  background: -webkit-linear-gradient(0deg, #005826 0, #9fc9b0 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(90deg, #005826 0, #9fc9b0 100%), rgb(238, 238, 238);
+  background: linear-gradient(90deg, #005826 0, #9fc9b0 100%), rgb(238, 238, 238);
+}
+
+.El:hover {
+  background: -webkit-linear-gradient(-90deg, #005826 0, #8dc6a5 98%, #bceab9 100%), -webkit-linear-gradient(0deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: -moz-linear-gradient(180deg, #005826 0, #8dc6a5 98%, #bceab9 100%), -moz-linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+  background: linear-gradient(180deg, #005826 0, #8dc6a5 98%, #bceab9 100%), linear-gradient(90deg, rgb(243,243,243) 0, rgb(233,233,233) 100%), rgb(238, 238, 238);
+}
+
+.El.clicked {
+  background: -webkit-radial-gradient(#bee0cc 0, #317c51 99%, #317c51 100%), rgb(255, 255, 255);
+  background: -moz-radial-gradient(#bee0cc 0, #317c51 99%, #317c51 100%), rgb(255, 255, 255);
+  background: radial-gradient(#bee0cc 0, #317c51 99%, #317c51 100%), rgb(255, 255, 255);
+}
+.gray {
+  color:#CCC !important;
+  background: #CCC !important;
+}
+.selected {
+    color:red;
+}
+span {
+    color:white !important;
+}
+#cloud_container a.chosen {
+    color: #62F295 !important;
+}
