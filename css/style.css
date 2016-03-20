@@ -3,8 +3,8 @@
 /***  GENERAL PAGE STYLES  ********/
 
 html, body {
-	font-family: Verdana, Helvetica, Arial, sans-serif;
-	font-size: 11px;
+	/*font-family: Verdana, Helvetica, Arial, sans-serif;*/
+	font-size: 13px;
 	height: 100%;
 	line-height: 1.6em;
 	color: #333;
@@ -79,7 +79,13 @@ ul ul {
 }
 
 li {
+	font-family: 'Libre Baskerville', serif;
 	line-height: 1.9em;
+}
+
+.side{
+	padding-left: 25px;
+	margin: -8px 0;
 }
 
 input {
@@ -135,7 +141,7 @@ h2 span.cite {
 }
 
 /* used in text searches to highlight found words */
-.hilit 
+.hilit
 {
 	color: #A84936;
 	font-weight: bold;
@@ -144,7 +150,7 @@ h2 span.cite {
 /* Image Styles */
 
 .image_right, .image_left, .image_center {
-	margin-bottom: 20px;	
+	margin-bottom: 20px;
 }
 
 .image_right {
@@ -277,92 +283,35 @@ h2 span.cite {
 #sidebar ul {
 	width: 169px;
 	/*height: 355px;  --  original height*/
-	height:450px; /*ensures that short pages won't cut off menu*/
+	font-size: 16px;
+	/*height:450px; /*ensures that short pages won't cut off menu*/*/
 	background-repeat:no-repeat;
+	/*border: 2px solid #DDDEBB;
+	background-color: #F8F8F8;*/
+	background-size: cover;
+    background-position: center;
 	background-image: url(../images/page_elements/navigation_back.png);
 	margin-left: 16px;
 	margin-top: 9px;
 	padding-top: 22px;
+	padding-bottom: 22px;
 }
 
 #sidebar ul li a {
-	display: block;
+	/*display: block;*/
 	height: 22px;
 	background-repeat: no-repeat;
 	text-indent: -9000px;
 }
 
-#sidebar ul li a:hover {
+#sidebar ul li a:hover a.selected {
 	border: none;
-	background-position: 0 -22px;
+	color: #333333;
 }
 
 #sidebar ul li a.selected {
-	background-position: 0 -44px;
-}
-
-#sidebar ul li#the_project a {
-	background-image: url(../images/nav/the_project.png);
-}
-
-#sidebar ul li#boccaccio a {
-	background-image: url(../images/nav/boccaccio.png);
-}
-
-#sidebar ul li#texts a {
-	background-image: url(../images/nav/texts.png);
-}
-
-#sidebar ul li#search a {
-	background-image: url(../images/nav/search.png);
-}
-
-#sidebar ul li#brigata a {
-	background-image: url(../images/nav/brigata.png);
-}
-
-#sidebar ul li#plague a {
-	background-image: url(../images/nav/plague.png);
-}
-
-#sidebar ul li#literature a {
-	background-image: url(../images/nav/literature.png);
-}
-
-#sidebar ul li#history a {
-	background-image: url(../images/nav/history.png);
-}
-
-#sidebar ul li#society a {
-	background-image: url(../images/nav/society.png);
-}
-
-#sidebar ul li#religion a {
-	background-image: url(../images/nav/religion.png);
-}
-
-#sidebar ul li#arts a {
-	background-image: url(../images/nav/arts.png);
-}
-
-#sidebar ul li#maps a {
-	background-image: url(../images/nav/maps.png);
-}
-
-#sidebar ul li#themes_motifs a {
-	background-image: url(../images/nav/themes_motifs.png);
-}
-
-#sidebar ul li#bibliography a {
-	background-image: url(../images/nav/bibliography.png);
-}
-
-#sidebar ul li#pedagogy a {
-	background-image: url(../images/nav/pedagogy.png);
-}
-
-#sidebar ul li#syllabus a {
-	background-image: url(../images/nav/syllabus.png);
+	color: #333333;
+	/*Add little diamond image*/
 }
 
 /* Text Search */
@@ -484,20 +433,20 @@ ul.links li a:hover {
 			color: #333;
 			border-bottom: 1px solid #404040;
 		}
-		
+
 		ul.relatedLinks li a:visited {
 			color: #333;
 			border-bottom: 1px dotted #404040;
 		}
-		
+
 		ul.relatedLinks li a:hover {
 			border-bottom-color: #B3B296;
 		}
-		
+
 ul#breadcrumbs {
 	height: 22px;
 	background-color: #dddebb;
-	font-size: 9px;
+	font-size: 13px;
 	border-bottom: 1px solid #cdcbab;
 	border-top: 1px solid #cdcbab;
 	line-height: 22px;
@@ -567,14 +516,14 @@ img.map {
 div.twocolumn {
 	overflow: auto;
 	width: 100%;}
-	
+
 .left {
 	width: 40%;
 	float: left;}
 .right {
 	width: 50%;
 	float: right;}
-	
+
 /* for floating paras and making them look like a two column.*/
 div.maps{
 	overflow: auto;
@@ -753,7 +702,7 @@ background-color: #cccc99;
 }
 
 #footer a:hover {
-	color: #c1c894;	
+	color: #c1c894;
 }
 
 #footer strong {
@@ -777,7 +726,7 @@ background-color: #cccc99;
 /** HOME PAGE **/
 
 #stripe {
-background: #edf2cc url(../images/page_elements/footer_background.png) repeat-x; 
+background: #edf2cc url(../images/page_elements/footer_background.png) repeat-x;
 top:0px;
 bottom: 0px;
 
@@ -813,7 +762,7 @@ bottom: 0px;
 	margin-right: auto;
 	position: relative;
 }
-   
+
 #indexcontent {
 	position:relative;
 	top:0px;
