@@ -16,9 +16,10 @@
     .onoffswitch {float:right; padding:10px 10px 10px 10px;}
     .switchlabel {float:right; padding:18px 10px 10px 10px; color:white; font-size:1.5em; font-family:'Open Sans' Helvetica Arial sans-serif;}
     footer { font-size:1em;}
-    #legend { font-size:1.2em;background:#C7B68A; padding:10px; width:120px; font-family:'Open Sans' Helvetica Arial sans-serif;
+    #legend { font-size:1.2em;background:#C7B68A; padding:10px; width:120px; font-family:'Open Sans' Helvetica Arial sans-serif; 
     border:1px solid gray;}
     .colorbox { height: 10px; width:15px; background:black; display:inline-block; margin-right: 5px;}
+    a {text-decoration:underline; color:#085394;}
     .box-image { max-width:450px; max-height:350px;}
     .narr { color:black; padding-top:2px;padding-right:20px;padding-left:5px; text-decoration:none;}
     .narr:hover {
@@ -40,6 +41,20 @@
         border:1px solid gray !important;
         border-radius:5px !important;
     }
+    #grid img {
+        height:400px;
+        width:500px;
+    }
+    #grid_header {
+        width:480px;
+        background-color:gray;
+        padding:10px;
+        color:white;
+        font-size:1.4em;
+    }
+    #grid {
+        padding:20px 20px 20px 0px;
+    }
 
 </style>
 
@@ -47,7 +62,12 @@
 	<li><a href="../">Main</a></li>
 	<li>Brigata</li>
 </ul>
-
+<div id="grid" class="container">
+    <div id="grid_header">
+    <p>Decameron Grid: <a href="grid/index.html">Full Size</a></p>
+    </div>
+    <img src="grid/grid_screenshot.png">
+</div>
 
 <div id="tools" class="container">
 	<div id="title">Decameron Map: <a target="_blank" href="Decameron/index.html">Full Size</a></div>
@@ -79,7 +99,7 @@
     <div><a class="narr" id="9"><div class="colorbox" style="background:#005B7F;"></div>Panfilo</a></div>
     <strong>Filter by story day</strong>
     <p><a class="day" id="0">&nbsp;1 &nbsp;</a><a class="day" id="1">&nbsp;2 &nbsp;</a><a class="day" id="2">&nbsp;3&nbsp;</a>
-    <a class="day" id="3">&nbsp;4 &nbsp;</a><a class="day" id="4">&nbsp;5 &nbsp;</a><br><a class="day" id="5">&nbsp;6&nbsp;</a>
+    <a class="day" id="3">&nbsp;4 &nbsp;</a><a class="day" id="4">&nbsp;5 &nbsp;</a><br><a class="day" id="5">&nbsp;6&nbsp;</a>    
     <a class="day" id="6">&nbsp;7 &nbsp;</a><a class="day" id="7">&nbsp;8&nbsp;</a>
     <a class="day" id="8">&nbsp;9 &nbsp;</a><a class="day" id="9">&nbsp;10 &nbsp;</a></p>
   </div>
