@@ -18,21 +18,43 @@
 define(function() { 
   return function (domNode, crossFilterDimension, makeCloud, updateAll) {
     
-  var cloud = require('d3.layout.cloud');
-  
-  var facetGroup = crossFilterDimension.group(function(textLabel) { 
-    return textLabel 
-  }),
-  activeFilterList = {};
+  var cloud = require('d3.layout.cloud'),
+      entries = {},
+      facetGroup = crossFilterDimension.group(function(textLabel) { 
+         return textLabel 
+      }),
+      activeFilterList = {};
+
+  //go through every entry in the spreadsheet
+  facetGroup.all().forEach(function (facet) {
+
+     //split entries by comma, put into hashtable where
+     //key is the new word, value is a list of original entries that contain
+     //that word
+      var temp = facet.key.split(',').map(function(x) {
+          return x.replace(/^\s+|\s+$/g, '');
+      });
+      temp.forEach(function (key) {
+        if (!entries[key]) {
+            entries[key] = [facet.key];
+        } else {
+            entries[key].push(facet.key);
+        }
+      });
+  });
 
   function applyFilterList() {
 
       // Convert activeFilterList hash into an array
       var filterArray = [];
-      for (f in activeFilterList) { filterArray.push(f); }
+      for (f in activeFilterList) { 
+        //put every entry that contains that word in the filterArray
+        $.each(entries[f], function(f, k) {
+          filterArray.push(k);
+        });
+      }
 
       // Apply filters to dimensions
-
       if (filterArray.length === 0) {
         crossFilterDimension.filterAll(); 
       } else {
@@ -40,7 +62,6 @@ define(function() {
           return ! (filterArray.indexOf(d) === -1);
         });  
       }
-
       updateAll(); 
   }
 
@@ -50,16 +71,29 @@ define(function() {
   function update() {
 
       // Clear what's there
-      console.log("UPDATE CLOUD");
       $('#cloud').empty();
  
       var data = [];
-
+      var facetData = {};
       facetGroup.all().forEach(function (facet) {
+
         if ((facet.value > 0 ) && (facet.key != "")) {
-          var facetData = {"text": facet.key, "size": facet.value};
-          data.push(facetData);
+          temp = facet.key.split(',').map(function(x) {
+              return x.replace(/^\s+|\s+$/g, '');
+          });
+
+          temp.forEach(function (key) {
+            if (!facetData[key]) 
+                facetData[key] = facet.value;
+            else 
+                facetData[key] = facetData[key]+1;
+            
+          });
         }
+      });
+      $.each(facetData, function(k, v) {
+         var element = {"text": k, "size": v};
+         data.push(element); 
       });
         
       addFilter = function (key) {
@@ -68,7 +102,6 @@ define(function() {
       };
 
       removeFilter = function (key) {
-        console.log("click");
         delete(activeFilterList[key]);
         applyFilterList();
       };
@@ -78,8 +111,8 @@ define(function() {
       function calculateCloud(data) {
         cloud()
         .size([580, 400])
-        .words(data) // data from PubNub
-        .rotate(0) // 0 or 90deg
+        .words(data)
+        .rotate(0) 
         .fontSize(function(d) { return d.size; })
         .on('end', drawCloud)
         .start();
@@ -98,13 +131,10 @@ define(function() {
           .style('font-family', 'Arial')
           .on('click', function(d) {
               var a = d3.select(this);
-              console.log(a);
-              console.log($(this).attr("class"));
-              if (activeFilterList[d.text] !== undefined) {
-                var e = d3.select(this);
-                console.log(e);
+              var entry = entries[d.text];
+              if (activeFilterList[d.text] !== undefined) 
                 removeFilter(d.text);
-              }
+              
               else {
                 $(this).addClass('selected');
                 $(this).css("font-weight", "bold");

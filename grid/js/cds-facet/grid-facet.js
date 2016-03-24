@@ -16,6 +16,7 @@
 */
 
 function getId(narr, day) {
+//    console.log("narr: "+narr+", day: "+day);
     var id;
     var narrators = {Dioneo: 0, Elissa: 10, Emilia: 20, Fiammetta: 30, Filomena: 40, Filostrato: 50,
                     Lauretta: 60, Neifile: 70, Pampinea: 80, Panfilo: 90};
@@ -72,12 +73,13 @@ define(function() {
     function updateResultsListing(itemNumberStart) {
 
         var allItems = crossFilterDimension.top(Infinity);
-
+//        console.log("items "+allItems);
     
             d3.selectAll("td")
               .classed("gray", true);
         
         allItems.forEach(function (item) {
+//            console.log("item is: "+item);
             var gridId = getId(item.gsx$narrator.$t, item.gsx$storyday.$t);
             gridId = "#" + gridId;
             $(gridId).removeClass("gray");

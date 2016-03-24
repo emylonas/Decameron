@@ -1,6 +1,8 @@
 body { font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: 300; padding:20px;}
+.col-md-5, .col-md-4, .col-md-3 {
+  float:left !important;
+}
 table {
-  margin: -10px;
   border-collapse: separate;
   float:left;
   position:relative;
@@ -140,7 +142,7 @@ figure {
     margin:0;
 }
 #first {
-    width:200px;
+    width:300px;
 }
 .facet_x {
     margin-left:20px
