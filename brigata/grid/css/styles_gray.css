@@ -6,8 +6,9 @@ table {
   position:relative;
   margin-left:40px;
   margin-top:20px;
-  background-color: black;
+  background-color: #CCC !important;
   margin-bottom:20px;
+  margin-right:0px;
 }
 td {
   vertical-align: top;
@@ -112,12 +113,12 @@ td.clicked {
     float:left;
     width:420px;
     background-color:#5ECADE;
-    margin: 20px;
+    margin: 0px;
     padding-left:20px;
     position:relative;
     padding-right:20px;
     margin-top:40px;
-    margin-left:10px;
+    margin-left:-10px;
     border-radius:5px;
     padding-top:0px;
 }
@@ -195,6 +196,7 @@ figure {
     border: 1px solid gray;
     border-radius: 5px;
     margin-left:40px;
+
 }
 
 
