@@ -95,7 +95,7 @@ td:hover {
 }
 td.clicked {
   top: 2px;
-  color:transparent;
+  font-weight:bold !important;
  -webkit-background-origin: padding-box;
   background-origin: padding-box;
   -webkit-background-clip: border-box;
@@ -401,4 +401,26 @@ span {
 }
 #cloud_container a.chosen {
     color: #62F295 !important;
+}
+h4 {
+  float:left;
+}
+.arrow-d {
+  background:url("../arrow_side.gif") left top;
+  width:25px;
+  height:10px;
+  background-size: 25px 10px;
+  display:block;
+  float:left;
+}
+.arrow-r {
+  background:url("../arrow_down.gif") left top;
+  width:20px;
+  height:15px;
+  background-size: 20px 15px;
+  display:block;
+  float:left;
+}
+.facet {
+  clear:both;
 }

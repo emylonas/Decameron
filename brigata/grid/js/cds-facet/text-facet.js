@@ -24,16 +24,41 @@ define(function() {
     var facetGroup = crossFilterDimension.group(function(textLabel) { 
           return textLabel 
         }),
+        entries = {},
         $domNode = $(domNode),
         $facetListingContainer,
         activeFilterList = {};
+      
+      
+      //go through every entry in the spreadsheet
+      facetGroup.all().forEach(function (facet) {
+
+         //split entries by comma, put into hashtable where
+         //key is the new word, value is a list of original entries that contain
+         //that word
+          var temp = facet.key.split(',').map(function(x) {
+              return x.replace(/^\s+|\s+$/g, '');
+          });
+          temp.forEach(function (key) {
+            if (!entries[key]) {
+                entries[key] = [facet.key];
+            } else {
+                entries[key].push(facet.key);
+            }
+          });
+      });
 
     function applyFilterList() {
-
+      console.log('applying');
+      console.log(activeFilterList);
       // Convert activeFilterList hash into an array
 
       var filterArray = [];
-      for (f in activeFilterList) { filterArray.push(f); }
+      for (f in activeFilterList) { 
+        $.each(entries[f], function(f, k) {
+          filterArray.push(k);
+        });
+      }
 
       // Apply filters to dimensions
 
@@ -55,13 +80,21 @@ define(function() {
         clearFilter();
         updateAll();
       }).appendTo($domNode);
-    }
+    };
+      
+    function addFilter(key) {
+        console.log('add');
+      activeFilterList[key] = 1;
+      applyFilterList();
+    };
 
-    function addFacetListingContainer() {
-      // $facetListingContainer = $('<div class="facet-container"></div>');
-      $facetListingContainer = $('<div class="facet-container"></div>');
-      $domNode.append($facetListingContainer);
-    }
+    // removeFilter handler for when a previously-selected facet is clicked
+
+    function removeFilter(key) {
+        console.log('delete');
+      delete(activeFilterList[key]);
+      applyFilterList();
+    };
 
     // Update facet listing -- this is the main draw routine
     //  Draw content straight to the DOM node
@@ -70,41 +103,59 @@ define(function() {
 
       // Clear what's there
 
-      $facetListingContainer.empty();
-
+      $domNode.empty();
+      var facetData = {};
+        
       facetGroup.all().forEach(function (facet) {
+          
           if ((!facet.value==0) && (/\S/.test(facet.key))) {
+              
+              temp = facet.key.split(',').map(function(x) {
+                  return x.replace(/^\s+|\s+$/g, '');
+              });
 
-                var newNode,
-                    newNodeStyle = 'margin-right: 0.1em; margin-bottom: 0.1em',
+              temp.forEach(function (key) {
+                if (!facetData[key]) 
+                    facetData[key] = facet.value;
+                else 
+                    facetData[key] = facetData[key]+facet.value;
 
-                    // addFilter handler for when a facet is clicked
+              });
 
-                    addFilter = function () {
-                      activeFilterList[facet.key] = 1;
-                      applyFilterList();
-                    },
 
-                    // removeFilter handler for when a previously-selected facet is clicked
-
-                    removeFilter = function () {
-                      delete(activeFilterList[facet.key]);
-                      applyFilterList();
-                    };
-
-                newNode = $('<span class="btn btn-sm" style="' + newNodeStyle + '">' + 
-                            facet.key + 
-                            ' <span class="badge">' + facet.value + '</span></span> ');
-
-                if (activeFilterList[facet.key] !== undefined)
-                  newNode.addClass('btn-primary')
-                         .click(removeFilter);
-                else
-                  newNode.click(addFilter); 
-
-                $facetListingContainer.append(newNode);
           }
       });
+        
+     console.log(facetData);
+        
+     for (var key in facetData) {
+      if (facetData.hasOwnProperty(key)) {
+                var newNode,
+            newNodeStyle = 'margin-right: 0.1em; margin-bottom: 0.1em',
+
+            // addFilter handler for when a facet is clicked
+
+        newNode = $('<span class="btn btn-sm" id="'+key+'" style="' + newNodeStyle + '">' + 
+                    key + 
+                    ' <span class="badge">' + facetData[key] + '</span></span> ');
+
+        if (activeFilterList[key] !== undefined)
+          newNode.addClass('btn-primary');
+
+          newNode.click(function(e) {
+              console.log('hey');
+              var key = $(this).attr('id');
+              if (activeFilterList[key] !== undefined)
+                  removeFilter(key);
+              else
+                addFilter(key);
+          }); 
+
+        $domNode.append(newNode);
+          
+      }
+     }
+        
     }
 
     function clearFilter() {
@@ -115,8 +166,6 @@ define(function() {
     // Initialize
 
     function init() {
-      // addClearButton();
-      addFacetListingContainer();
       update();    
     }
 

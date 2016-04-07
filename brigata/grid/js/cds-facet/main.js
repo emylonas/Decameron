@@ -16,12 +16,10 @@ requirejs([ 'jquery-2.1.4.min', 'crossfilter.min', 'd3.min',
         textFacet = arguments[3];
     
 
-        $('#first').collapsible({
-            arrowRclass: 'arrow-r',
-            arrowDclass: 'arrow-d',
-       animate:true
-           });
-    
+        $('#collapsible').collapsible({
+          arrowRclass: 'arrow-r',
+          arrowDclass: 'arrow-d'
+        });
         var grid = [[{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},
                     {narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1}],
                     [{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},
@@ -145,7 +143,7 @@ requirejs([ 'jquery-2.1.4.min', 'crossfilter.min', 'd3.min',
                 .classed("clicked", false);
               $(this).addClass("clicked");
               location = data.feed.entry[this.id].gsx$locations.$t;
-              setting = data.feed.entry[this.id].gsx$locations.$t;
+              setting = data.feed.entry[this.id].gsx$setting.$t;
               label = data.feed.entry[this.id].gsx$label.$t;
               theme = data.feed.entry[this.id].gsx$themeoftheday.$t;
               summary = data.feed.entry[this.id].gsx$summary.$t;
@@ -156,10 +154,13 @@ requirejs([ 'jquery-2.1.4.min', 'crossfilter.min', 'd3.min',
               image = data.feed.entry[this.id].gsx$image.$t;
               console.log(image);
               caption = data.feed.entry[this.id].gsx$caption.$t;
-              $("#content").html("<div><p><strong>"+label+"</strong><p><strong>Theme of the Day: </strong>"+theme+"</p><p><strong>Summary: </strong>"+summary+
+              var content = "<div><p><strong>"+label+"</strong><p><strong>Theme of the Day: </strong>"+theme+"</p><p><strong>Summary: </strong>"+summary+
                 "</p><p><strong>Story Type: </strong>"+stype+"</p><p><strong>Location: </strong>"+location+"</p><p><strong>Setting: </strong>"+setting+
-                "</p><p><strong>Characters: </strong>"+characters+"</p><p><strong>Themes: </strong>"+themes+"</p><p><strong>Keywords: </strong>"+keywords+
-                "</p><figure><img src="+'"'+image+'"'+"/><figcaption>"+caption+"</figcaption></figure></div>");
+                "</p><p><strong>Characters: </strong>"+characters+"</p><p><strong>Themes: </strong>"+themes+"</p><p><strong>Keywords: </strong>"+keywords;
+              if (image.length != 0) {
+                content.concat("</p><figure><img src="+'"'+image+'"'+"/><figcaption>"+caption+"</figcaption></figure></div>");
+              }
+              $("#content").html(content);
               $("#content").css("padding-bottom","20px");
                 $("#content").css("padding-top", "20px");
               }
