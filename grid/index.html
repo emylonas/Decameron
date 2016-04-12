@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
     <link rel="stylesheet" href="css/styles_gray.css"></link>
     <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+    <script src="js/cds-facet/jquery-2.1.4.min.js"></script>
     <script src="js/cds-facet/d3.layout.cloud.js"></script>
     <script src="js/cds-facet/d3.min.js"></script>
     <script data-main="js/cds-facet/main" src="js/require.js"></script>
@@ -16,22 +17,29 @@
         <div id="facets">
               <h2>Filters 
             <button class="btn btn-xs btn-info" style="" id="clear-filters-button">Clear all</button>
-            <h4><span class="arrow-r" aria-hidden="true"></span><a href="#">Narrator</a></h4>
+            
               </h2>
+              <div id="collapsible">
+              <h4><span class="arrow-r"></span><a href="#">Narrator</a></h4>
                 <div id="text-facet-narrator" class="facet facet-narrator" data-facet-type="narrator" data-dimension="narrator" data-abc123="whatevah">
       </div>
-
-        <h4><span class="arrow-r"></span><a href="#">Location(s)</a></h4>
+      <div style="clear:both"></div><div></div>
+        <h4 id="toggle1"><span class="arrow-r"></span><a href="#">Location(s)</a></h4>
         <div id="text-facet-location" class="facet facet-location" data-facet-type="location" data-dimension="locations" data-abc123="whatevah">
         </div>
-        <h4><span class="arrow-r"></span><a href="#">Setting</a></h4>
+        <div style="clear:both"></div><div></div>
+        <h4 id="toggle2"><span class="arrow-r"></span><a style="display:inline" href="#">Setting</a></h4>
         <div id="text-facet-setting" class="facet facet-setting" data-facet-type="setting" data-dimension="setting" data-abc123="whatevah">
         </div>
-        <h4><span class="arrow-r"></span><a href="#">Story Type</a></h4>
+        <div style="clear:both"></div><div></div>
+        <h4 id="toggle3"><span class="arrow-r"></span><a href="#">Story Type</a></h4>
         <div id="text-facet-story_type" class="facet facet-type" data-facet-type="type" data-dimension="storytype" data-abc123="whatevah">
         </div>
-        <h4><span class="arrow-r"></span><a href="#">Time Period</a></h4>
+        <div style="clear:both"></div><div></div>
+        <h4 id="toggle4"><span class="arrow-r"></span><a href="#">Time Period</a></h4>
         <div id="text-facet-time_period" class="facet facet-time" data-facet-type="time" data-dimension="timeperiod" data-abc123="whatevah">
+        <div style="clear:both"></div><div></div>
+        </div>
         </div>
         </div>
     </div>
@@ -54,8 +62,13 @@
   </tr>
 </thead>
 </table>
+        <br>
+        <div>
+        <h2 id="theme_head">Themes</h2>
 <div id="cloud"></div>
+
     </div>
+        </div>
     
 <div class="col-md-3" id="content"></div>
 

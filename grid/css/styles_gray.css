@@ -6,8 +6,9 @@ table {
   position:relative;
   margin-left:40px;
   margin-top:20px;
-  background-color: black;
+  background-color: #CCC !important;
   margin-bottom:20px;
+  margin-right:0px;
 }
 td {
   vertical-align: top;
@@ -94,7 +95,7 @@ td:hover {
 }
 td.clicked {
   top: 2px;
-  color:transparent;
+  font-weight:bold !important;
  -webkit-background-origin: padding-box;
   background-origin: padding-box;
   -webkit-background-clip: border-box;
@@ -112,12 +113,12 @@ td.clicked {
     float:left;
     width:420px;
     background-color:#5ECADE;
-    margin: 20px;
+    margin: 0px;
     padding-left:20px;
     position:relative;
     padding-right:20px;
     margin-top:40px;
-    margin-left:10px;
+    margin-left:-10px;
     border-radius:5px;
     padding-top:0px;
 }
@@ -185,7 +186,6 @@ figure {
     color: #5ECADE !important;
 }
 #cloud {
-    margin-top:30px;
     background-color:#5b5757;
     float:left;
     width:672px;
@@ -195,8 +195,12 @@ figure {
     border: 1px solid gray;
     border-radius: 5px;
     margin-left:40px;
+    margin-top:-5px;
 }
-
+#theme_head {
+    margin-left:40px;
+    color:#57db85;
+}
 
 #cloud_container a {
     background-color:#5A5B5B;
@@ -399,4 +403,26 @@ span {
 }
 #cloud_container a.chosen {
     color: #62F295 !important;
+}
+h4 {
+  float:left;
+}
+.arrow-d {
+  background:url("../arrow_side.gif") left top;
+  width:25px;
+  height:10px;
+  background-size: 25px 10px;
+  display:block;
+  float:left;
+}
+.arrow-r {
+  background:url("../arrow_down.gif") left top;
+  width:20px;
+  height:15px;
+  background-size: 20px 15px;
+  display:block;
+  float:left;
+}
+.facet {
+  clear:both;
 }
