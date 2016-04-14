@@ -186,7 +186,6 @@ figure {
     color: #5ECADE !important;
 }
 #cloud {
-    margin-top:30px;
     background-color:#5b5757;
     float:left;
     width:672px;
@@ -196,9 +195,12 @@ figure {
     border: 1px solid gray;
     border-radius: 5px;
     margin-left:40px;
-
+    margin-top:-5px;
 }
-
+#theme_head {
+    margin-left:40px;
+    color:#57db85;
+}
 
 #cloud_container a {
     background-color:#5A5B5B;

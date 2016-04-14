@@ -47,12 +47,15 @@ define(function() {
 
       // Convert activeFilterList hash into an array
       var filterArray = [];
+      console.log('applying active filter list');
+      console.log(activeFilterList);
       for (f in activeFilterList) { 
         //put every entry that contains that word in the filterArray
         $.each(entries[f], function(f, k) {
           filterArray.push(k);
         });
       }
+      console.log(filterArray);
 
       // Apply filters to dimensions
       if (filterArray.length === 0) {
@@ -78,10 +81,12 @@ define(function() {
       facetGroup.all().forEach(function (facet) {
 
         if ((facet.value > 0 ) && (facet.key != "")) {
+                          
+            
           temp = facet.key.split(',').map(function(x) {
               return x.replace(/^\s+|\s+$/g, '');
           });
-
+            console.log(temp);
           temp.forEach(function (key) {
             if (!facetData[key]) 
                 facetData[key] = facet.value;
@@ -96,7 +101,9 @@ define(function() {
          data.push(element); 
       });
         
+      console.log(data);
       addFilter = function (key) {
+        console.log('add filter for '+key);
         activeFilterList[key] = 1;
         applyFilterList();
       };
@@ -109,22 +116,34 @@ define(function() {
       calculateCloud(data);
         
       function calculateCloud(data) {
+          console.log(data);
         cloud()
         .size([580, 400])
         .words(data)
         .rotate(0) 
-        .fontSize(function(d) { return d.size; })
-        .on('end', drawCloud)
+        .fontSize(function(d) { console.log(d);
+            return d.size; })
+        .on('end', drawCloud(data))
         .start();
       }
         
+      function compareStrings(a, b) {
+          a = a.toLowerCase();
+          b = b.toLowerCase();
+
+          return (a < b) ? -1 : (a > b) ? 1 : 0;
+      }
+      
       function drawCloud(words) {
+          console.log(words);
           d3.select('#cloud').append('div')
           .attr('width', 580).attr('height', 400)
           .attr('id', 'cloud_container')
           .append('p')
           .selectAll('text')
-          .data(words)
+          .data(words.sort(function(a, b) {
+              return compareStrings(a.text, b.text);
+          }))
           .enter().append('a')
           .classed("theme", true)
           .style('font-size', function(d) { return d.size+12 + 'px'; })

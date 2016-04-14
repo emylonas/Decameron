@@ -16,10 +16,6 @@ requirejs([ 'jquery-2.1.4.min', 'crossfilter.min', 'd3.min',
         textFacet = arguments[3];
     
 
-        $('#collapsible').collapsible({
-          arrowRclass: 'arrow-r',
-          arrowDclass: 'arrow-d'
-        });
         var grid = [[{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},
                     {narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1}],
                     [{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},{narr: " ", id: -1},
@@ -77,7 +73,7 @@ requirejs([ 'jquery-2.1.4.min', 'crossfilter.min', 'd3.min',
         var time_facet = [];
 
         $(function () {
-        $.getJSON('https://spreadsheets.google.com/feeds/list/1KYWHUZEMXb9qMK_4MMKpmBL9L5AGGXV55htunh3nQ9E/default/public/values?alt=json&callback=?', function(data) {
+        $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9yBaXksddgtc0B6Xqd74/default/public/values?alt=json&callback=?', function(data) {
            
             var narr, narrator, day, order, location, label, theme, summary, stype, setting, characters, themes, keywords, image, caption, time;
             for (var i = 0; i < data.feed.entry.length; i++) {
@@ -94,6 +90,8 @@ requirejs([ 'jquery-2.1.4.min', 'crossfilter.min', 'd3.min',
             
               if ((/\S/.test(narr)) && (/\S/.test(narrator)) && (/\S/.test(day)) && (/\S/.test(order))) {
               //put into grid array so grid knows what to paint later
+                  if (day=='I')
+                      day = 1;
               grid[day-1][order-1].narr = narr;
               grid[day-1][order-1].id = i;
               if ($.inArray(narrator, narr_facet) == -1) {
@@ -239,11 +237,28 @@ requirejs([ 'jquery-2.1.4.min', 'crossfilter.min', 'd3.min',
                     return cloudFacet(domNode, themeDimension, cloudFunction, updateAll);
                 else
                     return { update: function() {return true}};
+            
+
             }
 
             $('#clear-filters-button').click(clearAll);
             //   updateAll(group, dimension);
             });
+            
+            $('#collapsible').collapsible({
+              arrowRclass: 'arrow-r',
+              arrowDclass: 'arrow-d'
+            });
+            
+            $("#toggle1").children(':first-child').toggleClass('arrow-r arrow-d');
+            $("#toggle1").next().slideToggle(500);
+            $("#toggle2").children(':first-child').toggleClass('arrow-r arrow-d');
+            $("#toggle2").next().slideToggle(500);
+            $("#toggle3").children(':first-child').toggleClass('arrow-r arrow-d');
+            $("#toggle3").next().slideToggle(500);
+            $("#toggle4").children(':first-child').toggleClass('arrow-r arrow-d');
+            $("#toggle4").next().slideToggle(500);
+            
 
         });
 

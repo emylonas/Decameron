@@ -172,6 +172,10 @@ figure {
     border: 1px solid gray;
     border-radius: 5px;
 }
+#theme_head {
+    margin-left:40px;
+    color:white;
+}
 a:hover {
     font-weight: bold !important;
     cursor: pointer !important;

@@ -29,6 +29,19 @@ define(function() {
         $facetListingContainer,
         activeFilterList = {};
       
+    //set narrators with associated colors for the badge display  
+    var narrators = {};
+    narrators['Pampinea'] = '#662D91';
+    narrators['Panfilo'] = '#005B7F';
+    narrators['Neifile'] = '#FFF568';
+    narrators['Filomena'] = '#84CDEF';
+    narrators['Dioneo'] = '#9E0B0F';
+    narrators['Fiammetta'] = '#F26522';
+    narrators['Emilia'] = '#bababa';
+    narrators['Filostrato'] = '#707070';
+    narrators['Lauretta'] = '#7CC576';
+    narrators['Elissa'] = '#005826';
+      
       
       //go through every entry in the spreadsheet
       facetGroup.all().forEach(function (facet) {
@@ -49,8 +62,6 @@ define(function() {
       });
 
     function applyFilterList() {
-      console.log('applying');
-      console.log(activeFilterList);
       // Convert activeFilterList hash into an array
 
       var filterArray = [];
@@ -83,7 +94,6 @@ define(function() {
     };
       
     function addFilter(key) {
-        console.log('add');
       activeFilterList[key] = 1;
       applyFilterList();
     };
@@ -91,7 +101,6 @@ define(function() {
     // removeFilter handler for when a previously-selected facet is clicked
 
     function removeFilter(key) {
-        console.log('delete');
       delete(activeFilterList[key]);
       applyFilterList();
     };
@@ -126,7 +135,6 @@ define(function() {
           }
       });
         
-     console.log(facetData);
         
      for (var key in facetData) {
       if (facetData.hasOwnProperty(key)) {
@@ -134,16 +142,21 @@ define(function() {
             newNodeStyle = 'margin-right: 0.1em; margin-bottom: 0.1em',
 
             // addFilter handler for when a facet is clicked
+                    
+        getColor = function(k) {
+            if (narrators[k] != null)
+                return narrators[k];
+            return 'gray';
+        };            
 
         newNode = $('<span class="btn btn-sm" id="'+key+'" style="' + newNodeStyle + '">' + 
                     key + 
-                    ' <span class="badge">' + facetData[key] + '</span></span> ');
+                    ' <span class="badge" style="background-color:'+getColor(key)+'">' + facetData[key] + '</span></span> ');
 
         if (activeFilterList[key] !== undefined)
           newNode.addClass('btn-primary');
 
           newNode.click(function(e) {
-              console.log('hey');
               var key = $(this).attr('id');
               if (activeFilterList[key] !== undefined)
                   removeFilter(key);
