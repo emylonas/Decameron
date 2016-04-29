@@ -135,8 +135,23 @@ define(function() {
           }
       });
         
-        
+        var key, keys = Object.keys(facetData);
+        var n = keys.length;
+        var result={}
+        while (n--) {
+          key = keys[n];
+          result[key.charAt(0).toUpperCase() + key.slice(1)] = facetData[key];
+        }
+        var ordered = {};
+        Object.keys(result).sort().forEach(function(key) {
+            ordered[key] = result[key];
+        });
+        facetData = ordered;
+//    .data(words.sort(function(a, b) {
+//              return compareStrings(a.text, b.text);
+//          }))
      for (var key in facetData) {
+      if (key.trim().length > 0 && key != null) {
       if (facetData.hasOwnProperty(key)) {
                 var newNode,
             newNodeStyle = 'margin-right: 0.1em; margin-bottom: 0.1em',
@@ -166,6 +181,7 @@ define(function() {
 
         $domNode.append(newNode);
           
+      }
       }
      }
         

@@ -1,4 +1,10 @@
 body { font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: 300; padding:20px; background-color:#262626 !important;}
+@media (min-width: 992px) {
+	.col-md-5{
+	width:initial !important;
+	}
+}
+
 table {
   margin: -10px;
   border-collapse: separate;
@@ -184,6 +190,9 @@ figure {
 }
 .btn-primary .badge {
     color: #5ECADE !important;
+}
+#theme_container {
+	clear:both;
 }
 #cloud {
     background-color:#5b5757;

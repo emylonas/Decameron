@@ -47,15 +47,13 @@ define(function() {
 
       // Convert activeFilterList hash into an array
       var filterArray = [];
-      console.log('applying active filter list');
-      console.log(activeFilterList);
+      
       for (f in activeFilterList) { 
         //put every entry that contains that word in the filterArray
         $.each(entries[f], function(f, k) {
           filterArray.push(k);
         });
       }
-      console.log(filterArray);
 
       // Apply filters to dimensions
       if (filterArray.length === 0) {
@@ -86,7 +84,6 @@ define(function() {
           temp = facet.key.split(',').map(function(x) {
               return x.replace(/^\s+|\s+$/g, '');
           });
-            console.log(temp);
           temp.forEach(function (key) {
             if (!facetData[key]) 
                 facetData[key] = facet.value;
@@ -100,10 +97,8 @@ define(function() {
          var element = {"text": k, "size": v};
          data.push(element); 
       });
-        
-      console.log(data);
+
       addFilter = function (key) {
-        console.log('add filter for '+key);
         activeFilterList[key] = 1;
         applyFilterList();
       };
@@ -116,12 +111,12 @@ define(function() {
       calculateCloud(data);
         
       function calculateCloud(data) {
-          console.log(data);
+
         cloud()
         .size([580, 400])
         .words(data)
         .rotate(0) 
-        .fontSize(function(d) { console.log(d);
+        .fontSize(function(d) { 
             return d.size; })
         .on('end', drawCloud(data))
         .start();
@@ -135,7 +130,6 @@ define(function() {
       }
       
       function drawCloud(words) {
-          console.log(words);
           d3.select('#cloud').append('div')
           .attr('width', 580).attr('height', 400)
           .attr('id', 'cloud_container')
