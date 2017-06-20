@@ -3,37 +3,39 @@
 $(function() {
 	showLabels();
 	$("#toggle_labels").click(function(event) { toggleLabels(); return false; });
-	
+
 	// Give the div containers of images appropriate widths, necessary for IE
-	$(".image_right img, .image_left img").parent().css("width", function(n) { return $(".image_right img, .image_left img").get(n).width + 8 + "px"; });
-	
-	$.Lightbox.construct({
+	//$(".image_right img, .image_left img").parent().css("width", function(n) { return $(".image_right img, .image_left img").get(n).width + 8 + "px"; });
 
-		show_linkback: false,
-		auto_resize: false,
-		show_helper_text: false,
-		auto_scroll: 'ignore',
 
-		text: {
-
-			image: 'Photo'
-
-			}
-
-	});
+	//$.featherlight();
+	// $.Lightbox.construct({
+	//
+	// 	show_linkback: false,
+	// 	auto_resize: false,
+	// 	show_helper_text: false,
+	// 	auto_scroll: 'ignore',
+	//
+	// 	text: {
+	//
+	// 		image: 'Photo'
+	//
+	// 		}
+	//
+	// });
 });
 
 function toggleLabels() {
 	if ($.cookie('labels') == null) {
 		$.cookie('labels', 'false');
-	} 
+	}
 	else {
 		if ($.cookie('labels') == 'false') {
 			$.cookie('labels', 'true');
 		}
 		else $.cookie('labels', 'false')
 	}
-		
+
 	showLabels();
 }
 
@@ -46,7 +48,7 @@ function showLabels() {
 		$("#text a, #text h3").show();
 		$("#toggle_labels").html("Hide text labels");
 	}
-}	
+}
 
 // florio hide and show text
 
@@ -59,7 +61,7 @@ function display (category) {
        }
 }
 
-	
+
 
 // Cookies
 
