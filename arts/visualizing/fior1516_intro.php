@@ -22,43 +22,43 @@
 <h2>Images</h2>
 <p>Note: in the following bibliographical descriptions, the long 's' is represented by an italic f (<em>f</em>). Where confusion may arise between 's' and 'f', the word has been transcribed in square brackets.</p>
 
-<div class="image_block">
+<div class="image_block" data-featherlight-gallery data-featherlight-filter="a.gallery">
 	<div class="row">
 		<div class="image_center">
 			<img src="fior1516/images/Dec1516_page1r_th.jpg" width="94" height="150" />
-			<span><a rel="lightbox-small" title="Page 1 recto (small)" href="fior1516/images/Dec1516_page1r_sm.jpg">small image</a> (87kb)<br /> <a rel="lightbox-large" title="Page 1 recto (large)" href="fior1516/images/Dec1516_page1r.jpg">large image</a> (437kb)</span>
+			<span><a class="gallery" title="Page 1 recto (small)" href="fior1516/images/Dec1516_page1r_sm.jpg">small image</a> (87kb)<br /> <a class="gallery" title="Page 1 recto (large)" href="fior1516/images/Dec1516_page1r.jpg">large image</a> (437kb)</span>
 		</div>
 		<p>Page 1 recto (a<sup>a</sup>): headed PROEMIO.; woodcut of brigata in garden, with small insert at top right showing meeting in Santa Maria Novella; subtitle DEL DECAMERON DI .M. GIOVANNI | BOCCACCIO PROEMIO.; illuminated initial letter H missing, indicated by lower-case <em>h</em>; text set in italic; signature <em>a</em> at bottom right.</p>
 	</div>
-	
+
 	<div class="row">
 		<div class="image_center">
 			<img src="fior1516/images/Dec1516_page16r_th.jpg" width="93" height="150" />
-			<span><a rel="lightbox-small" title="Page 16 recto (small)" href="fior1516/images/Dec1516_page16r_sm.jpg">small image</a> (77kb)<br /> <a rel="lightbox-large" title="Page 16 recto (large)" href="fior1516/images/Dec1516_page16r.jpg">large image</a> (377kb)</span>
+			<span><a class="gallery" title="Page 16 recto (small)" href="fior1516/images/Dec1516_page16r_sm.jpg">small image</a> (77kb)<br /> <a class="gallery" title="Page 16 recto (large)" href="fior1516/images/Dec1516_page16r.jpg">large image</a> (377kb)</span>
 		</div>
 		<p>Page 16 recto [bxiii<sup>a</sup>] headed GIORNATA (from the running title reading across both pages of the opening: PRIMA GIORNATA); rubric to the second novella of the First Day <em>Abraham iudeo ftimolato da Giannotto decivigni perche di/ | veniffi chriftiano va in corte di Roma, & veduta la malvagita | de cherici ritorna ad Parigi & feffi </em>[fessi] <em> christiano. Novella .II.</em>; woodcut showing the baptism of Abraham in foreground, with inserted scene of Abraham journeying to Rome and three seated clerics; large initial letter L at beginning of novella.</p>
 	</div>
-	
+
 	<div class="row">
 		<div class="image_center">
 			<img src="fior1516/images/Dec1516_page18r_th.jpg" width="94" height="150" />
-			<span><a rel="lightbox-small" title="Page 18 recto (small)" href="fior1516/images/Dec1516_page18r_sm.jpg">small image</a> (85kb)<br /> <a rel="lightbox-large" title="Page 18 recto (large)" href="fior1516/images/Dec1516_page18r.jpg">large image</a> (438kb)</span>
+			<span><a class="gallery" title="Page 18 recto (small)" href="fior1516/images/Dec1516_page18r_sm.jpg">small image</a> (85kb)<br /> <a rel="lightbox-large" title="Page 18 recto (large)" href="fior1516/images/Dec1516_page18r.jpg">large image</a> (438kb)</span>
 		</div>
 		<p>Page 18 recto (cij<sup>a</sup>) headed GIORNATA (from the running title reading across both pages of the opening: PRIMA GIORNATA); rubric to the third novella of the First Day: <em>Melchifedech iudeo con una fua novella di tre anella fc&atildepo un | gr&atilde pericolo apparecchiatogli dalfoldano. Novella.III.</em>; woodcut showing Saladino approaching Melchisedech on left side of frame, with Melchisedech telling Saladino the story of the three rings on right-hand side; large initial P at beginning of novella; signature <em>c ij</em> at bottom right.</p>
 	</div>
-	
+
 	<div class="row">
 		<div class="image_center">
 			<img src="fior1516/images/Dec1516_page21r_th.jpg" width="95" height="150" />
-			<span><a rel="lightbox-small" title="Page 21 recto (small)" href="fior1516/images/Dec1516_page21r_sm.jpg">small image</a> (81kb)<br /> <a rel="lightbox-large" title="Page 21 recto (large)" href="fior1516/images/Dec1516_page21r.jpg">large image</a> (418kb)</span>
+			<span><a class="gallery" title="Page 21 recto (small)" href="fior1516/images/Dec1516_page21r_sm.jpg">small image</a> (81kb)<br /> <a class="gallery" title="Page 21 recto (large)" href="fior1516/images/Dec1516_page21r.jpg">large image</a> (418kb)</span>
 		</div>
 		<p>Page 21 recto [cv<sup>a</sup>] headed GIORNATA (from the running title reading across both pages of the opening: PRIMA GIORNATA); large initial L at beginning of frame story; woodcut showing the Marchesana of Monferrato greeting King Filippo of France in foreground, while their meal is shown                      in the interior scene on the left-hand side of the frame. Large initial capital E marks beginning of novella.</p>
 	</div>
-	
+
 	<div class="row">
 		<div class="image_center">
 			<img src="fior1516/images/Dec1516_page25r_th.jpg" width="95" height="150" />
-			<span><a rel="lightbox-small" title="Page 25 recto (small)" href="fior1516/images/Dec1516_page25r_sm.jpg">small image</a> (82kb)<br /> <a rel="lightbox-large" title="Page 25 recto (large)" href="fior1516/images/Dec1516_page25r.jpg">large image</a> (416kb)</span>
+			<span><a class="gallery" title="Page 25 recto (small)" href="fior1516/images/Dec1516_page25r_sm.jpg">small image</a> (82kb)<br /> <a class="gallery" title="Page 25 recto (large)" href="fior1516/images/Dec1516_page25r.jpg">large image</a> (416kb)</span>
 		</div>
 		<p>Page 25 recto (d<sup>a</sup>) headed GIORNATA (from the running title reading across both pages of the opening: PRIMA GIORNATA); rubric to the eighth story of the First Day <em>Guiglielmo borfieri con leggiadre parole riprende lavaritia di | meffer Hermino de grimaldi. Novella VIII.</em>; woodcut showing Messer Ermino asking Guiglielmo his opinion about what should be painted in his house; large initial S at beginning of novella; signature <em>d</em> at bottom right.</p>
 	</div>
@@ -66,7 +66,7 @@
 	<div class="row">
 		<div class="image_center">
 			<img src="fior1516/images/Dec1516_page178r_th.jpg" width="95" height="150" />
-			<span><a rel="lightbox-small" title="Page 178 recto (small)" href="fior1516/images/Dec1516_page178r_sm.jpg">small image</a> (81kb)<br /> <a rel="lightbox-large" title="Page 178 recto (large)" href="fior1516/images/Dec1516_page178r.jpg">large image</a> (418kb)</span>
+			<span><a class="gallery" title="Page 178 recto (small)" href="fior1516/images/Dec1516_page178r_sm.jpg">small image</a> (81kb)<br /> <a class="gallery" title="Page 178 recto (large)" href="fior1516/images/Dec1516_page178r.jpg">large image</a> (418kb)</span>
 		</div>
 		<p>Page 178 recto (zij<sup>a</sup>) headed GIORNATA (from the running title reading across both pages of the opening: PRIMA GIORNATA); rubric to the fourth story of the Sixth Day <em>Chichibio cuoco di Currado gianfigliazi                      c&otilde una prefta rifpofta | alla fua falute lira di Currado uolge in rifo, & campa della mala | uentura, & dallira del fuo fignore. Novella. VIIII.</em>; woodcut in two parts: the left panel shows Chichibio, Currado, and the cranes. The right-hand panel has two episodes conflated into one: on the left is Chichibio giving the leg to Brunetta, while to the right he cooks the bird on the fire; large initial T at beginning of novella; large initial C; signature <em>z ij</em> at bottom right.</p>
 	</div>

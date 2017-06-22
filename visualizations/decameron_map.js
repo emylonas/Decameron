@@ -35,7 +35,9 @@ var imageMapType = new google.maps.ImageMapType({
     name: 'Tiles'
 });
 
-map.overlayMapTypes.push(imageMapType);
+/* Don't have overlay on by default
+// map.overlayMapTypes.push(imageMapType);
+*/
 // map.fitBounds(mapBounds);
 
 //arrays for turning markers on and off by narrator and day
@@ -127,11 +129,11 @@ function createMarker(latitude, longitude, city, text, color, label, narrator, d
   oms.addMarker(marker);
   onmarkers.push(marker);
 }
-  
+
 //turn historical map on and off
 function handleclick(cb) {
   if (!cb.checked) {
-    map.overlayMapTypes.clear();     
+    map.overlayMapTypes.clear();
   }
   else{
     map.overlayMapTypes.push(imageMapType);
@@ -176,11 +178,11 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
       var contentString = '<h2>'+label+'</h2>'+'<div><p><strong>Location(s): </strong>'+locations+'</p><p><strong>Theme of the Day: </strong>'+
       theme+'</p><p><strong>Summary: </strong>'+rubric+'</p><p><strong>Story Type: </strong>'+type+'</p><p><strong>Time Period: </strong>'+timeperiod+'</p><p><strong>Setting: </strong>'+
       locationtype+'</p><p><strong>Characters: </strong>'+characters+'</p><p><strong>Themes: </strong>'+
-      themes+'</p><p><strong>Keywords: </strong>'+keywords+'</p>';                 
+      themes+'</p><p><strong>Keywords: </strong>'+keywords+'</p>';
       var color;
 
       if (narr in narrators) {
-        color = narrators[narr]; 
+        color = narrators[narr];
       }
       else {
         color = Math.floor(Math.random() * 16777216).toString(16);
@@ -200,7 +202,7 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
           createMarker(lat, lng, location, contentString, color, mlabel, narr, mlabel);
         }
       }
-    } 
+    }
 });
 
 //functions for user to click on narrator and day boxes to turn markers on and off
@@ -258,9 +260,9 @@ function clickAllBoxes(array, e, xswitch, filter1, filter2) {
       }
       set -=1;
       hideMarkers(array[e.id], filter2);
-      
+
   }
-      
+
 };
 
 

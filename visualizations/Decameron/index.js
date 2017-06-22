@@ -35,7 +35,9 @@ var imageMapType = new google.maps.ImageMapType({
     name: 'Tiles'
 });
 
+/*
 map.overlayMapTypes.push(imageMapType);
+*/
 // map.fitBounds(mapBounds);
 
 //initialize two arrays to store markers for user to turn markers on and off by
@@ -126,12 +128,12 @@ function createMarker(latitude, longitude, city, text, color, label, narrator, d
   days[day-1].push(marker);
   oms.addMarker(marker);
 }
-  
+
 
 //turn historical map on and off
 function handleclick(cb) {
   if (!cb.checked) {
-    map.overlayMapTypes.clear();     
+    map.overlayMapTypes.clear();
   }
   else{
     map.overlayMapTypes.push(imageMapType);
@@ -175,11 +177,11 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
       var contentString = '<h2>'+label+'</h2>'+'<div><p><strong>Location(s): </strong>'+locations+'</p><p><strong>Theme of the Day: </strong>'+
       theme+'</p><p><strong>Summary: </strong>'+rubric+'</p><p><strong>Story Type: </strong>'+type+'</p><p><strong>Time Period: </strong>'+timeperiod+'</p><p><strong>Setting: </strong>'+
       locationtype+'</p><p><strong>Characters: </strong>'+characters+'</p><p><strong>Themes: </strong>'+
-      themes+'</p><p><strong>Keywords: </strong>'+keywords+'</p><figure><img class="box-image" src='+image+'/><figcaption>'+caption+'</figcaption></figure></div>';                 
+      themes+'</p><p><strong>Keywords: </strong>'+keywords+'</p><figure><img class="box-image" src='+image+'/><figcaption>'+caption+'</figcaption></figure></div>';
       var color;
 
       if (narr in narrators) {
-        color = narrators[narr]; 
+        color = narrators[narr];
       }
       else {
         color = Math.floor(Math.random() * 16777216).toString(16);
@@ -199,7 +201,7 @@ $.getJSON('https://spreadsheets.google.com/feeds/list/14MHHM3EX9xITi-DNaf4j6nG9y
         }
       }
 
-    } 
+    }
 });
 
 //functions for user to click on narrator and day boxes to turn markers on and off
@@ -257,9 +259,9 @@ function clickAllBoxes(array, e, xswitch, filter1, filter2) {
       }
       set -=1;
       hideMarkers(array[e.id], filter2);
-      
+
   }
-      
+
 };
 
 
