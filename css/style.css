@@ -602,15 +602,21 @@ div.maps > p {
 /* drop caps in Decameron text */
 
 .day-cap {
-    color: green;
+    font-size: 3.26em;
+    line-height: 0.5;
+    margin: 0.205em .1 0 0;
     }
     
 .story-cap {
-    color: green;
+    font-size: 3em;
+    line-height: 0.4;
+    margin: 0.205em .1 0 0;
     }
     
 .novella-cap {
-    color: green;
+    font-size: 2.26em;
+    line-height: 0.3;
+    margin: 0.205em .1 0 0;
     }    
     
 /* tables in browse/search pages */
