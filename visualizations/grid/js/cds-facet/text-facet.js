@@ -1,35 +1,35 @@
 
 /*
 
-  Given a domNode (a container), a dimension (which provides the facet data), 
+  Given a domNode (a container), a dimension (which provides the facet data),
   and updateAll (a function that draws all the facets on the page)
-  
+
   Creates a clear button within the container
-  
+
   Creates a container within the container for the listing of facets
-  
-  Creates the listing 
-  
-  Returns an object with an update() method that draws the facet, using the dimension, 
+
+  Creates the listing
+
+  Returns an object with an update() method that draws the facet, using the dimension,
   to the domNode
-  
+
 */
 
-define(function() { 
+define(function() {
 
   // Return a constructor
-  
+
   return function (domNode, crossFilterDimension, updateAll) {
 
-    var facetGroup = crossFilterDimension.group(function(textLabel) { 
-          return textLabel 
+    var facetGroup = crossFilterDimension.group(function(textLabel) {
+          return textLabel
         }),
         entries = {},
         $domNode = $(domNode),
         $facetListingContainer,
         activeFilterList = {};
-      
-    //set narrators with associated colors for the badge display  
+
+    //set narrators with associated colors for the badge display
     var narrators = {};
     narrators['Pampinea'] = '#662D91';
     narrators['Panfilo'] = '#005B7F';
@@ -41,8 +41,8 @@ define(function() {
     narrators['Filostrato'] = '#707070';
     narrators['Lauretta'] = '#7CC576';
     narrators['Elissa'] = '#005826';
-      
-      
+
+
       //go through every entry in the spreadsheet
       facetGroup.all().forEach(function (facet) {
 
@@ -65,7 +65,7 @@ define(function() {
       // Convert activeFilterList hash into an array
 
       var filterArray = [];
-      for (f in activeFilterList) { 
+      for (f in activeFilterList) {
         $.each(entries[f], function(f, k) {
           filterArray.push(k);
         });
@@ -74,25 +74,25 @@ define(function() {
       // Apply filters to dimensions
 
       if (filterArray.length === 0) {
-        crossFilterDimension.filterAll(); 
+        crossFilterDimension.filterAll();
       } else {
         crossFilterDimension.filterFunction(function (d) {
           return ! (filterArray.indexOf(d) === -1);
-        });  
+        });
       }
 
-      updateAll(); 
+      updateAll();
     }
 
     // Add clear button
 
     function addClearButton() {
-      $('<button>Clear</button>').click(function () { 
+      $('<button>Clear</button>').click(function () {
         clearFilter();
         updateAll();
       }).appendTo($domNode);
     };
-      
+
     function addFilter(key) {
       activeFilterList[key] = 1;
       applyFilterList();
@@ -114,19 +114,19 @@ define(function() {
 
       $domNode.empty();
       var facetData = {};
-        
+
       facetGroup.all().forEach(function (facet) {
-          
+
           if ((!facet.value==0) && (/\S/.test(facet.key))) {
-              
+
               temp = facet.key.split(',').map(function(x) {
                   return x.replace(/^\s+|\s+$/g, '');
               });
 
               temp.forEach(function (key) {
-                if (!facetData[key]) 
+                if (!facetData[key])
                     facetData[key] = facet.value;
-                else 
+                else
                     facetData[key] = facetData[key]+facet.value;
 
               });
@@ -134,23 +134,27 @@ define(function() {
 
           }
       });
-        
-        
+
+
+      let indexingArray = [],
+          arrayOfNode = [];
+
+    let index = 0;
      for (var key in facetData) {
       if (facetData.hasOwnProperty(key)) {
                 var newNode,
             newNodeStyle = 'margin-right: 0.1em; margin-bottom: 0.1em',
 
             // addFilter handler for when a facet is clicked
-                    
+
         getColor = function(k) {
             if (narrators[k] != null)
                 return narrators[k];
             return 'gray';
-        };            
+        };
 
-        newNode = $('<span class="btn btn-sm" id="'+key+'" style="' + newNodeStyle + '">' + 
-                    key + 
+        newNode = $('<span class="btn btn-sm" id="'+key+'" style="' + newNodeStyle + '">' +
+                    key +
                     ' <span class="badge" style="background-color:'+getColor(key)+'">' + facetData[key] + '</span></span> ');
 
         if (activeFilterList[key] !== undefined)
@@ -162,24 +166,37 @@ define(function() {
                   removeFilter(key);
               else
                 addFilter(key);
-          }); 
+          });
 
-        $domNode.append(newNode);
-          
+          indexingArray.push([key, index]);
+          arrayOfNode.push(newNode);
+          index = index + 1;
       }
      }
-        
+
+     let sortedArray = indexingArray.sort((l,r) => {
+       console.log(l);
+       let str1 = l[0].toLowerCase(),
+           str2 = r[0].toLowerCase();
+       return str1 < str2 ? -1 : str1 > str2;
+     });
+     for (let i = 0; i < sortedArray.length; ++i) {
+       let ind = sortedArray[i][1];
+       $domNode.append(arrayOfNode[ind]);
+     }
+
+
     }
 
     function clearFilter() {
-      crossFilterDimension.filterAll(); 
+      crossFilterDimension.filterAll();
       activeFilterList = {};
     }
 
     // Initialize
 
     function init() {
-      update();    
+      update();
     }
 
     init();
@@ -190,5 +207,3 @@ define(function() {
     };
   }
 });
-
-
