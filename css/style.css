@@ -33,7 +33,7 @@ p, blockquote {
 }
 
 h2 {
-	font-family: "Cambria", Georgia, Times New Roman, serif;
+	font-family: "Cambria", Georgia, 'Times New Roman', serif;
 }
 
 h2 {
@@ -284,7 +284,7 @@ h2 span.cite {
 	width: 169px;
 	/*height: 355px;  --  original height*/
 	font-size: 16px;
-	/*height:450px; /*ensures that short pages won't cut off menu*/*/
+	/*height:450px; /*ensures that short pages won't cut off menu*/
 	background-repeat:no-repeat;
 	/*border: 2px solid #DDDEBB;
 	background-color: #F8F8F8;*/
@@ -490,7 +490,7 @@ p.sequence_links {
 }
 
 .brigata_information h3 {
-	font-family: "Cambria", Georgia, Times New Roman, serif;
+	font-family: "Cambria", Georgia, 'Times New Roman', serif;
 	font-weight: normal;
 	font-size: 15px;
 	margin-bottom: .5em;
@@ -599,7 +599,20 @@ div.maps > p {
 	background-color: #4d3027;
 	border: 0;
 }
+/* drop caps in Decameron text */
 
+.day_cap {
+    color: green;
+    }
+    
+.story_cap {
+    color: green;
+    }
+    
+.novella_cap {
+    color: green;
+    }    
+    
 /* tables in browse/search pages */
 
 th.orange {background-color: #ffcc66;}
@@ -706,7 +719,7 @@ background-color: #cccc99;
 }
 
 #footer strong {
-	font-family: "Cambria", Georgia, Times New Roman, serif;
+	font-family: "Cambria", Georgia, 'Times New Roman', serif;
 	font-weight: normal;
 	font-style: italic;
 	font-size: 12px;
