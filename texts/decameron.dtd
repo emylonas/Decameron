@@ -26,7 +26,7 @@ the encoding of Elegia di Madonna Fiammetta and maybe of Corbaccio-->
                         lang       CDATA     #IMPLIED
                         rend      (singleq | doubleq | ndash | dguill | sguill | 
                                    italic | opendash | closedash | notdash | 
-                                   dqopen | dqclose | dqnone)     #IMPLIED"  >
+                                   dqopen | dqclose | dqnone | day-cap | novella-cap | story-cap)     #IMPLIED"  >
 
 <!ENTITY % linkstuff    "ptr | ref | xptr | xref | anchor | seg"  > 
 
@@ -159,7 +159,7 @@ Prologue is needed for Decameron and Elegia di Madonna Fiammetta.-->
 <!ATTLIST prologue   who              IDREF                       #IMPLIED
                      %globalatts;                                                >
 
-<!ELEMENT p   (#PCDATA | date | name | note | num | rs | time | emph | foreign | hi | 
+<!ELEMENT p   (#PCDATA | date | name | note | num | rs | time | emph | foreign | hi | c |
                    title | %linkstuff; | pb | q | %text; | figure)*  >
 <!ATTLIST p      
                  %globalatts;                                                    >
@@ -169,7 +169,7 @@ Prologue is needed for Decameron and Elegia di Madonna Fiammetta.-->
                  value             CDATA                           #IMPLIED
                  %globalatts;                                                    > 
 
-<!ELEMENT name   (#PCDATA | code | foreign | hi | %linkstuff;)*  >
+<!ELEMENT name   (#PCDATA | code | foreign | hi | c | %linkstuff;)*  >
 <!ATTLIST name  type          (person | place)                     #IMPLIED      
                 persref            IDREFS                          #IMPLIED    
                 placeref           IDREFS                          #IMPLIED
@@ -217,12 +217,16 @@ Prologue is needed for Decameron and Elegia di Madonna Fiammetta.-->
 <!ATTLIST emph 
                %globalatts;                                        >
 
+<!ELEMENT c   (#PCDATA)  >
+<!ATTLIST c 
+               %globalatts;                                        >
+
 <!ELEMENT title   (#PCDATA | foreign)*  >
 <!ATTLIST title  type         CDATA                     #IMPLIED
                   %globalatts;                                     >
 
 <!ELEMENT q   (#PCDATA | emph | foreign | hi | lg | l |  name | note | p | 
-                 pb | q | title | %text; | %linkstuff;)*  >
+                 pb | q | title | c | %text; | %linkstuff;)*  >
 
 <!ATTLIST q    type       (internalmonologue | novella | othervoice | 
                           prayer | proverb | song | mentioned)           #IMPLIED 
@@ -317,7 +321,7 @@ presented in the file containing a list of people and places-->
                 who                   IDREF                              #IMPLIED    
                 %globalatts;   >
 
-<!ELEMENT l   (#PCDATA | note | q | %linkstuff; | %text;)*  >
+<!ELEMENT l   (#PCDATA | note | q | c | %linkstuff; | %text;)*  >
 <!ATTLIST l    
                 %globalatts;   >
 
@@ -519,7 +523,7 @@ both simplified versions of the TEI elements PC -->
  <!-- ***************** GENERAL ENTITIES ********************		-->
 
 <!-- we need just the plain first set of ISO Latin 1 entities to be able to reproduce accented 
-Italian letters. We get them in here -->  
+Italian letters. We get them in here   
 
 <!ENTITY % isolat1 SYSTEM "iso-lat1.ent" >
      %isolat1;
@@ -531,4 +535,4 @@ Italian letters. We get them in here -->
      %ISOnum;
 
 <!ENTITY % ISOpub SYSTEM "iso-pub.ent" >
-     %ISOpub;
+     %ISOpub;    -->
