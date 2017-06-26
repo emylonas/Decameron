@@ -601,15 +601,15 @@ div.maps > p {
 }
 /* drop caps in Decameron text */
 
-.day_cap {
+.day-cap {
     color: green;
     }
     
-.story_cap {
+.story-cap {
     color: green;
     }
     
-.novella_cap {
+.novella-cap {
     color: green;
     }    
     
