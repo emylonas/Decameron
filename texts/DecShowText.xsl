@@ -183,6 +183,10 @@ to the conclusion of the previous day. But if it's day 1, then it should go back
 			&#8221; 
 		</xsl:text>
 	</xsl:template>
+	
+	<xsl:template match="c" mode="content">
+		<span class="{@rend}"><xsl:apply-templates mode="content" /></span>
+	</xsl:template>
 	<xsl:template match="note" mode="content">
 	</xsl:template>
 	<xsl:template match="title" mode="content">

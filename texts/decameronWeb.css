@@ -86,7 +86,7 @@ BODY {
       background-color: #FFB6C1;
 }
 .framing {
-      font-family: Lucida Sans, Eyechart, Geneva, Arial, Helvetica, sans-serif;
+      font-family: 'Lucida Sans', Eyechart, Geneva, Arial, Helvetica, sans-serif;
       color:#A52A2A;
 }
 .greenText {
@@ -101,11 +101,11 @@ BODY {
       background-color: yellow;
      }
 H1 {
-      font-family: Lucida Sans, Eyechart, Geneva, Arial, Helvetica, sans-serif;
+      font-family: 'Lucida Sans', Eyechart, Geneva, Arial, Helvetica, sans-serif;
       text-align:left;
 }
 H2 {
-      font-family: Lucida Sans, Eyechart, Geneva, Arial, Helvetica, sans-serif;
+      font-family: 'Lucida Sans', Eyechart, Geneva, Arial, Helvetica, sans-serif;
       text-align:left;
 }
 .linkbox {
@@ -157,7 +157,7 @@ H2 {
      }
 .toctitle {
       font-size: 1em;
-      font-family: Lucida Sans, Verdana, Geneva, Helvetica, sans-serif; 
+      font-family: 'Lucida Sans', Verdana, Geneva, Helvetica, sans-serif; 
       line-height: 1.5em;
       font-weight: bold;
       color: #A52A2A;
