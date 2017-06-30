@@ -3,14 +3,15 @@ var map;
 var mapBounds = new google.maps.LatLngBounds(
     new google.maps.LatLng(22.18472031, -25.51538958),
     new google.maps.LatLng(67.92833924, 46.24766462));
-    var mapMinZoom = 5;
+    var mapMinZoom = 3;
+    var startingZoom = 3;
     var mapMaxZoom = 12;
     var opts = {
     streetViewControl: false,
     tilt: 0,
     mapTypeId: google.maps.MapTypeId.HYBRID,
-    center: {lat: 43.78, lng: 11.25},
-    zoom: mapMinZoom,
+    center: {lat: 27.070109567145078, lng: 23.818359375},
+    zoom: startingZoom,
     minZoom: mapMinZoom
 }
 map = new google.maps.Map(document.getElementById("map"), opts);
