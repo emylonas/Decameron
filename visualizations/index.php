@@ -44,10 +44,6 @@
         margin: 15px auto 0 auto;
     }
 
-    #visualizationsContainer:first-child {
-        color:red;
-    }
-
 </style>
 <section id="visualizationsContainer">
     <p class="title"><a href="grid/index.html">Decameron Grid</a></p>
