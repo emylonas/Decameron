@@ -15,7 +15,7 @@
     
     footer { font-size:1em;}
     
-    a { text-decoration:underline; color:#085394; }
+    a { text-decoration:none; }
 
     .title a {
         color: #451404;
