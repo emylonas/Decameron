@@ -24,8 +24,8 @@
     p { margin: 0; }
 
     #grid img, #map img {
-        height:100%;
-        width:100%; 
+        width: 300px;
+        height: 280px; 
     }
 
     .title {
@@ -36,34 +36,45 @@
 
     .description {
         font-size:1.25em;
+        margin-top: 10px;
+        padding: 0 10px;
     }
 
     .thumbnail {
-        width: 60%;
-        height: 60%;
+        width: 90%;
+        height: 90%;
         margin: 15px auto 0 auto;
+    }
+
+    #gridContainer, #mapContainer {
+        width: 50%;
+        float: left;
     }
 
 </style>
 <section id="visualizationsContainer">
-    <p class="title"><a href="grid/index.html">Decameron Grid</a></p>
-    <p class="description">
-        This is some description of the app that this thing is being described by.
-    </p>
-    <div id="grid" class="container thumbnail">
-        <a target="_blank" href="grid/index.html">
-            <img src="visualizations-grid.png" alt="Screenshot of the Decameron Grid" />
-        </a>
+    <div id="gridContainer">
+        <p class="title"><a href="grid/index.html">Decameron Grid</a></p>
+        <div id="grid" class="container thumbnail">
+            <a target="_blank" href="grid/index.html">
+                <img src="visualizations-grid.png" alt="Screenshot of the Decameron Grid" />
+            </a>
+        </div>
+        <p class="description">
+            This is some description of the app that this thing is being described by.
+        </p>
     </div>
 
-    <p class="title"style="margin-top:15px"><a href="grid/index.html">Decameron Map</a></p>
-    <p class="description">
-        More text. Even more more text this is some more text. This is some description of the app that this thing is being described by.
-    </p>
-    <div id="map" class="container thumbnail">
-        <a target="_blank" href="map/index.html">
-            <img src="visualizations-map.png" alt="Screenshot of the Decameron Map" />
-        </a>
+    <div id="mapContainer">
+        <p class="title"><a href="grid/index.html">Decameron Map</a></p>
+        <div id="map" class="container thumbnail">
+            <a target="_blank" href="map/index.html">
+                <img src="visualizations-map.png" alt="Screenshot of the Decameron Map" />
+            </a>
+        </div>
+        <p class="description">
+            More text. Even more more text this is some more text. This is some description of the app that this thing is being described by.
+        </p>
     </div>
 </section>
 
